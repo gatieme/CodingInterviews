@@ -3,11 +3,11 @@
 
 >牛客OJ：http://www.nowcoder.com/practice/abc3fe2ce8e146608e868a70efebf62e?tpId=13&tqId=11154&rp=1&ru=/ta/coding-interviews&qru=/ta/coding-interviews/question-ranking
 >
->九度OJ：
+>九度OJ：http://ac.jobdu.com/problem.php?pid=1384
 >
->GitHub代码：https://github.com/gatieme/LeetCode/tree/master/023-MergeKSortedLists
+>GitHub代码：[gatiemee/CodingInterviews--003二维数组中的查找](https://github.com/gatieme/CodingInterviews/tree/master/003-%E4%BA%8C%E7%BB%B4%E6%95%B0%E7%BB%84%E4%B8%AD%E7%9A%84%E6%9F%A5%E6%89%BE)
 >
->CSDN题解：http://blog.csdn.net/gatieme/article/details/51097730
+>CSDN题解：[剑指Offer--003--二维数组中的查找](http://blog.csdn.net/gatieme/article/details/51100125)
 
 
 #题意
