@@ -1,19 +1,20 @@
 #链接
 ------- 
 
->牛客OJ：[二维数组中的查找](http://www.nowcoder.com/practice/abc3fe2ce8e146608e868a70efebf62e?tpId=13&tqId=11154&rp=1&ru=/ta/coding-interviews&qru=/ta/coding-interviews/question-ranking)
+>牛客OJ：[替换空格](http://www.nowcoder.com/practice/4060ac7e3e404ad1a894ef3e17650423?tpId=13&tqId=11155&rp=1&ru=/ta/coding-interviews&qru=/ta/coding-interviews/question-ranking)
 >
 >九度OJ：http://ac.jobdu.com/problem.php?pid=1510
 >
->GitHub代码：[gatiemee/CodingInterviews--003二维数组中的查找](https://github.com/gatieme/CodingInterviews/tree/master/003-%E4%BA%8C%E7%BB%B4%E6%95%B0%E7%BB%84%E4%B8%AD%E7%9A%84%E6%9F%A5%E6%89%BE)
+>GitHub代码： [004-替换空格](https://github.com/gatieme/CodingInterviews/tree/master/004-%E6%9B%BF%E6%8D%A2%E7%A9%BA%E6%A0%BC)
 >
->CSDN题解：[剑指Offer--003--二维数组中的查找](http://blog.csdn.net/gatieme/article/details/51100125)
+>CSDN题解：[剑指Offer--004-替换空格](http://blog.csdn.net/gatieme/article/details/51100630)
 
 
 
-| 牛客OJ | 九度OJ |CSDN题解 | GitHub代码 |
+| 牛客OJ | 九度OJ | CSDN题解 | GitHub代码 |
 | ------------- |:-------------:| -----:|
-| [替换空格](http://www.nowcoder.com/practice/4060ac7e3e404ad1a894ef3e17650423?tpId=13&tqId=11155&rp=1&ru=/ta/coding-interviews&qru=/ta/coding-interviews/question-ranking)  | [剑指Offer--004-替换空格]() | |
+| [替换空格](http://www.nowcoder.com/practice/4060ac7e3e404ad1a894ef3e17650423?tpId=13&tqId=11155&rp=1&ru=/ta/coding-interviews&qru=/ta/coding-interviews/question-ranking)  | [剑指Offer--004-替换空格](http://blog.csdn.net/gatieme/article/details/51100630)   | [1510-替换空格](http://ac.jobdu.com/problem.php?pid=1510)   | [004-替换空格](https://github.com/gatieme/CodingInterviews/tree/master/004-%E6%9B%BF%E6%8D%A2%E7%A9%BA%E6%A0%BC)  |
+
 
 
 #题意
