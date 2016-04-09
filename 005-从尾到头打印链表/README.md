@@ -5,7 +5,7 @@
 >
 >九度OJ：http://ac.jobdu.com/problem.php?pid=1511
 >
->GitHub代码： [004-替换空格](https://github.com/gatieme/CodingInterviews/tree/master/004-%E6%9B%BF%E6%8D%A2%E7%A9%BA%E6%A0%BC)
+>GitHub代码： [005-从尾到头打印链表](https://github.com/gatieme/CodingInterviews/tree/master/005-%E4%BB%8E%E5%B0%BE%E5%88%B0%E5%A4%B4%E6%89%93%E5%8D%B0%E9%93%BE%E8%A1%A8)
 >
 >CSDN题解：[剑指Offer--005-从尾到头打印链表](http://blog.csdn.net/gatieme/article/details/51107632)
 
@@ -13,7 +13,7 @@
 
 | 牛客OJ | 九度OJ | CSDN题解 | GitHub代码 |
 | ------------- |:-------------:| -----:|
-| [从尾到头打印链表](http://www.nowcoder.com/practice/d0267f7f55b3412ba93bd35cfa8e8035?tpId=13&tqId=11156&rp=1&ru=/ta/coding-interviews&qru=/ta/coding-interviews/question-ranking) | [1511-从尾到头打印链表](http://ac.jobdu.com/problem.php?pid=1511)   | [剑指Offer--005-从尾到头打印链表](http://blog.csdn.net/gatieme/article/details/51107632)   | [004-替换空格](https://github.com/gatieme/CodingInterviews/tree/master/004-%E6%9B%BF%E6%8D%A2%E7%A9%BA%E6%A0%BC)  |
+| [从尾到头打印链表](http://www.nowcoder.com/practice/d0267f7f55b3412ba93bd35cfa8e8035?tpId=13&tqId=11156&rp=1&ru=/ta/coding-interviews&qru=/ta/coding-interviews/question-ranking) | [1511-从尾到头打印链表](http://ac.jobdu.com/problem.php?pid=1511)   | [剑指Offer--005-从尾到头打印链表](http://blog.csdn.net/gatieme/article/details/51107632)   | [005-从尾到头打印链表](https://github.com/gatieme/CodingInterviews/tree/master/005-%E4%BB%8E%E5%B0%BE%E5%88%B0%E5%A4%B4%E6%89%93%E5%8D%B0%E9%93%BE%E8%A1%A8)  |
 
 
 #题意
