@@ -5,15 +5,15 @@
 >
 >九度OJ：http://ac.jobdu.com/problem.php?pid=1385
 >
->GitHub代码： [005-从尾到头打印链表](https://github.com/gatieme/CodingInterviews/tree/master/005-%E4%BB%8E%E5%B0%BE%E5%88%B0%E5%A4%B4%E6%89%93%E5%8D%B0%E9%93%BE%E8%A1%A8)
+>GitHub代码： [006-重建二叉树](https://github.com/gatieme/CodingInterviews/tree/master/006-%E9%87%8D%E5%BB%BA%E4%BA%8C%E5%8F%89%E6%A0%91)  
 >
->CSDN题解：[剑指Offer--005-从尾到头打印链表](http://blog.csdn.net/gatieme/article/details/51107632)
+>CSDN题解：[剑指Offer--006-重构二叉树](http://blog.csdn.net/gatieme/article/details/51108612)
 
 
 
 | 牛客OJ | 九度OJ | CSDN题解 | GitHub代码 |
 | ------------- |:-------------:| -----:|
-| [重建二叉树](http://www.nowcoder.com/practice/8a19cbe657394eeaac2f6ea9b0f6fcf6?tpId=13&tqId=11157&rp=1&ru=%2Fta%2Fcoding-interviews&qru=%2Fta%2Fcoding-interviews%2Fquestion-ranking) | [1385-重建二叉树](http://ac.jobdu.com/problem.php?pid=1385)   | [剑指Offer--005-从尾到头打印链表](http://blog.csdn.net/gatieme/article/details/51107632)   | [005-从尾到头打印链表](https://github.com/gatieme/CodingInterviews/tree/master/005-%E4%BB%8E%E5%B0%BE%E5%88%B0%E5%A4%B4%E6%89%93%E5%8D%B0%E9%93%BE%E8%A1%A8)  |
+| [重建二叉树](http://www.nowcoder.com/practice/8a19cbe657394eeaac2f6ea9b0f6fcf6?tpId=13&tqId=11157&rp=1&ru=%2Fta%2Fcoding-interviews&qru=%2Fta%2Fcoding-interviews%2Fquestion-ranking) | [1385-重建二叉树](http://ac.jobdu.com/problem.php?pid=1385)   | [剑指Offer--006-重构二叉树](http://blog.csdn.net/gatieme/article/details/51108612) | [006-重建二叉树](https://github.com/gatieme/CodingInterviews/tree/master/006-%E9%87%8D%E5%BB%BA%E4%BA%8C%E5%8F%89%E6%A0%91)  |
 
 
 #题意
