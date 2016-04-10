@@ -7,11 +7,11 @@ using namespace std;
 
 #ifdef __tmain
 
-#define dout cout
+#define debug cout
 
 #else
 
-#define dout 0 && cout
+#define debug 0 && cout
 
 #endif // __tmain
 
@@ -20,6 +20,6 @@ using namespace std;
 
 int __tmain( )
 {
-    dout <<"test" <<endl;
+    debug <<"test" <<endl;
     return 0;
 }
