@@ -5,7 +5,7 @@
 >
 >九度OJ：http://ac.jobdu.com/problem.php?pid=1387
 >
->GitHub代码： [009-斐波那契数列](https://github.com/gatieme/CodingInterviews/tree/master/009-%E6%97%8B%E8%BD%AC%E6%95%B0%E7%BB%84%E7%9A%84%E6%9C%80%E5%B0%8F%E6%95%B0%E5%AD%97)
+>GitHub代码： [009-斐波那契数列](https://github.com/gatieme/CodingInterviews/tree/master/009-%E6%96%90%E6%B3%A2%E9%82%A3%E5%A5%91%E6%95%B0%E5%88%97)
 >
 >CSDN题解：[剑指Offer--009-斐波那契数列](http://blog.csdn.net/gatieme/article/details/51115810)
 
@@ -13,7 +13,7 @@
 
 | 牛客OJ | 九度OJ | CSDN题解 | GitHub代码 |
 | ------------- |:-------------:| -----:|
-|[斐波那契数列](http://www.nowcoder.com/practice/c6c7742f5ba7442aada113136ddea0c3?tpId=13&tqId=11160&rp=1&ru=%2Fta%2Fcoding-interviews&qru=%2Fta%2Fcoding-interviews%2Fquestion-rankingg)  | [1387-斐波那契数列](http://ac.jobdu.com/problem.php?pid=1387)   | [剑指Offer--009-斐波那契数列](http://blog.csdn.net/gatieme/article/details/51115810) | [009-斐波那契数列](https://github.com/gatieme/CodingInterviews/tree/master/009-%E6%97%8B%E8%BD%AC%E6%95%B0%E7%BB%84%E7%9A%84%E6%9C%80%E5%B0%8F%E6%95%B0%E5%AD%97)|
+|[斐波那契数列](http://www.nowcoder.com/practice/c6c7742f5ba7442aada113136ddea0c3?tpId=13&tqId=11160&rp=1&ru=%2Fta%2Fcoding-interviews&qru=%2Fta%2Fcoding-interviews%2Fquestion-rankingg)  | [1387-斐波那契数列](http://ac.jobdu.com/problem.php?pid=1387)   | [剑指Offer--009-斐波那契数列](http://blog.csdn.net/gatieme/article/details/51115810) | [009-斐波那契数列](https://github.com/gatieme/CodingInterviews/tree/master/009-%E6%96%90%E6%B3%A2%E9%82%A3%E5%A5%91%E6%95%B0%E5%88%97)|
 
 >参考：
 >[剑指Offer面试题9（java版）斐波那契数列](http://blog.csdn.net/jsqfengbao/article/details/47121489)
