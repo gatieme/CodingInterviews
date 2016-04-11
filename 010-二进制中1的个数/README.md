@@ -10,7 +10,7 @@
 
 | 牛客OJ | 九度OJ | CSDN题解 | GitHub代码 | 
 | ------------- |:-------------:| -----:| 
-|[二进制中1的个数](http://www.nowcoder.com/practice/c6c7742f5ba7442aada113136ddea0c3?tpId=13&tqId=11160&rp=1&ru=%2Fta%2Fcoding-interviews&qru=%2Fta%2Fcoding-interviews%2Fquestion-rankingg) | [1387-二进制中1的个数](http://ac.jobdu.com/problem.php?pid=1513) | [剑指Offer--010-二进制中1的个数](http://blog.csdn.net/gatieme/article/details/51122144) | [010-二进制中1的个数](https://github.com/gatieme/CodingInterviews/tree/master/010-二进制中1的个数)|
+|[二进制中1的个数](http://www.nowcoder.com/practice/c6c7742f5ba7442aada113136ddea0c3?tpId=13&tqId=11160&rp=1&ru=%2Fta%2Fcoding-interviews&qru=%2Fta%2Fcoding-interviews%2Fquestion-rankingg) | [1513-二进制中1的个数](http://ac.jobdu.com/problem.php?pid=1513) | [剑指Offer--010-二进制中1的个数](http://blog.csdn.net/gatieme/article/details/51122144) | [010-二进制中1的个数](https://github.com/gatieme/CodingInterviews/tree/master/010-二进制中1的个数)|
 
 #题意
 
