@@ -23,11 +23,17 @@ class Solutin
 public :
     void Print(int n)
     {
-        int max = pow(10, n);
-        for(int i = 1; i < max; i++)
+        if(n <= 0)
         {
-            cout <<i <<endl;
+            return;
         }
+
+    }
+
+
+    void Increment(int n)
+    {
+
     }
 
 };
