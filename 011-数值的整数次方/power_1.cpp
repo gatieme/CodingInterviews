@@ -22,8 +22,13 @@ class Solution
 public:
     double Power(double base, int exponent)
     {
+        double res = 1;
+        for(int i = 0; i < exponent; i++)
+        {
+            res *= base;
+        }
 
-
+        return res;
     }
 };
 
@@ -31,6 +36,9 @@ public:
 
 int __tmain( )
 {
-    debug <<"test" <<endl;
+    Solution solu;
+
+    cout <<solu.Power(2, 0) <<endl;
+    cout <<solu.Power(2, -3) <<endl;
     return 0;
 }
