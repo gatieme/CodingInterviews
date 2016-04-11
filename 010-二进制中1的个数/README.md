@@ -1,17 +1,16 @@
-#链接
-------- 
->牛客OJ：[二进制中1的个数](http://www.nowcoder.com/practice/8ee967e43c2c4ec193b040ea7fbb10b8?tpId=13&tqId=11164&rp=1&ru=/ta/coding-interviews&qru=/ta/coding-interviews/question-ranking) 
->
+#链接 ------- 
+>牛客OJ：[二进制中1的个数](http://www.nowcoder.com/practice/8ee967e43c2c4ec193b040ea7fbb10b8?tpId=13&tqId=11164&rp=1&ru=/ta/coding-interviews&qru=/ta/coding-interviews/question-ranking)
+> 
 >九度OJ：http://ac.jobdu.com/problem.php?pid=1513
->
->GitHub代码： [010-二进制中1的个数](https://github.com/gatieme/CodingInterviews/tree/master/010-%E6%96%90%E6%B3%A2%E9%82%A3%E5%A5%91%E6%95%B0%E5%88%97)
+> 
+>GitHub代码： [010-二进制中1的个数](https://github.com/gatieme/CodingInterviews/tree/master/010-二进制中1的个数) 
 >
 >CSDN题解：[剑指Offer--010-二进制中1的个数](http://blog.csdn.net/gatieme/article/details/51122144)
 
-| 牛客OJ | 九度OJ | CSDN题解 | GitHub代码 |
-| ------------- |:-------------:| -----:|
-|[二进制中1的个数](http://www.nowcoder.com/practice/c6c7742f5ba7442aada113136ddea0c3?tpId=13&tqId=11160&rp=1&ru=%2Fta%2Fcoding-interviews&qru=%2Fta%2Fcoding-interviews%2Fquestion-rankingg)  | [1387-二进制中1的个数](http://ac.jobdu.com/problem.php?pid=1513)   | [剑指Offer--010-二进制中1的个数]http://blog.csdn.net/gatieme/article/details/51122144) | [010-二进制中1的个数](https://github.com/gatieme/CodingInterviews/tree/master/010-%E6%96%90%E6%B3%A2%E9%82%A3%E5%A5%91%E6%95%B0%E5%88%97)|
 
+| 牛客OJ | 九度OJ | CSDN题解 | GitHub代码 | 
+| ------------- |:-------------:| -----:| 
+|[二进制中1的个数](http://www.nowcoder.com/practice/c6c7742f5ba7442aada113136ddea0c3?tpId=13&tqId=11160&rp=1&ru=%2Fta%2Fcoding-interviews&qru=%2Fta%2Fcoding-interviews%2Fquestion-rankingg) | [1387-二进制中1的个数](http://ac.jobdu.com/problem.php?pid=1513) | [剑指Offer--010-二进制中1的个数](http://blog.csdn.net/gatieme/article/details/51122144) | [010-二进制中1的个数](https://github.com/gatieme/CodingInterviews/tree/master/010-二进制中1的个数)|
 
 #题意
 
