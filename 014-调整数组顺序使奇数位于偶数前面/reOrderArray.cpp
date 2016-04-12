@@ -22,6 +22,10 @@ class Solution
 public:
     void reOrderArray(vector<int> &array)
     {
+        if(array.size( ) <= 1)
+        {
+            return ;
+        }
         vector<int>::iterator left = array.begin( );
         vector<int>::iterator right = array.end( ) - 1;
 
@@ -30,21 +34,25 @@ public:
         while(left < right)
         //while(left != right)
         {
-            debug <<"left = " <<*left <<", right = " <<*right <<endl;
             //system("PAUSE");
 
-            if(((*left & 1) == 0)
-              && ((*right & 1) == 1))
+            //  left向后移动指向第一个偶数
+            while(left < right && (*left & 0x01) == 1)
+            {
+                left++;
+            }
+
+            // right向前移动指向第一个奇数
+            while(left < right && (*right &0x01) == 0)
+            {
+                right--;
+            }
+            debug <<"left = " <<*left <<", right = " <<*right <<endl;
+
+            if(left < right)
             {
                 swap(*left, *right);
             }
-            left++;
-
-//            if(left == right)
-//            {
-//                break;
-//            }
-            right--;
         }
 
     }
@@ -53,9 +61,9 @@ public:
 
 int __tmain( )
 {
-    int array[] = {2, 4, 6, 1, 3, 5};
-    vector<int> vec(array, array + 6);
-    for(int i = 0; i < 6; i++)
+    int array[] = { 1, 2, 3, 4, 5, 6, 7};
+    vector<int> vec(array, array + 7);
+    for(int i = 0; i < 7; i++)
     {
         cout <<vec[i] <<" ";
     }
@@ -63,7 +71,7 @@ int __tmain( )
     Solution solu;
     solu.reOrderArray(vec);
 
-    for(int i = 0; i < 6; i++)
+    for(int i = 0; i < 7; i++)
     {
         cout <<vec[i] <<" ";
     }
