@@ -7,50 +7,22 @@
 > 
 >GitHub代码： [017-合并两个排序的链表](https://github.com/gatieme/CodingInterviews/tree/master/017-合并两个排序的链表)
 >
->CSDN题解：[剑指Offer--017-合并两个排序的链表](#链接
-------- 
-
->牛客OJ：[合并两个排序的链表](http://www.nowcoder.com/practice/d8b6b4358f774294a89de2a6ac4d9337?tpId=13&tqId=11169&rp=1&ru=%2Fta%2Fcoding-interviews&qru=%2Fta%2Fcoding-interviews%2Fquestion-ranking)
-> 
->九度OJ：http://ac.jobdu.com/problem.php?pid=1519
-> 
->GitHub代码： [017-合并两个排序的链表](https://github.com/gatieme/CodingInterviews/tree/master/017-合并两个排序的链表)
->
->CSDN题解：[剑指Offer--017-合并两个排序的链表](http://blog.csdn.net/gatieme/article/details/51138298)
-
-
-| 牛客OJ | 九度OJ | CSDN题解 | GitHub代码 | 
-| ------------- |:-------------:| -----:| 
-|[合并两个排序的链表](http://www.nowcoder.com/practice/d8b6b4358f774294a89de2a6ac4d9337?tpId=13&tqId=11169&rp=1&ru=%2Fta%2Fcoding-interviews&qru=%2Fta%2Fcoding-interviews%2Fquestion-ranking) | [1519-合并两个排序的链表](http://ac.jobdu.com/problem.php?pid=1518) | [剑指Offer--017-合并两个排序的链表](#链接
-------- 
-
->牛客OJ：[合并两个排序的链表](http://www.nowcoder.com/practice/d8b6b4358f774294a89de2a6ac4d9337?tpId=13&tqId=11169&rp=1&ru=%2Fta%2Fcoding-interviews&qru=%2Fta%2Fcoding-interviews%2Fquestion-ranking)
-> 
->九度OJ：http://ac.jobdu.com/problem.php?pid=1519
-> 
->GitHub代码： [017-合并两个排序的链表](https://github.com/gatieme/CodingInterviews/tree/master/017-合并两个排序的链表)
->
 >CSDN题解：[剑指Offer--017-合并两个排序的链表](http://blog.csdn.net/gatieme/article/details/51138298)
 
 
 | 牛客OJ | 九度OJ | CSDN题解 | GitHub代码 | 
 | ------------- |:-------------:| -----:| 
 |[合并两个排序的链表](http://www.nowcoder.com/practice/d8b6b4358f774294a89de2a6ac4d9337?tpId=13&tqId=11169&rp=1&ru=%2Fta%2Fcoding-interviews&qru=%2Fta%2Fcoding-interviews%2Fquestion-ranking) | [1519-合并两个排序的链表](http://ac.jobdu.com/problem.php?pid=1518) | [剑指Offer--017-合并两个排序的链表](http://blog.csdn.net/gatieme/article/details/51138298) | [017-合并两个排序的链表](https://github.com/gatieme/CodingInterviews/tree/master/017-合并两个排序的链表)|
-) | [017-合并两个排序的链表](https://github.com/gatieme/CodingInterviews/tree/master/017-合并两个排序的链表)|
-)
 
 
-| 牛客OJ | 九度OJ | CSDN题解 | GitHub代码 | 
-| ------------- |:-------------:| -----:| 
-|[合并两个排序的链表](http://www.nowcoder.com/practice/d8b6b4358f774294a89de2a6ac4d9337?tpId=13&tqId=11169&rp=1&ru=%2Fta%2Fcoding-interviews&qru=%2Fta%2Fcoding-interviews%2Fquestion-ranking) | [1519-合并两个排序的链表](http://ac.jobdu.com/problem.php?pid=1518) | [剑指Offer--017-合并两个排序的链表](http://blog.csdn.net/gatieme/article/details/51135119) | [017-合并两个排序的链表](https://github.com/gatieme/CodingInterviews/tree/master/017-合并两个排序的链表)|
+>其实这道题跟LeetCode上一道题是一样的
 
-其实这道题跟LeetCode上一道题是一样的
+>[LeetCodet题解--21. Merge Two Sorted Lists（合并两个排序好的链表）](http://blog.csdn.net/gatieme/article/details/51094742)
+>
+>当然他还有很多变种，比如说两个链表扩展成为K个的时候
+>
+>[LeetCodet题解--23. Merge k Sorted Lists（合并K个已排序的链表）](http://blog.csdn.net/gatieme/article/details/51097730)
 
-[LeetCodet题解--21. Merge Two Sorted Lists（合并两个排序好的链表）](http://blog.csdn.net/gatieme/article/details/51094742)
-
-当然他还有很多变种，比如说两个链表扩展成为K个的时候
- 
-[LeetCodet题解--23. Merge k Sorted Lists（合并K个已排序的链表）](http://blog.csdn.net/gatieme/article/details/51097730)
 
 
 #题意
