@@ -23,20 +23,27 @@ public:
     void reOrderArray(vector<int> &array)
     {
         vector<int>::iterator left = array.begin( );
-        vector<int>::iterator right = array.end( );
+        vector<int>::iterator right = array.end( ) - 1;
 
-        right --;
-        while(left != right)
+        // 三种顺序容器中只有deque和vector容器的迭代器支持大小的比较和算术运算。
+
+        while(left < right)
+        //while(left != right)
         {
             debug <<"left = " <<*left <<", right = " <<*right <<endl;
-            system("PAUSE");
+            //system("PAUSE");
 
             if(((*left & 1) == 0)
               && ((*right & 1) == 1))
             {
-                swap(left, right);
+                swap(*left, *right);
             }
             left++;
+
+//            if(left == right)
+//            {
+//                break;
+//            }
             right--;
         }
 
