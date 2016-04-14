@@ -1,6 +1,6 @@
 #include <iostream>
 #include <vector>
-
+#include <stack>
 using namespace std;
 
 //  调试开关
@@ -17,12 +17,15 @@ using namespace std;
 #endif // __tmain
 
 
+
+
 #ifdef __tmain
 struct TreeNode
 {
     int val;
     TreeNode *left;
     TreeNode *right;
+
 
     TreeNode(int x)
     : val(x), left(NULL), right(NULL)
@@ -52,6 +55,145 @@ struct TreeNode
         InOrder(root->right);
     }
 
+    static void PostOrder(TreeNode *root)
+    {
+        if(root == NULL)
+        {
+            return;
+        }
+        InOrder(root->left);
+        InOrder(root->right);
+        cout <<root->val;
+    }
+
+    //    非递归实现
+    //
+    //    根据前序遍历访问的顺序，优先访问根结点，然后再分别访问左孩子和右孩子。
+    //
+    //    即对于任一结点，其可看做是根结点，因此可以直接访问，访问完之后，若其左孩子不为空，按相同规则访问它的左子树；
+    //    当访问其左子树时，再访问它的右子树。因此其处理过程如下：
+    //
+    //     对于任一结点P：
+    //
+    //     1)访问结点P，并将结点P入栈;
+    //
+    //     2)判断结点P的左孩子是否为空，若为空，则取栈顶结点并进行出栈操作，并将栈顶结点的右孩子置为当前的结点P，循环至1);若不为空，则将P的左孩子置为当前的结点P;
+    //
+    //     3)直到P为NULL并且栈为空，则遍历结束。
+    static void PreOrderDev(TreeNode *root)
+    {
+        if(root == NULL)
+        {
+            debug <<"The tree is NULL..." <<endl;
+        }
+
+        stack<TreeNode *> nstack;
+
+
+        TreeNode *node = root;
+        //  开始遍历整个二叉树
+        while(node != NULL || nstack.empty( ) != true)
+        {
+            //  输出当前子树的根节点，然后递归直至最左
+            while(node != NULL)
+            {
+                cout <<node->val;
+                nstack.push(node);
+                node = node->left;
+            }
+
+            //  此时循环结束时，当前栈顶节点已经是最左节点
+            //  此时递归开始返回，开始出栈，并输出节点的右节点
+            if(nstack.empty() != true)
+            {
+                node = nstack.top( );
+                nstack.pop( );
+                node = node->right;
+            }
+        }
+    }
+
+    static void InOrderDev(TreeNode *root)
+    {
+        if(root == NULL)
+        {
+            debug <<"The tree is NULL..." <<endl;
+        }
+
+        stack<TreeNode *> nstack;
+        TreeNode *node = root;
+
+        //  开始遍历整个二叉树
+        while(node != NULL || nstack.empty() != true)
+        {
+            // 不输出当前根节点，但是递归直至当前根节点node的最左端
+            while(node != NULL)
+            {
+                nstack.push(node);
+                node = node->left;
+            }
+
+            //  此时栈顶的元素是当前最左元素
+            //  它应该被输出
+            if(nstack.empty( ) != true)
+            {
+                node = nstack.top( );
+                cout <<node->val;
+                nstack.pop( );
+                node = node->right;
+            }
+        }
+    }
+    //  第二种思路：
+    //  要保证根结点在左孩子和右孩子访问之后才能访问，
+    //  因此对于任一结点P，先将其入栈。
+    //  如果P不存在左孩子和右孩子，则可以直接访问它；
+    //  或者P存在左孩子或者右孩子，但是其左孩子和右孩子都已被访问过了，
+    //  则同样可以直接访问该结点。
+    //  若非上述两种情况，则将P的右孩子和左孩子依次入栈，这样就保证了每次取栈顶元素的时候，左孩子在右孩子前面被访问，左孩子和右孩子都在根结点前面被访问。
+    //
+    //   可见，后序遍历中，一个节点要是想被输出
+    //   要么其左右孩子都是NULL，被访问时就会被输出(叶子节点)
+    //   要么其左右还是刚被输出了(递归返回)
+
+    static void PostOrderDev(TreeNode *root)
+    {
+        if(root == NULL)
+        {
+            debug <<"The tree is NULL..." <<endl;
+        }
+        stack<TreeNode *> nstack;
+
+        TreeNode *cur;                      //当前结点
+        TreeNode *pre = NULL;                 //前一次访问的结点
+        nstack.push(root);
+
+        while(nstack.empty( ) != true)
+        {
+            cur = nstack.top( );
+
+            if((cur->left == NULL && cur->right == NULL)                     //  左右还是均为NULL, 可以被输出
+            || (pre != NULL && (pre == cur->left || pre == cur->right)))     //  左右还是被输出了, 递归返回
+            {
+                cout<<cur->val;  //如果当前结点没有孩子结点或者孩子节点都已被访问过
+                nstack.pop( );
+                pre = cur;
+            }
+            else
+            {
+                // 由于栈是先进后出，因此先如后孩子, 再左孩子可以保证递归返回时先遍历左孩子
+                if(cur->right != NULL)
+                {
+                    nstack.push(cur->right);
+                }
+
+                if(cur->left != NULL)
+                {
+                    nstack.push(cur->left);
+                }
+            }
+        }
+    }
  };
 #endif // __tmain
 
@@ -174,12 +316,16 @@ int __tmain( )
     Solution solu;
     TreeNode *root = solu.reConstructBinaryTree(preOrder, inOrder);
 
-    cout <<"PreOrder";
+    cout <<"PreOrder" <<endl;
     TreeNode::PreOrder(root);
     cout <<endl;
+    TreeNode::PreOrderDev(root);
+    cout <<endl;
 
-    cout <<"InOrder ";
+    cout <<"InOrder " <<endl;
     TreeNode::InOrder(root);
+    cout <<endl;
+    TreeNode::InOrderDev(root);
     cout <<endl;
 
     return 0;
