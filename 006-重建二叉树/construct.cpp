@@ -19,12 +19,19 @@ using namespace std;
 
 
 
+//#define __ISFIRST_FOR_POSTPRDER
+
+
+
 #ifdef __tmain
 struct TreeNode
 {
     int val;
     TreeNode *left;
     TreeNode *right;
+#ifdef __ISFIRST_FOR_POSTPRDER
+    int    isFirst;          //  非递归中序遍历中保存其是否首次被访问
+#endif // __ISFIRST_FOR_POSTPRDER
 
 
     TreeNode(int x)
@@ -61,8 +68,8 @@ struct TreeNode
         {
             return;
         }
-        InOrder(root->left);
-        InOrder(root->right);
+        PostOrder(root->left);
+        PostOrder(root->right);
         cout <<root->val;
     }
 
@@ -144,18 +151,58 @@ struct TreeNode
             }
         }
     }
-    //  第二种思路：
-    //  要保证根结点在左孩子和右孩子访问之后才能访问，
-    //  因此对于任一结点P，先将其入栈。
-    //  如果P不存在左孩子和右孩子，则可以直接访问它；
-    //  或者P存在左孩子或者右孩子，但是其左孩子和右孩子都已被访问过了，
-    //  则同样可以直接访问该结点。
-    //  若非上述两种情况，则将P的右孩子和左孩子依次入栈，这样就保证了每次取栈顶元素的时候，左孩子在右孩子前面被访问，左孩子和右孩子都在根结点前面被访问。
-    //
-    //   可见，后序遍历中，一个节点要是想被输出
-    //   要么其左右孩子都是NULL，被访问时就会被输出(叶子节点)
-    //   要么其左右还是刚被输出了(递归返回)
 
+
+#ifdef __ISFIRST_FOR_POSTPRDER
+    //  对于任一结点P，将其入栈，
+    //  然后沿其左子树一直往下搜索，直到搜索到没有左孩子的结点，
+    //  此时该结点出现在栈顶，但是此时不能将其出栈并访问，因此其右孩子还为被访问。
+    //
+    //  所以接下来按照相同的规则对其右子树进行相同的处理，当访问完其右孩子时，该结点又出现在栈顶，
+    //  此时可以将其出栈并访问。这样就保证了正确的访问顺序。
+    //  可以看出，在这个过程中，每个结点都两次出现在栈顶，只有在第二次出现在栈顶时，才能访问它。因此需要多设置一个变量标识该结点是否是第一次出现在栈顶。
+    static void PostOrderDev(TreeNode *root)
+    {
+        if(root == NULL)
+        {
+            debug <<"The tree is NULL..." <<endl;
+        }
+
+        stack<TreeNode *> nstack;
+        TreeNode *node = root;
+
+        while(node != NULL || nstack.empty( ) != true)
+        {
+            //  遍历直至最左节点
+            while(node != NULL)
+            {
+                node->isFirst = 1;       // 当前节点首次被访问
+                nstack.push(node);
+                node = node->left;
+
+            }
+
+            if(nstack.empty() != true)
+            {
+                node = nstack.top( );
+                nstack.pop( );
+
+                if(node->isFirst == 1)   // 第一次出现在栈顶
+                {
+                    node->isFirst++;
+                    nstack.push(node);
+
+                    node = node->right;
+                }
+                else if(node->isFirst == 2)
+                {
+                    cout <<node->val;
+                    node = NULL;
+                }
+            }
+        }
+    }
+#else           //
     static void PostOrderDev(TreeNode *root)
     {
         if(root == NULL)
@@ -173,7 +220,15 @@ struct TreeNode
             cur = nstack.top( );
 
             if((cur->left == NULL && cur->right == NULL)                     //  左右还是均为NULL, 可以被输出
-            || (pre != NULL && (pre == cur->left || pre == cur->right)))     //  左右还是被输出了, 递归返回
+            || (pre != NULL && ((pre == cur->left && cur->right == NULL) || pre == cur->right)))     //  左右还是被输出了, 递归返回
+            //  其实当前节点要是想被输出, 要么
+            //  1--其左右孩子均为NULL
+            //  2--其左孩子刚被输出，而其右孩子为NULL
+            //  3--其右孩子刚被输出
+            //
+            //  但是这里有一个优化, 入栈时候, 先是根入栈， 然后是右孩子, 然后是左孩子,
+            //  因此当跟元素位于栈顶的时候, 其左右孩子必然已经弹出，即被输出,
+            //  也就是说, 当前
             {
                 cout<<cur->val;  //如果当前结点没有孩子结点或者孩子节点都已被访问过
                 nstack.pop( );
@@ -194,6 +249,9 @@ struct TreeNode
             }
         }
     }
+
+#endif // __ISFIRST_FOR_POSTPRDER
+
  };
 #endif // __tmain
 
@@ -316,16 +374,23 @@ int __tmain( )
     Solution solu;
     TreeNode *root = solu.reConstructBinaryTree(preOrder, inOrder);
 
-    cout <<"PreOrder" <<endl;
+    cout <<"PreOrder" <<endl;   //  12345678
     TreeNode::PreOrder(root);
     cout <<endl;
     TreeNode::PreOrderDev(root);
     cout <<endl;
 
-    cout <<"InOrder " <<endl;
+    cout <<"InOrder " <<endl;   //  47215386
     TreeNode::InOrder(root);
     cout <<endl;
     TreeNode::InOrderDev(root);
+    cout <<endl;
+
+
+    cout <<"PostOrder " <<endl; //
+    TreeNode::PostOrder(root);
+    cout <<endl;
+    TreeNode::PostOrderDev(root);
     cout <<endl;
 
     return 0;
