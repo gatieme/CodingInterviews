@@ -74,8 +74,6 @@ public:
             return;
         }
 
-
-
         swap(pRoot->left, pRoot->right);
         Mirror(pRoot->left);
         Mirror(pRoot->right);
