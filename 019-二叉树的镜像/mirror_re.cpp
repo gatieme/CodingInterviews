@@ -31,17 +31,22 @@ struct TreeNode
 
 class Solution {
 public:
-    void Mirror(TreeNode *pRoot)
+    void Mirror(TreeNode *root)
     {
-        if(pRoot == NULL)
+        if(root == NULL)
+        {
+            return ;
+
+        }
+        if(root->left == NULL
+        && root->right == NULL)
         {
             return;
         }
+        swap(root->left, root->right);
 
-        swap(pRoot->left, pRoot->right);
-
-        Mirror(pRoot->left);
-        Mirror(pRoot->right);
+        Mirror(root->left);
+        Mirror(root->right);
 
     }
 };
