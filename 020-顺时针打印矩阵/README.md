@@ -182,3 +182,48 @@ int __tmain( )
     return 0;
 }
 ```
+
+#用数组来标识转向
+-------
+由于蛇形填数的方法，本质就是一次遍历，因此我们也可以用一层循环来实现
+当然由于也是需要转向，那么我们可以用一个数组来
+>const int D[4][2] = {{0, 1}, {1, 0}, {0, -1}, {-1, 0}};
+表示转向操作
+
+这样我们的代码称为
+```cpp
+class Solution
+{
+    int n, m;
+    vector<vector<bool> > v;
+    bool judge(int i, int j)
+    {
+        return 0 <= i && i < n && 0 <= j && j < m && !v[i][j];
+    }
+
+public:
+     vector<int> printMatrix(vector<vector<int> > a)
+     {
+        vector<int> r;
+        if((n = a.size()) == 0 || (m = a[0].size()) == 0)
+            return r;
+
+        v = vector<vector<bool> >(n, vector<bool>(m, false));
+        const int D[4][2] = {{0, 1}, {1, 0}, {0, -1}, {-1, 0}};
+
+        int i = 0, j = 0, d = 0, count = m * n;
+        while(count--)
+        {
+            r.push_back(a[i][j]);
+            v[i][j] = true;
+            if(!judge(i + D[d][0], j + D[d][1]))
+            {
+                (++d) %= 4; //转弯
+            }
+            i += D[d][0];
+            j += D[d][1];//前进
+        }
+        return r;
+    }
+};
+```
