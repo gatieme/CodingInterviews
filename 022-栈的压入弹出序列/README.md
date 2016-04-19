@@ -4,14 +4,15 @@
 > 
 >九度OJ：http://ac.jobdu.com/problem.php?pid=1366
 > 
->GitHub代码： [022栈的压入、弹出序列](https://github.com/gatieme/CodingInterviews/tree/master/022-栈的压入、弹出序列)
+>GitHub代码： [022-栈的压入弹出序列](https://github.com/gatieme/CodingInterviews/tree/master/022-栈的压入弹出序列)
 >
 >CSDN题解：[剑指Offer--022栈的压入、弹出序列](http://blog.csdn.net/gatieme/article/details/51190653)
 
 
 | 牛客OJ | 九度OJ | CSDN题解 | GitHub代码 | 
 | ------------- |:-------------:| -----:| 
-|[栈的压入、弹出序列](http://www.nowcoder.com/practice/d77d11405cc7470d82554cb392585106?tpId=13&tqId=11174&rp=1&ru=%2Fta%2Fcoding-interviews&qru=%2Fta%2Fcoding-interviews%2Fquestion-ranking) | [1366-栈的压入、弹出序列](http://ac.jobdu.com/problem.php?pid=1366) | [剑指Offer--022栈的压入、弹出序列](http://blog.csdn.net/gatieme/article/details/51190653) | [022栈的压入、弹出序列](https://github.com/gatieme/CodingInterviews/tree/master/022-栈的压入、弹出序列) |
+|[栈的压入、弹出序列](http://www.nowcoder.com/practice/d77d11405cc7470d82554cb392585106?tpId=13&tqId=11174&rp=1&ru=%2Fta%2Fcoding-interviews&qru=%2Fta%2Fcoding-interviews%2Fquestion-ranking) | [1366-栈的压入、弹出序列](http://ac.jobdu.com/problem.php?pid=1366) | [剑指Offer--022栈的压入、弹出序列](http://blog.csdn.net/gatieme/article/details/51190653) | [022-栈的压入弹出序列](https://github.com/gatieme/CodingInterviews/tree/master/022-栈的压入弹出序列) |
+
 
 #题意
 -------
