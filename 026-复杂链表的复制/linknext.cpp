@@ -19,10 +19,10 @@ struct RandomListNode
 {
     int label;
     struct RandomListNode *next, *random;
-    RandomListNode(int x)
-    :label(x), next(NULL), random(NULL)
-    {
-    }
+//    RandomListNode(int x)
+//    :label(x), next(NULL), random(NULL)
+//    {
+//    }
 };
 
 
@@ -45,7 +45,12 @@ public:
         ///  将新的节点链接杂原来节点的末尾
         while(currNode != NULL)
         {
-            newNode = new RandomListNode(currNode->label);
+            if((newNode = new RandomListNode(currNode->label)) == NULL)
+            {
+                perror("new error : ");
+                exit(-1);
+            }
+
 
             /// 将新的节点newNode连接在currNode的后面
             newNode->next = currNode->next;
@@ -58,26 +63,47 @@ public:
         ///  接着复制随机指针域
         ///  原来节点的下一个位置就是其对应的新节点
         currNode = pHead;
-        newNode = NULL;
+        newNode = pHead->next;
         while(currNode != NULL)
         {
             RandomListNode *randNode = currNode->random;                        ///  随机指针域randNode
             RandomListNode *newNode = currNode->next;
-            newNode->random = randNode->next;
+            if(randNode != NULL)
+            {
 
+                newNode->random = randNode->next;
+
+            }
+            else
+            {
+                newNode->random = NULL;
+            }
             ///  链表同步移动
             currNode = newNode->next;
         }
 
         /// 将链接在一起的新旧两个链表拆分开
+        /// 脱链，更新各链表的next指针
         currNode = pHead;
-        newNode = pHead->next;
+        newNode = newHead = pHead->next;
         while(currNode != NULL)
         {
-            /// currNode  newNode newNode->next
-            newNode = currNode->next;
+            /// curr  new new->next
             currNode->next = newNode->next;
+            debug <<currNode->label <<", " <<newNode->label <<endl;
+            if(newNode->next != NULL)
+            {
+                newNode->next = newNode->next->next;
+            }
+            else
+            {
+                newNode->next = NULL;
+            }
+
+            currNode = currNode->next;
+            newNode = newNode->next;
         }
+
         return newHead;
     }
 
@@ -90,6 +116,24 @@ public:
 
 int __tmain( )
 {
-    debug <<"test" <<endl;
+
+    RandomListNode list[4];
+    list[0].label = 1;
+    list[0].next = &list[1];
+    list[1].label = 1;
+    list[1].next = &list[2];
+    list[2].label = 2;
+    list[2].next = &list[3];
+    list[3].label = 2;
+    list[3].next = NULL;
+
+
+    Solution solu;
+    RandomListNode *head = solu.Clone(list);
+    while(head != NULL)
+    {
+        cout <<head->label;
+        head = head->next;
+    }
     return 0;
 }
