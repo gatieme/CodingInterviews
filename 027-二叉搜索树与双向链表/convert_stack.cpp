@@ -1,4 +1,5 @@
 #include <iostream>
+#include <stack>
 
 using namespace std;
 
@@ -41,7 +42,7 @@ public:
      * @param     pRootOfTree              [二叉排序树的根]
      * @return                             [转换成的链表的头结点]
      */
-    TreeNode* Convert(TreeNode* pRootOfTree)
+    TreeNode* Convert(TreeNode* root)
     {
         if(root == NULL)
         {
@@ -49,29 +50,45 @@ public:
         }
 
         stack<TreeNode *> nstack;
-        TreeNode *node = root;
+        TreeNode *currNode = root;
         TreeNode *preNode = NULL;
+        TreeNode *head = NULL;
 
         //  开始遍历整个二叉树
-        while(node != NULL || nstack.empty() != true)
+        while(currNode != NULL || nstack.empty() != true)
         {
             // 不输出当前根节点，但是递归直至当前根节点node的最左端
-            while(node != NULL)
+            while(currNode != NULL)
             {
-                nstack.push(node);
-                node = node->left;
+                nstack.push(currNode);
+                currNode = currNode->left;
             }
 
             //  此时栈顶的元素是当前最左元素
             //  它应该被输出
             if(nstack.empty( ) != true)
             {
-                node = nstack.top( );
-                debug <<node->val;
+                currNode = nstack.top( );
+                debug <<currNode->val;
                 nstack.pop( );
-                node = node->right;
+                
+                //  第一个节点
+                if(preNode == NULL)
+                {
+                    head = currNode;
+                    preNode = currNode;
+                }
+                else
+                {
+                    preNode->right = currNode;
+                    currNode->left = preNode;
+                    preNode = currNode;
+                }
+                currNode = currNode->right;
+
             }
         }
+        return head;
     }
 };
 
@@ -104,5 +121,6 @@ int __tmain( )
         cout <<head->val <<" ";
         head = head->right;
     }
+    
     return 0;
 }
