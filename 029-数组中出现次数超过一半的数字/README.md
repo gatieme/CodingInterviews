@@ -14,6 +14,7 @@
 |[数组中出现次数超过一半的数字](http://www.nowcoder.com/practice/e8a1b01a2df14cb2b228b30ee6a92163?tpId=13&tqId=11181&rp=2&ru=/ta/coding-interviews&qru=/ta/coding-interviews/question-ranking) | [1370-数组中出现次数超过一半的数字](http://ac.jobdu.com/problem.php?pid=1370) | [剑指Offer--029-数组中出现次数超过一半的数字](http://blog.csdn.net/gatieme/article/details/51251311) | [029-数组中出现次数超过一半的数字](https://github.com/gatieme/CodingInterviews/tree/master/029-数组中出现次数超过一半的数字) |
 
 
+
 #题意
 -------
 
