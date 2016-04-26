@@ -21,37 +21,27 @@ using namespace std;
 
 class Solution
 {
-protected:
-    vector<string> m_res;
-
 public:
-    void Permutation(string prefix, string str)
+    vector<string> Permutation(string str)
     {
+        vector<string> res;
 
-        if(str.length() == 0)
+        if(str.empty( ) == true)
         {
-            //cout << prefix << endl;
-            m_res.push_back(prefix);
+            return res;
         }
-        else
-        {
-            for(int i = 0; i < str.length(); i++)
-            {
-                Permutation(prefix+str[i], str.substr(0,i)+str.substr(i+1,str.length()));
-            }
-        }
-    }
+        sort(str.begin( ), str.end( ));
 
-    vector<string> Permutation(string s)
-    {
-        m_res.clear( );
-        if(s.empty( ) == true)
+        do
         {
-            return m_res;
+            res.push_back(str);
+            debug <<str <<endl;
         }
-        Permutation("",s);
+        while(next_permutation(str.begin( ), str.end( )));
 
-        return m_res;
+
+        return res;
+
     }
 };
 
