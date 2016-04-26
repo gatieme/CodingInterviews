@@ -36,6 +36,7 @@ public:
         }
         PermutationRecursion(str, 0);
 
+        sort(m_res.begin( ), m_res.end( ));
         return m_res;
     }
 
