@@ -146,27 +146,6 @@ public:
     };
 
 
-    vector<int> LeastKNumbers_ByMinHeap(vector<int> numbers, int k)
-    {
-        make_heap(numbers.begin( ), numbers.end( ), greater_class());
-
-        for(int i = 0; i < k; i++)
-        {
-
-            //  最小的元素在栈顶
-            debug <<numbers[0] <<" ";
-            m_res.push_back(numbers[0]);
-
-            ///  一下两种操作均可以
-            // [1]  --  清除它, 然后重新排序堆
-            //numbers.erase(numbers.begin( ));
-            //sort_heap(numbers.begin( ), numbers.end( ));
-
-            // [2]  --  当然从堆出弹出这个栈顶元素
-            pop_heap(numbers.begin( ), numbers.end( ), greater_class( ));   // 弹出一个元素后，剩下的又重建了 heap，仍保持heap的性质
-            numbers.pop_back();         // vector 删除末尾元素
-        }
-    }
 };
 
 
