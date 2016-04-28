@@ -19,36 +19,29 @@ using namespace std;
 class Solution
 {
 protected:
-    vector<int> m_res;
 public:
+    class greater_class
+    {
+    public:
+        bool operator()(int a, int b)
+        {
+            return a > b;
+        }
+    };
 
     vector<int> GetLeastNumbers_Solution(vector<int> numbers, int k)
     {
-        m_res.clear( );
-        LeastKNumbers_ByMinHeap(numbers, k);
-        return m_res;
-    }
-
-    ///  排序后输出前K个数字
-    vector<int> LeastKNumbers_BySort(vector<int> numbers, int k)
-    {
-        debug <<endl <<"line " <<__LINE__ <<"in function : "<<__func__ <<endl <<endl;
-
-        vector<int> res;
-
-        sort(numbers.begin( ), numbers.end( ));
-        for(int i = 0; i < k; i++)
-        {
-            debug <<numbers[i] <<" ";
-            res.push_back(numbers[i]);
-        }
-        debug <<endl;
-
-        return res;
+        return LeastKNumbers_ByMinHeap(numbers, k);
     }
 
     vector<int> LeastKNumbers_ByMinHeap(vector<int> numbers, int k)
     {
+        vector<int> res;
+
+        if(numbers.size( ) == 0 || numbers.size( ) < k)
+        {
+            return res;
+        }
         make_heap(numbers.begin( ), numbers.end( ), greater_class());
 
         for(int i = 0; i < k; i++)
@@ -56,7 +49,7 @@ public:
 
             //  最小的元素在栈顶
             debug <<numbers[0] <<" ";
-            m_res.push_back(numbers[0]);
+            res.push_back(numbers[0]);
 
             ///  一下两种操作均可以
             // [1]  --  清除它, 然后重新排序堆
@@ -66,7 +59,10 @@ public:
             // [2]  --  当然从堆出弹出这个栈顶元素
             pop_heap(numbers.begin( ), numbers.end( ), greater_class( ));   // 弹出一个元素后，剩下的又重建了 heap，仍保持heap的性质
             numbers.pop_back();         // vector 删除末尾元素
+
         }
+
+        return res;
     }
 
 

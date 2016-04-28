@@ -1,6 +1,7 @@
 #include <iostream>
 #include <vector>
 #include <algorithm>
+#include <cstring>
 using namespace std;
 
 //  调试开关
@@ -24,6 +25,12 @@ public:
 
     vector<int> GetLeastNumbers_Solution(vector<int> numbers, int k)
     {
+        m_res.clear( );
+
+        if(numbers.size( ) == 0 || numbers.size() < k)
+        {
+            return m_res;
+        }
 //        m_res.clear( );
 //        LeastKNumbers_BySort(numbers, k);
 //
@@ -33,8 +40,10 @@ public:
 //        m_res.clear( );
 //        LeastKNumbers_ByBubbleSort(numbers, k);
 
-        m_res.clear( );
-        LeastKNumbers_ByMinHeap(numbers, k);
+
+        LeastKNumbers_ByCountSort(numbers, k);
+
+
         return m_res;
     }
 
@@ -43,17 +52,17 @@ public:
     {
         debug <<endl <<"line " <<__LINE__ <<"in function : "<<__func__ <<endl <<endl;
 
-        vector<int> res;
+        //vector<int> res;
 
         sort(numbers.begin( ), numbers.end( ));
         for(int i = 0; i < k; i++)
         {
             debug <<numbers[i] <<" ";
-            res.push_back(numbers[i]);
+            m_res.push_back(numbers[i]);
         }
         debug <<endl;
 
-        return res;
+        return m_res;
     }
 
     ///  采用选择排序法, K趟找出前K个数字
@@ -61,8 +70,6 @@ public:
     vector<int> LeastKNumbers_BySelectSort(vector<int> numbers, int k)
     {
         debug <<endl <<"line " <<__LINE__ <<" in function : "<<__func__ <<endl <<endl;
-
-        vector<int> res;
 
         int i, j, index;
         int length = numbers.size( ) -1;
@@ -136,14 +143,33 @@ public:
         return m_res;
     }
 
-    class greater_class
+
+    ///  采用计数排序
+    vector<int> LeastKNumbers_ByCountSort(vector<int> numbers, int k)
     {
-    public:
-        bool operator()(int a, int b)
+        int i, count;
+        int num[1000];
+        memset(num, '\0', 1000);
+
+        for(i = 0; i < numbers.size( ); i++)
         {
-            return a > b;
+            num[numbers[i]]++;
+            debug <<numbers[i] <<endl;
         }
-    };
+        for(i = 0, count = 0; i < 1000 && count < k; i++)
+        {
+            if(num[i] != 0)
+            {
+                count++;
+                debug <<i <<" ";
+                m_res.push_back(i);
+            }
+        }
+        debug <<endl;
+
+        return m_res;
+    }
+
 
 
 };
