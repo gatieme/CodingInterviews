@@ -8,7 +8,7 @@ using namespace std;
 #ifdef __tmain
 
 #define debug cout
-
+ 
 #else
 
 #define debug 0 && cout
