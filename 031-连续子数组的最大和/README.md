@@ -158,13 +158,8 @@ public:
 
 #endif  // __tmain
 
-
-
         int maxSum = INT_MIN;
-
-        dp[0] = array[0];
-
-        
+        dp[0] = array[0];      
 
         for(unsigned int i = 1; i < array.size( ); i++)
         {
@@ -185,7 +180,6 @@ public:
                 dp[i] = array[i] + dp[i - 1];
             }
 
-            
 
             if(dp[i] > maxSum)
             {
@@ -200,8 +194,6 @@ public:
             }        
 
         }
-
-
 
         debug <<"[" <<start <<", " <<end <<"] = " <<maxSum <<endl;
 
@@ -267,13 +259,10 @@ public:
             sum += array[i];
             debug <<sum <<endl;
 
-
-
             if(sum < 0)     ///  如果当前和小于0, 就舍弃它, 重新开始累加
             {
                 sum = 0;
             }
-
             else if(sum > maxSum)   ///  否则的话累计当前和
             {
                 maxSum = sum;
@@ -336,8 +325,6 @@ public:
             return 0;
         }
 
-
-
         int maxNum = INT_MIN;
 
         int sum = 0, maxSum = INT_MIN;
@@ -347,8 +334,6 @@ public:
             sum += array[i];
             debug <<sum <<endl;
 
-
-
             if(sum < 0)     ///  如果当前和小于0, 就舍弃它, 重新开始累加
             {
                 sum = 0;
@@ -356,9 +341,7 @@ public:
             else if(sum > maxSum)   ///  否则的话累计当前和
             {
                 maxSum = sum;
-            }
-
-            
+            }       
 
             ///  保存数据中的最大值
             ///  这种情况下是为了排除整个数组全为负数的特殊情况
