@@ -3,7 +3,7 @@
 
 using namespace std;
 
-//  调试开关
+
 #define __tmain main
 
 #ifdef __tmain
@@ -19,6 +19,7 @@ using namespace std;
 
 class Solution
 {
+    int dp[1000];
 public:
     int FindGreatestSumOfSubArray(vector<int> array)
     {
@@ -27,34 +28,40 @@ public:
             return 0;
         }
 
-        int maxNum = INT_MIN;
-        int sum = 0, maxSum = INT_MIN;
-        for(unsigned int i = 0; i < array.size( ); i++)
+#ifdef __tmain
+        int temp, start, end;
+#endif  // __tmain
+
+        int maxSum = INT_MIN;
+        dp[0] = array[0];
+        
+        for(unsigned int i = 1; i < array.size( ); i++)
         {
-            sum += array[i];
-            debug <<sum <<endl;
-
-
-            if(sum < 0)     ///  如果当前和小于0, 就舍弃它, 重新开始累加
+            if(dp[i - 1] <= 0)
             {
-                sum = 0;
+                dp[i] = array[i];
+#ifdef __tmain
+                temp = i;
+#endif  // __tmain
             }
-            else if(sum > maxSum)   ///  否则的话累计当前和
+            else
             {
-                maxSum = sum;
+                dp[i] = array[i] + dp[i - 1];
             }
             
-            ///  保存数据中的最大值
-            ///  这种情况下是为了排除整个数组全为负数的特殊情况
-            if(array[i] > maxNum)
+            if(dp[i] > maxSum)
             {
-                maxNum = array[i];
-            }
+                maxSum = dp[i];
+#ifdef __tmain
+                start = temp;
+                end = i;
+#endif  // __tmain
+            }        
         }
-        
-        ///  如果数组最大值大于0, 那么我们就直接返回累计的最大和
-        ///  如果数组最大值为负数, 说明整个数组都是负数, 那么就返回数组最大值
-        return (maxNum > 0) ? maxSum : maxNum;
+
+        debug <<"[" <<start <<", " <<end <<"] = " <<maxSum <<endl;
+        return maxSum;
+
     }
 };
 
