@@ -4,7 +4,7 @@
 #include <algorithm>
 #include <sstream>
 using namespace std;
-
+asda
 //  µ÷ÊÔ¿ª¹Ø
 #define __tmain main
 
