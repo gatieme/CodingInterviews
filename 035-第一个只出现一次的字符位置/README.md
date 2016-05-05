@@ -136,13 +136,13 @@ public:
 
 
 ```cpp
-
 class Solution
 {
 public:
     int FirstNotRepeatingChar(string str)
     {
         int x[26] = {0}, y[26] = {0};
+
         for(unsigned int i = 0; i < str.size(); ++i)
         {
             //  小写字母
@@ -158,21 +158,22 @@ public:
                     //  出现多次, 就置标识-1
                     x[str[i] - 'a'] = -1;
                 }
+                debug <<str[i] <<", " <<x[str[i] - 'a'] <<endl;
             }
-
-            // 大写字母
-            if('A' <= str[i] && str[i] <= 'Z')
+            else if('A' <= str[i] && str[i] <= 'Z')      // 大写字母
             {
                 if(y[str[i] - 'A'] == 0)
                 {
                      //  首次出现保存出现位置
                      y[str[i] - 'A']= i + 1;
                 }
-                else
+                else 
                 {
                     //  出现多次, 就置标识-1
-                    y[str[i] - 'a']= -1;
+                    y[str[i] - 'A'] = -1;
                 }
+                debug <<str[i] <<", " <<y[str[i] - 'A'] <<endl;
+
             }
         }
 
@@ -187,7 +188,7 @@ public:
             {
                 res = min(res, x[i]);
             }
-            if(y[i] != 0 && x[i] != -1)
+            if(y[i] != 0 && y[i] != -1)
             {
                 res = min(res, y[i]);
             }
