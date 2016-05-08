@@ -40,8 +40,24 @@ public:
     {
         return TreeDepth(root, 0);
     }
+	
+	/// 递归方法一
+    int TreeDepthRecursion(TreeNode *root)
+    {
+        if(root == NULL)
+        {
+            return 0;
+        }
+        else
+        {
+            int leftDepth = TreeDepthRecursion(root->left);
+            int rightDepth = TreeDepthRecursion(root->right);
 
-    int TreeDepth(TreeNode *root, int depth)
+            return max(leftDepth, rightDepth) + 1;
+        }
+    }
+	///  递归方法二
+    int TreeDepthRecursion(TreeNode *root, int depth)
     {
         if(root == NULL)
         {
@@ -49,8 +65,8 @@ public:
         }
         else
         {
-            int leftDepth = TreeDepth(root->left, depth + 1);
-            int rightDepth = TreeDepth(root->right, depth + 1);
+            int leftDepth = TreeDepthRecursion(root->left, depth + 1);
+            int rightDepth = TreeDepthRecursion(root->right, depth + 1);
 
             return max(leftDepth, rightDepth);
         }
@@ -98,14 +114,31 @@ class Solution
 public:
     int TreeDepth(TreeNode* root)
     {
-        return TreeDepth(root, 0);
-        return LevelOrderDev(tree);
-        return LevelOrderUseEnd(tree);
-        return LevelOrderUseSize(tree);
-        return LevelOrderUsePoint(tree);
+        return TreeDepthRecursion(root);
+        //return TreeDepthRecursion(root, 0);        
+        //return LevelOrderDev(tree);
+        //return LevelOrderUseEnd(tree);
+        //return LevelOrderUseSize(tree);
+        //return LevelOrderUsePoint(tree);
     }
 
-    int TreeDepth(TreeNode *root, int depth)
+    int TreeDepthRecursion(TreeNode *root)
+    {
+        if(root == NULL)
+        {
+            return 0;
+        }
+        else
+        {
+            int leftDepth = TreeDepthRecursion(root->left);
+            int rightDepth = TreeDepthRecursion(root->right);
+
+            return max(leftDepth, rightDepth) + 1;
+        }
+    }
+
+
+    int TreeDepthRecursion(TreeNode *root, int depth)
     {
         if(root == NULL)
         {
@@ -113,8 +146,8 @@ public:
         }
         else
         {
-            int leftDepth = TreeDepth(root->left, depth + 1);
-            int rightDepth = TreeDepth(root->right, depth + 1);
+            int leftDepth = TreeDepthRecursion(root->left, depth + 1);
+            int rightDepth = TreeDepthRecursion(root->right, depth + 1);
 
             return max(leftDepth, rightDepth);
         }
