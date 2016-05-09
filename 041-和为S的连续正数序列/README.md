@@ -1,5 +1,7 @@
 #链接
 ------- 
+
+
 >牛客OJ：[和为S的连续正数序列](http://www.nowcoder.com/practice/c451a3fd84b64cb19485dad758a55ebe?tpId=13&tqId=11194&rp=2&ru=%2Fta%2Fcoding-interviews&qru=%2Fta%2Fcoding-interviews%2Fquestion-ranking)
 > 
 >九度OJ：http://ac.jobdu.com/problem.php?pid=1354
