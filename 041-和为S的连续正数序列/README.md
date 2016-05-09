@@ -40,6 +40,11 @@
 #题目一：和为sum的两个数
 -------
 
+>参见
+>
+>[LeetCode题解--1. Two Sum](
+http://blog.csdn.net/gatieme/article/details/50596965)
+
 ##题目描述
 -------
 
