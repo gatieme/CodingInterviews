@@ -2,7 +2,6 @@
 
 using namespace std;
 
-//  调试开关
 #define __tmain main
 
 #ifdef __tmain
@@ -16,6 +15,14 @@ using namespace std;
 #endif // __tmain
 
 
+class Solution
+{
+public:
+    void FindNumsAppearOnce(vector<int> data, int *num1, int *num2)
+    {
+
+    }
+};
 
 
 int __tmain( )
