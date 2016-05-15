@@ -34,13 +34,20 @@ public:
         for (auto i : str)
         {//把str中的全部压入
             debug <<i <<endl;
-            stk1.push(i);
+            //stk1.push(i);
         }
+        //  通过将字符串压入栈中, 现在出栈顺序正好是入展顺序的逆序
+        //  即我们实现了一次整个字符串的翻转
+
+        //  接下来我们翻转每个单词
+        //  只要不是空格就一直入栈(实现翻转)
+        //  遇见空格的时候，就读取栈中元素(出栈的顺序正好是每个单词的顺序)
         while (!stk1.empty())
         {
             if (stk1.top() != ' ')
             {   //没有遇到空格 就再弹出 压到第二个栈
                 stk2.push(stk1.top());
+                //debug <<stk1.top( );
                 stk1.pop();
             }
             else
@@ -48,6 +55,7 @@ public:
                 while (!stk2.empty())
                 {
                     result += stk2.top();
+                    debug <<stk2.top( );
                     stk2.pop();
                 }
                 result += stk1.top();//空格也要加上
