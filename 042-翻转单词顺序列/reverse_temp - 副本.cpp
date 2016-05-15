@@ -36,13 +36,17 @@ public:
             debug <<i <<endl;
             stk1.push(i);
         }
-        while (!stk1.empty()) {
-            if (stk1.top() != ' ') {//没有遇到空格 就再弹出 压到第二个栈
+        while (!stk1.empty())
+        {
+            if (stk1.top() != ' ')
+            {   //没有遇到空格 就再弹出 压到第二个栈
                 stk2.push(stk1.top());
                 stk1.pop();
             }
-            else {//如果遇到了空格 一个单词结束了  将第二个栈里的弹出
-                while (!stk2.empty()) {
+            else
+            {   //如果遇到了空格 一个单词结束了  将第二个栈里的弹出
+                while (!stk2.empty())
+                {
                     result += stk2.top();
                     stk2.pop();
                 }
