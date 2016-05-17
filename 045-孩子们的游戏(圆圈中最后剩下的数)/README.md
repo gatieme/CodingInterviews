@@ -198,14 +198,17 @@ public:
         }
 
         int last = 0;
+        debug <<"F[" <<0 <<"] = " <<last <<endl;
+
         for(int step = 2; step <= n; step++)
         {
             last = (last + m) % step;
-            debug <<"step = " <<(step - 1) <<", " <<last <<" leave" <<endl;
+            debug <<"F[" <<step - 1 <<"] = " <<last <<endl;
         }
-        return (last);
+        return last;
     }
 };
+
 ```
 
 当然也可以使用递归方式
