@@ -2,6 +2,7 @@
 
 using namespace std;
 
+
 //  µ÷ÊÔ¿ª¹Ø
 #define __tmain main
 

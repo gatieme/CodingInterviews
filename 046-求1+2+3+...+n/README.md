@@ -9,7 +9,7 @@
 >CSDN题解：[剑指Offer--046-求1+2+3+...+n](http://blog.csdn.net/gatieme/article/details/51485713)
 
 
-| 牛客OJ | 九度OJ | CSDN题解 | GitHub代码 | 
+| 牛客OJ | 九度OJ | CSDN题解 | GitHub代码 |
 | ------------- |:-------------:| -----:| -----:|
 |[046-求1+2+3+...+n](http://www.nowcoder.com/practice/7a0da8fc483247ff8800059e12d7caf1?tpId=13&tqId=11200&rp=2&ru=%2Fta%2Fcoding-interviews&qru=%2Fta%2Fcoding-interviews%2Fquestion-ranking) | [1506-求1+2+3+...+n](http://ac.jobdu.com/problem.php?pid=1506) | [剑指Offer--046-求1+2+3+...+n](http://blog.csdn.net/gatieme/article/details/51485713) | [046-求1+2+3+...+n](https://github.com/gatieme/CodingInterviews/tree/master/046-求1+2+3+...+n) |
 

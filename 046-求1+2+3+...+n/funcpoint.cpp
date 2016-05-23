@@ -2,6 +2,7 @@
 
 using namespace std;
 
+
 //  调试开关
 #define __tmain main
 
