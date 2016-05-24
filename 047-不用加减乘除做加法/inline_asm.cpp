@@ -20,18 +20,18 @@ using namespace std;
 class Solution
 {
 public:
-    int Add(int a, int b)
+    int Add(int left, int right)
     {
         __asm__ __volatile__
         (
             //"lock;\n"
             "addl %1,%0;\n"     /* 相当于 add b, a结果存储在a中*/
-            : "=m"(a)
-            : "r"(b), "m"(a)
+            : "=m"(left)
+            : "r"(right), "m"(left)
           //  :
         );
 
-        return a;
+        return left;
     }
 };
 
