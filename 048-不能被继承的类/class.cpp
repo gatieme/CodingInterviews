@@ -17,10 +17,29 @@ using namespace std;
 #endif // __tmain
 
 
+class SealedClass
+{
+public  :
+    static SealedClass* GetInstance( )
+    {
+        return new SealedClass( );
+    }
+private :
+    SealedClass( ){ }
+    ~SealedClass( ){ };
 
+};
+
+class Base : public SealedClass
+{
+
+
+};
 
 int __tmain( )
 {
-    debug <<"test" <<endl;
+    SealedClass *pb = Base::GetInstance( );
+    Base base;
+
     return 0;
 }
