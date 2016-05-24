@@ -4,14 +4,14 @@
 > 
 >九度OJ：未收录
 > 
->GitHub代码： [040-平衡二叉树](https://github.com/gatieme/CodingInterviews/tree/master/040-平衡二叉树)
+>GitHub代码： [039-平衡二叉树](https://github.com/gatieme/CodingInterviews/tree/master/039-平衡二叉树%5B附加%5D)
 >
->CSDN题解：[剑指Offer--040-平衡二叉树](http://blog.csdn.net/gatieme/article/details/51346422)
+>CSDN题解：[剑指Offer--039-平衡二叉树](http://blog.csdn.net/gatieme/article/details/51346422)
 
 
 | 牛客OJ | 九度OJ | CSDN题解 | GitHub代码 | 
 | ------------- |:-------------:| -----:|
-|[040-平衡二叉树](http://www.nowcoder.com/practice/8b3b95850edb4115918ecebdf1b4d222?tpId=13&tqId=11192&rp=2&ru=%2Fta%2Fcoding-interviews&qru=%2Fta%2Fcoding-interviews%2Fquestion-ranking) | 未收录 | [剑指Offer--040-平衡二叉树](http://blog.csdn.net/gatieme/article/details/51346422) | [040-平衡二叉树](https://github.com/gatieme/CodingInterviews/tree/master/040-平衡二叉树) |
+|[039-平衡二叉树](http://www.nowcoder.com/practice/8b3b95850edb4115918ecebdf1b4d222?tpId=13&tqId=11192&rp=2&ru=%2Fta%2Fcoding-interviews&qru=%2Fta%2Fcoding-interviews%2Fquestion-ranking) | 未收录 | [剑指Offer--039-平衡二叉树](http://blog.csdn.net/gatieme/article/details/51346422) | [039-平衡二叉树](https://github.com/gatieme/CodingInterviews/tree/master/039-平衡二叉树%5B附加%5D) |
 
 
 
