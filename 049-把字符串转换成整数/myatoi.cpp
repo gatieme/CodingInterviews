@@ -65,8 +65,8 @@ public:
             //  解决OVER_FLOW的问题
             //  INT_MAX     2147483647
             //  INT_MIN     -2147483648  minus = true
-            if((minus == true  && value > (long)((long)INT_MAX + 1))
-            || (minus == false && value > INT_MAX))
+            if((minus == true  && value > (unsigned long)(INT_MAX) + 1)     //  负数绝对值最大为INT_MAX + 1
+            || (minus == false && value > INT_MAX))                         //  正数最大值为INT_MAX
             {
                 debug <<value <<", " <<INT_MAX + 1 <<endl;
                 debug <<"to max than int" <<endl;
@@ -105,11 +105,10 @@ public:
 int __tmain(void)
 {
     Solution solu;
-    debug <<"INT_MAX" <<INT_MAX <<endl;
-    debug <<"INT_MIN" <<INT_MIN <<endl;
+    cout <<"INT_MAX" <<INT_MAX <<endl;
+    cout <<"INT_MIN" <<INT_MIN <<endl;
     cout <<solu.StrToInt("1a33") <<endl;
     cout <<solu.StrToInt("-2147483648") <<endl;
-
 
 
     return EXIT_SUCCESS;
