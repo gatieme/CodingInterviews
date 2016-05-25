@@ -41,7 +41,79 @@
 >
 >相同题目 [LeetCode题解--8. String to Integer (atoi)](http://blog.csdn.net/gatieme/article/details/51046065)
 
+
+
+简单问题，如下代码即是主要框架
+
+
+```
+for (; *str != '\0'; str++)
+{
+
+    if ('0' <= *str && *str <= '9')
+    {
+        value *= 10;
+        value += *str - '0';
+#ifdef DEBUG
+        printf("value = %lld\n", value);
+#endif
+    }
+    else
+    {
+        break;
+    }
+}
+```
+
+
+但是需要注意的问题，
+
+*   前面的空白字符
+```
+//  排除前导的空格
+while (*str == ' '  || *str == '\n' || *str == '\t')          //  排除前导的空格
+{
+    str++;
+}
+```
+
+*   数字前面可能有符号位+/-
+
+```
+//  判断符号位+ -
+if (*str == '+')
+{
+    str++;
+}
+else if (*str == '-')
+{
+    str++;
+    minus = true;
+}
+```
+
+*   overflow问题
+
+我的解决方案是在循环的过程中，只要一发生溢出就结束
+```
+//  解决OVER_FLOW的问题
+//  INT_MAX     2147483647
+//  INT_MIN     -2147483648  minus = true
+if((minus == true  && value > (unsigned long)(INT_MAX) + 1)     //  负数绝对值最大为INT_MAX + 1
+ || (minus == false && value > INT_MAX))                         //  正数最大值为INT_MAX
+{
+    debug <<value <<", " <<INT_MAX + 1 <<endl;
+    debug <<"to max than int" <<endl;
+    break;
+ }
+```
+
+
+如果最后再判断可能出现的问题，因为不管我们value用什么保存，long,long long，他们都有表示范围，都存在溢出，字符串过长时都会溢出，溢出后可能会发生截断，或者甚至读取成一个负数，那么我们循环结束后再判断就不可行。
+
+
 分析的已经很好了，我们直接上代码吧
+
 
 ```cpp
 #include <iostream>
