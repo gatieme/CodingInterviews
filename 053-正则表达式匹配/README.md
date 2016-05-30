@@ -14,6 +14,11 @@
 |[053-正则表达式匹配](http://www.nowcoder.com/practice/45327ae22b7b413ea21df13ee7d6429c?tpId=13&tqId=11205&rp=2&ru=%2Fta%2Fcoding-interviews&qru=%2Fta%2Fcoding-interviews%2Fquestion-ranking) | 未收录 | [剑指Offer--053-正则表达式匹配](http://blog.csdn.net/gatieme/article/details/51542072) | [053-正则表达式匹配](https://github.com/gatieme/CodingInterviews/tree/master/053-正则表达式匹配) |
 
 
+
+>[LeetCode题解--10. Regular Expression Matching](http://blog.csdn.net/gatieme/article/details/51049244)
+
+
+
 #题意
 -------
 
@@ -32,7 +37,6 @@
 
 
 
->[LeetCode题解--10. Regular Expression Matching](http://blog.csdn.net/gatieme/article/details/51049244)
 
 
 #分治–类似与深度优先搜索DFS
