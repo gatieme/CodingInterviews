@@ -75,6 +75,11 @@ public:
         return true;
     }
 };
+struct Bit
+{
+bool a:1;
+char b:4;
+};
 
 
 int __tmain( )
@@ -87,6 +92,6 @@ int __tmain( )
     {
         cout <<result <<endl;
     }
-
+    cout <<sizeof(Bit) <<endl;
     return 0;
 }
