@@ -9,7 +9,7 @@
 >CSDN题解：[剑指Offer--055-字符流中第一个不重复的字符](http://blog.csdn.net/gatieme/article/details/51598809)
 
 
-| 牛客OJ | 九度OJ | CSDN题解 | GitHub代码 | 
+| 牛客OJ | 九度OJ | CSDN题解 | GitHub代码 |
 | ------------- |:-------------:| -----:| -----:|
 |[055-字符流中第一个不重复的字符](http://www.nowcoder.com/practice/00de97733b8e4f97a3fb5c680ee10720?tpId=13&tqId=11207&rp=3&ru=/ta/coding-interviews&qru=/ta/coding-interviews/question-ranking) | 未收录 | [剑指Offer--055-字符流中第一个不重复的字符](http://blog.csdn.net/gatieme/article/details/51598809) | [055-字符流中第一个不重复的字符](https://github.com/gatieme/CodingInterviews/tree/master/055-字符流中第一个不重复的字符) |
 
@@ -42,7 +42,7 @@
 为了更加高效的解决这个问题, 需要在O(1)的时间内往数据容器里插入一个字符, 以及更新一个字符对应的值。
 
 
-#计数法
+#代码
 -------
 
 ```cpp
