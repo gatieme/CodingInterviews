@@ -5,7 +5,6 @@
 
 using namespace std;
 
-//  µ÷ÊÔ¿ª¹Ø
 #define __tmain main
 
 #ifdef __tmain
@@ -45,24 +44,18 @@ class Solution
 public:
     vector< vector<int> > Print(TreeNode *root)
     {
-        ///  ·½·¨1  -=>  Ñ­»·µ÷ÓÃµÝ¹é´òÓ¡Ã¿Ò»²ã
-        //LevelOrder(root);
+        LevelOrder(root);
 
-        ///  ·½·¨2  -=>  Ê¹ÓÃÁ½¸öË«¶Ë¶ÓÁÐ
-        //LevelOrderDev(root);
+        LevelOrderDev(root);
 
-        ///  ·½·¨3  -=>  Ê¹ÓÃË«Ö¸Õë±êÊ¶µ±Ç°Ö¸ÕëºÍ½áÊø
-        //LevelOrderUsePoint(root);
+        LevelOrderUsePoint(root);
 
-        ///  ·½·¨4  -=>  Ê¹ÓÃaprentºÍchildzsizesize±êÊ¶Ç°Ò»²ãºÍµ±Ç°²ãµÄ½Úµã¸öÊý
-        //LevelOrderUseSize(root);
+        LevelOrderUseSize(root);
 
-        ///  ·½·¨5  -=>  ÔÚ¶ÓÁÐÖÐ²åÈë½áÊø±êÊ¶À´±êÊ¶µ±Ç°²ã½áÊø
         LevelOrderUseEnd(root);
         return this->res;
     }
 
-    /// ´òÓ¡Ä³Ò»²ãµÄ½Úµã£¬µÝ¹éÊµÏÖ
     int PrintLevel(TreeNode *root, int level)
     {
         if(root == NULL || level < 0)
@@ -82,7 +75,6 @@ public:
         }
     }
 
-    ///  Ñ­»·Ã¿²ãÊä³öÆä½Úµã£¬µ÷ÓÃµÝ¹éº¯Êý
     void LevelOrder(TreeNode *root)
     {
         curr.clear( );           /// add for currult in vector
@@ -104,15 +96,12 @@ public:
     }
 
     //////////////////////////
-    ///  Ê¹ÓÃÁ½¸öË«¶Ë¶ÓÁÐ
     //////////////////////////
     void LevelOrderDev(TreeNode *root)
     {
         curr.clear( );           /// add for currult in vector
         res.clear( );
-        /// dequeË«¶Ë¶ÓÁÐ£¬
-        /// Ö§³Öµü´úÆ÷£¬ÓÐpush_back()·½·¨£¬
-        /// ¸úvector²î²»¶à£¬±Èvector¶àÁË¸öpop_front,push_front·½·¨
+
         if(root == NULL)
         {
             return ;
@@ -151,7 +140,6 @@ public:
 
 
     //////////////////////////
-    ///  Ê¹ÓÃË«Ö¸Õë±êÊ¶µ±Ç°Ö¸ÕëºÍ½áÊø
     //////////////////////////
     void LevelOrderUsePoint(TreeNode *root)
     {
@@ -170,19 +158,19 @@ public:
 
         while (cur < vec.size())
         {
-            end = vec.size();       ///  ÐÂµÄÒ»ÐÐ·ÃÎÊ¿ªÊ¼£¬ÖØÐÂ¶¨Î»endÓÚµ±Ç°ÐÐ×îºóÒ»¸ö½ÚµãµÄÏÂÒ»¸öÎ»ÖÃ
+            end = vec.size();
 
             while (cur < end)
             {
-                debug << vec[cur]->val;  ///  ·ÃÎÊ½Úµã
+                debug << vec[cur]->val;
                 curr.push_back(vec[cur]->val);        /// add for currult in vector
 
-                if (vec[cur]->left != NULL) ///  Ñ¹Èë×ó½Úµã
+                if (vec[cur]->left != NULL)
                 {
                     vec.push_back(vec[cur]->left);
 
                 }
-                if (vec[cur]->right != NULL)    ///  Ñ¹ÈëÓÒ½Úµã
+                if (vec[cur]->right != NULL)
                 {
                     vec.push_back(vec[cur]->right);
                 }
@@ -195,9 +183,7 @@ public:
     }
 
 
-    //////////////////////////
-    ///  Ê¹ÓÃaprentºÍchildzsizesize±êÊ¶Ç°Ò»²ãºÍµ±Ç°²ãµÄ½Úµã¸öÊý
-    //////////////////////////
+
     void LevelOrderUseSize(TreeNode *root)
     {
         curr.clear( );           /// add for currult in vector
@@ -245,9 +231,7 @@ public:
         }
     }
 
-    //////////////////////////
-    ///  ÔÚ¶ÓÁÐÖÐ²åÈë½áÊø±êÊ¶À´±êÊ¶µ±Ç°²ã½áÊø
-    //////////////////////////
+
     void LevelOrderUseEnd(TreeNode *root)
     {
         curr.clear( );           /// add for currult in vector
