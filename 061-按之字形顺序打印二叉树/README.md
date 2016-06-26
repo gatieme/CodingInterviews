@@ -9,8 +9,8 @@
 >CSDN题解：[剑指Offer--061-按之字形顺序打印二叉树](http://blog.csdn.net/gatieme/article/details/51763476)
 
 
-| 牛客OJ | 九度OJ | CSDN题解 | GitHub代码 | 
-| ------------- |:-------------:| -----:|
+| 牛客OJ | 九度OJ | CSDN题解 | GitHub代码 |
+| ------------- |:-------------:| -----:| -----:|
 |[061-按之字形顺序打印二叉树](http://www.nowcoder.com/practice/91b69814117f4e8097390d107d2efbe0?tpId=13&tqId=11212&rp=3&ru=/ta/coding-interviews&qru=/ta/coding-interviews/question-ranking) | 未收录 | [剑指Offer--061-按之字形顺序打印二叉树](http://blog.csdn.net/gatieme/article/details/51763476) | [061-按之字形顺序打印二叉树](https://github.com/gatieme/CodingInterviews/tree/master/061-按之字形顺序打印二叉树) |
 
 #题意
