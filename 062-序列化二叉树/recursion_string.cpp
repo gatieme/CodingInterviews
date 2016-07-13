@@ -1,5 +1,7 @@
 #include <iostream>
 #include <vector>
+#include <sstream>
+
 #include <cstring>
 #include <cstdio>
 
@@ -54,7 +56,6 @@ public:
     {
         if(root == NULL)
         {
-
             char *serial = new char[3];
             strcpy(serial, "#,");
             return serial;
@@ -66,8 +67,8 @@ public:
         const char  *c_str = str.c_str( );
         char        *serial = new char[str.length( ) + 1];
         strcpy(serial, c_str);
+
         return serial;
-        //return const_cast<char *>(str.c_str( ));
     }
 
     TreeNode* Deserialize(char *str)
@@ -82,20 +83,17 @@ public:
         return Deserialize(str, index);
     }
 
+private :
     void Serialize(TreeNode *root, string &str)
     {
         if(root == NULL)
         {
-//            debug <<"#,";
             str += "#,";
             return;
         }
 
         /*  先序遍历的方式, 序列化二叉树  */
-        char ch[10];
-        sprintf(ch,"%d,",root->val);
-        str += ch;
-//        debug <<ch;
+        str += (toString(root->val) + ",");
         Serialize(root->left, str);
         Serialize(root->right, str);
     }
@@ -125,6 +123,17 @@ public:
         root->right = Deserialize(str, index);
 
         return root;
+    }
+
+    string toString(int num)
+    {
+#if 0
+        char ch[10];
+        sprintf(ch,"%d,",root->val);
+#endif // 0
+        stringstream ss;
+        ss <<num;
+        return ss.str( );
     }
 };
 
