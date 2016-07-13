@@ -4,6 +4,7 @@ using namespace std;
 
 //http://blog.csdn.net/zuoyixiao/article/details/39525625
 //http://blog.csdn.net/asd7486/article/details/51800096
+//http://blog.jobbole.com/84712/
 //  调试开关
 #define __tmain main
 
