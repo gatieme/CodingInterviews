@@ -2,6 +2,8 @@
 #include <vector>
 #include <cstring>
 #include <cstdio>
+
+
 using namespace std;
 
 
@@ -20,6 +22,7 @@ using namespace std;
 
 
 #ifdef __tmain
+
 struct TreeNode
 {
     int val;
@@ -30,13 +33,14 @@ struct TreeNode
     {
     }
 };
+
 #endif
 
 
 
 /*
 用递归实现：
-序列化二叉树，按照中序遍历二叉树的顺序，先左节点，后右节点，当到‘#’时
+序列化二叉树，按照先序遍历二叉树的顺序，先左节点，后右节点，当到‘#’时
 候，说明左节点或者右节点为NULL，同样反序列二叉树也一个道理，需要注意的
 是在序列和反序列二叉树的时候，注意字符串与整数的转换，一般字符串转换为
 整数，用迭代循环实现，整数转换为字符串可以用sprintf实现或者itoa实现
@@ -45,61 +49,86 @@ struct TreeNode
 class Solution
 {
 public:
+    /*  序列化二叉树  */
     char* Serialize(TreeNode *root)
     {
-        if(root==NULL)
+        if(root == NULL)
         {
-            return NULL;
+
+            char *serial = new char[3];
+            strcpy(serial, "#,");
+            return serial;
         }
 
         string str;
-        Serialize(root,str);
+        Serialize(root, str);
 
-        return const_cast<char*>(str.c_str());
+        const char  *c_str = str.c_str( );
+        char        *serial = new char[str.length( ) + 1];
+        strcpy(serial, c_str);
+        return serial;
+        //return const_cast<char *>(str.c_str( ));
     }
 
-    TreeNode* Deserialize(char *str) {
-        if(str==NULL||*str=='\0')
-            return NULL;
-        int num=0;
-        return Deserialize(str,num);
-    }
-    void Serialize(TreeNode *root,string &str)
+    TreeNode* Deserialize(char *str)
     {
-        if(root==NULL)
+        if(str == NULL|| *str == '\0')
         {
-            str+="#,";
-            return ;
+            return NULL;
         }
+
+        int index = 0;
+
+        return Deserialize(str, index);
+    }
+
+    void Serialize(TreeNode *root, string &str)
+    {
+        if(root == NULL)
+        {
+//            debug <<"#,";
+            str += "#,";
+            return;
+        }
+
+        /*  先序遍历的方式, 序列化二叉树  */
         char ch[10];
-        sprintf(ch,"%d",root->val);
-        str+=",";
-        Serialize(root->left,str);
-        Serialize(root->right,str);
+        sprintf(ch,"%d,",root->val);
+        str += ch;
+//        debug <<ch;
+        Serialize(root->left, str);
+        Serialize(root->right, str);
     }
-    /*  */
-    TreeNode* Deserialize(char *str, int &num)
+
+
+    /*  反序列化二叉树
+     *  将一个序列化的字符串转换成二叉树  */
+    TreeNode* Deserialize(char *str, int &index)
     {
-        int val = 0;
-        if(str[num] == '#')
+        if(str[index] == '#')
         {
-            num+=2;
+            index += 2;
             return NULL;
         }
-        while(str[num] != ',' && str[num] != '\0')
-        {
-            val = val * 10 + str[num] - '0';
-            num++;
-        }
-        num++;
 
-        TreeNode *root=new TreeNode(val);
-        root->left = Deserialize(str,num);
-        root->right = Deserialize(str,num);
-        
+        /*  获取到节点的数字权值  */
+        int num = 0;
+        while(str[index] != ',' && str[index] != '\0')
+        {
+            num = num * 10 + (str[index] - '0');
+            index++;
+        }
+        index++;
+
+        TreeNode *root = new TreeNode(num);
+        root->left = Deserialize(str, index);
+        root->right = Deserialize(str, index);
+
         return root;
     }
 };
+
+
 int __tmain( )
 {
     TreeNode tree[7];
@@ -138,6 +167,7 @@ int __tmain( )
 
     Solution solu;
     cout <<solu.Serialize(tree) <<endl;
+    cout <<solu.Serialize(solu.Deserialize(solu.Serialize(tree))) <<endl;
 
 
     return 0;
