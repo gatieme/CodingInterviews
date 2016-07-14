@@ -1,6 +1,6 @@
 #include <iostream>
 #include <vector>
-#include <deque>
+#include <queue>
 #include <iterator>
 
 #include <climits>
@@ -21,11 +21,6 @@ using namespace std;
 
 #endif // __tmain
 
-/*  单调队列，O(n)
- *  引用马客（Mark）的解题思路，马客没加注释，我用自己的理解加下注释，希望对你们有用，
- *  如有错误，见谅，我会及时修改
- *  deque s中存储的是num的下标  */
-
 class Solution
 {
 public:
@@ -37,25 +32,31 @@ public:
             return res;
         }
 
-        for(int start = 0;
-            start <= (int)(num.size( ) - size);
-            start++)                    /*  循环所有窗口的开始位置  */
+        queue<int>      window;
+        queue<int>      max;
+        for(int i = 0; i < (int)num.size( ); i++)
         {
-            int end = start + size;     /*  窗口的结束位置  */
-
-            /*  找出滑动窗口的最大值  */
-            int max = INT_MIN;
-            for(int index = start; index < end; index++)
+            if(window.size( ) < size)
             {
-                if(num[index] > max)
+                window.push(num[i]);
+            }
+            else
+            {
+                /*  最前面元素划出窗口  */
+                window.pop( );
+                max.pop( );
+
+                /*  新元素入队  */
+                window.push(num[i]);
+                if(num[i] > max.back( ))
                 {
-                    max = num[index];
+                    max.push(num[i]);
+                }
+                else
+                {
+                    max.push(max.back( ));
                 }
             }
-
-            debug <<"[" <<start <<", " <<end <<"], max = " <<max <<endl;
-
-            res.push_back(max);
         }
 
         return res;
