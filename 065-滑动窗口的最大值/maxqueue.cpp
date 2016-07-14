@@ -23,48 +23,72 @@ using namespace std;
 
 class Solution
 {
-public:
-    vector<int> maxInWindows(const vector<int>& num, unsigned int size)
-    {
-        vector<int> res;
-        if(num.size() == 0 || size == 0)
+public :
+    /*  方式二：利用队列来解决,时间复杂度为O(n)
+        利用双端队列来实现单调队列(索引对应的值是单调的)  */
+   vector<int> maxInWindows(const vector<int>& num, unsigned int size)
+   {
+        unsigned int length = num.size( );
+        vector<int> result;
+
+        if(length == 0 || size == 0 || length < size)
         {
-            return res;
+            return result;
         }
 
-        queue<int>      window;
-        queue<int>      max;
-        for(int i = 0; i < (int)num.size( ); i++)
-        {
-            if(window.size( ) < size)
-            {
-                window.push(num[i]);
-            }
-            else
-            {
-                /*  最前面元素划出窗口  */
-                window.pop( );
-                max.pop( );
+        deque<int> indexQueue;
 
-                /*  新元素入队  */
-                window.push(num[i]);
-                if(num[i] > max.back( ))
-                {
-                    max.push(num[i]);
-                }
-                else
-                {
-                    max.push(max.back( ));
-                }
+        /*  第一个窗口的处理比较简单, 直接找到最大的那个即可  */
+        for(unsigned int i = 0;
+            i < size;
+            i++)
+        {
+            /*  删除队尾元素
+             *  对于当前元素num[i]
+             *  前面比k小的，直接移出队列
+             *  因为不再可能成为后面滑动窗口的最大值了  */
+            while(indexQueue.empty( ) != true
+               && num[i] >= num[indexQueue.back( )])
+            {
+                indexQueue.pop_back( );
             }
+            /*  将当前元素的下表压入队列中  */
+            indexQueue.push_back(i);
         }
 
-        return res;
+        /* 处理后续的滑动窗口*/
+        for(unsigned int i = size;
+            i < length;
+            i++)
+        {
+            /*  队列中的第一个元素是当前滑动窗口最大值的下标  */
+            result.push_back(num[indexQueue.front()]);
+
+            /*  删除队尾元素
+             *  对于当前元素num[i]
+             *  前面比k小的，直接移出队列
+             *  因为不再可能成为后面滑动窗口的最大值了  */
+            while(indexQueue.empty( ) != true
+               && num[i]>=num[indexQueue.back()])
+            {
+                indexQueue.pop_back();
+            }
+
+            /*  删除队首元素
+             *  前面比k大的X，
+             *  比较两者下标，判断X是否已不在窗口之内，
+             *  不在了，直接移出队列  */
+            if(indexQueue.empty( ) != true
+            && indexQueue.front( ) < (int)(i - size + 1))
+            {
+                indexQueue.pop_front( );
+            }
+            indexQueue.push_back(i);
+        }
+        result.push_back(num[indexQueue.front()]);
+        return result;
     }
-
 };
-
-
 
 int __tmain( )
 {
