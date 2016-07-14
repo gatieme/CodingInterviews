@@ -2,7 +2,7 @@
 #1    链接
 -------
 
->牛客OJ：[序列化二叉树](http://www.nowcoder.com/practice/ef068f602dde4d28aab2b210e859150a?tpId=13&tqId=11215&rp=4)
+>牛客OJ：[二叉搜索树的第K个结点](http://www.nowcoder.com/practice/ef068f602dde4d28aab2b210e859150a?tpId=13&tqId=11215&rp=4)
 > 
 >九度OJ：未收录
 > 
