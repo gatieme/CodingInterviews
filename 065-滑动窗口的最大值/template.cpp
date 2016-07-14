@@ -16,7 +16,8 @@ using namespace std;
 
 #endif // __tmain
 
-class Solution {
+class Solution
+{
 public:
     vector<int> maxInWindows(const vector<int>& num, unsigned int size)
     {
