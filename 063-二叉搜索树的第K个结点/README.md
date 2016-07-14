@@ -13,7 +13,7 @@
 
 | 牛客OJ | 九度OJ | CSDN题解 | GitHub代码 | 
 | ------------- |:-------------:| -----:| -----:|
-|[063-二叉搜索树的第K个结点](http://www.nowcoder.com/practice/91b69814117f4e8097390d107d2efbe0?rp=3) | 未收录 | [剑指Offer--063-二叉搜索树的第K个结点](http://blog.csdn.net/gatieme/article/details/51902530) | [063-二叉搜索树的第K个结点](https://github.com/gatieme/CodingInterviews/tree/master/063-二叉搜索树的第K个结点) |
+|[063-二叉搜索树的第K个结点](http://www.nowcoder.com/practice/ef068f602dde4d28aab2b210e859150a?tpId=13&tqId=11215&rp=4) | 未收录 | [剑指Offer--063-二叉搜索树的第K个结点](http://blog.csdn.net/gatieme/article/details/51902530) | [063-二叉搜索树的第K个结点](https://github.com/gatieme/CodingInterviews/tree/master/063-二叉搜索树的第K个结点) |
 
 #2    题意
 -------
