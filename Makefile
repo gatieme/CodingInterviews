@@ -1,5 +1,6 @@
 
-COMMIT="剑指Offer--064-数据流中的中位数--http://blog.csdn.net/gatieme/article/details/51908274"
+COMMIT="剑指Offer--062-序列化二叉树--http://blog.csdn.net/gatieme/article/details/51901268"
+
 
 GITHUB_COMMIT=$(COMMIT)
 
