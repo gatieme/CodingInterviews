@@ -1,5 +1,5 @@
 
-COMMIT="剑指Offer--065-滑动窗口的最大值--http://blog.csdn.net/gatieme/article/details/51915826"
+COMMIT="剑指Offer--题集目录索引--http://blog.csdn.net/gatieme/article/details/51916802"
 
 GITHUB_COMMIT=$(COMMIT)
 
