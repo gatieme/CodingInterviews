@@ -1,11 +1,13 @@
 | 牛客OJ | 九度OJ | CSDN题解 | GitHub代码 |
-|:-------:||:-------:||:-------:||:-------:|
+|-------||-------||-------||-------|
 | [牛客剑指Offer题目列表](http://www.nowcoder.com/ta/coding-interviews?page=) | [九度OJ剑指Offer题目列表](http://ac.jobdu.com/hhtproblems.php) | [剑指Offer](http://blog.csdn.net/gatieme/article/category/6174073) | [CodingInterviews--剑指Offer--名企面试官精讲典型编程题 ](https://github.com/gatieme/CodingInterviews) |
+
+
 
 <br>
 
 | 牛客OJ | 九度OJ | CSDN题解 | GitHub代码 |
-|:-------:||:-------:||:-------:||:-------:|
+|-------||-------||-------||-------|
 | [003--二维数组中的查找](http://www.nowcoder.com/practice/abc3fe2ce8e146608e868a70efebf62e?tpId=13&tqId=11154&rp=1&ru=/ta/coding-interviews&qru=/ta/coding-interviews/question-ranking)  | [1384-二维数组中的查找](http://ac.jobdu.com/problem.php?pid=1384) |  [剑指Offer--003--二维数组中的查找](http://blog.csdn.net/gatieme/article/details/51100125)  | [003二维数组中的查找](https://github.com/gatieme/CodingInterviews/tree/master/003-%E4%BA%8C%E7%BB%B4%E6%95%B0%E7%BB%84%E4%B8%AD%E7%9A%84%E6%9F%A5%E6%89%BE) |
 | [004--替换空格](http://www.nowcoder.com/practice/4060ac7e3e404ad1a894ef3e17650423?tpId=13&tqId=11155&rp=1&ru=/ta/coding-interviews&qru=/ta/coding-interviews/question-ranking)  | [1510-替换空格](http://ac.jobdu.com/problem.php?pid=1510)   | [剑指Offer--004-替换空格](http://blog.csdn.net/gatieme/article/details/51100630)   | [004-替换空格](https://github.com/gatieme/CodingInterviews/tree/master/004-%E6%9B%BF%E6%8D%A2%E7%A9%BA%E6%A0%BC)  |
 | [005--从尾到头打印链表](http://www.nowcoder.com/practice/d0267f7f55b3412ba93bd35cfa8e8035?tpId=13&tqId=11156&rp=1&ru=/ta/coding-interviews&qru=/ta/coding-interviews/question-ranking) | [1511-从尾到头打印链表](http://ac.jobdu.com/problem.php?pid=1511)   | [剑指Offer--005-从尾到头打印链表](http://blog.csdn.net/gatieme/article/details/51107632)   | [005-从尾到头打印链表](https://github.com/gatieme/CodingInterviews/tree/master/005-%E4%BB%8E%E5%B0%BE%E5%88%B0%E5%A4%B4%E6%89%93%E5%8D%B0%E9%93%BE%E8%A1%A8)  |
