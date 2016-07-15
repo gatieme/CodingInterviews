@@ -1,11 +1,10 @@
 | 牛客OJ | 九度OJ | CSDN题解 | GitHub代码 |
-|:-------:||:-------:||:-------:||:-------:|
+| ------------- |:-------------:| -----:|
 | [牛客剑指Offer题目列表](http://www.nowcoder.com/ta/coding-interviews?page=) | [九度OJ剑指Offer题目列表](http://ac.jobdu.com/hhtproblems.php) | [剑指Offer](http://blog.csdn.net/gatieme/article/category/6174073) | [CodingInterviews--剑指Offer--名企面试官精讲典型编程题 ](https://github.com/gatieme/CodingInterviews) | 
-
 <br>
 
 | 牛客OJ | 九度OJ | CSDN题解 | GitHub代码 |
-|:-------:||:-------:||:-------:||:-------:|
+| ------------- |:-------------:| -----:|
 | [003--二维数组中的查找](http://www.nowcoder.com/practice/abc3fe2ce8e146608e868a70efebf62e?tpId=13&tqId=11154&rp=1&ru=/ta/coding-interviews&qru=/ta/coding-interviews/question-ranking)  | [1384-二维数组中的查找](http://ac.jobdu.com/problem.php?pid=1384) |  [剑指Offer--003--二维数组中的查找](http://blog.csdn.net/gatieme/article/details/51100125)  | [003二维数组中的查找](https://github.com/gatieme/CodingInterviews/tree/master/003-%E4%BA%8C%E7%BB%B4%E6%95%B0%E7%BB%84%E4%B8%AD%E7%9A%84%E6%9F%A5%E6%89%BE) |
 | [004--替换空格](http://www.nowcoder.com/practice/4060ac7e3e404ad1a894ef3e17650423?tpId=13&tqId=11155&rp=1&ru=/ta/coding-interviews&qru=/ta/coding-interviews/question-ranking)  | [1510-替换空格](http://ac.jobdu.com/problem.php?pid=1510)   | [剑指Offer--004-替换空格](http://blog.csdn.net/gatieme/article/details/51100630)   | [004-替换空格](https://github.com/gatieme/CodingInterviews/tree/master/004-%E6%9B%BF%E6%8D%A2%E7%A9%BA%E6%A0%BC)  |
 | [005--从尾到头打印链表](http://www.nowcoder.com/practice/d0267f7f55b3412ba93bd35cfa8e8035?tpId=13&tqId=11156&rp=1&ru=/ta/coding-interviews&qru=/ta/coding-interviews/question-ranking) | [1511-从尾到头打印链表](http://ac.jobdu.com/problem.php?pid=1511)   | [剑指Offer--005-从尾到头打印链表](http://blog.csdn.net/gatieme/article/details/51107632)   | [005-从尾到头打印链表](https://github.com/gatieme/CodingInterviews/tree/master/005-%E4%BB%8E%E5%B0%BE%E5%88%B0%E5%A4%B4%E6%89%93%E5%8D%B0%E9%93%BE%E8%A1%A8)  |
@@ -69,3 +68,4 @@
 |[063-二叉搜索树的第K个结点](http://www.nowcoder.com/practice/ef068f602dde4d28aab2b210e859150a?tpId=13&tqId=11215&rp=4) | 未收录 | [剑指Offer--063-二叉搜索树的第K个结点](http://blog.csdn.net/gatieme/article/details/51902530) | [063-二叉搜索树的第K个结点](https://github.com/gatieme/CodingInterviews/tree/master/063-二叉搜索树的第K个结点) |
 |[064-数据流之中的中位数](http://www.nowcoder.com/practice/9be0172896bd43948f8a32fb954e1be1?tpId=13&tqId=11216&rp=4) | 未收录 | [剑指Offer--064-数据流之中的中位数](http://blog.csdn.net/gatieme/article/details/51908274) | [064-数据流之中的中位数](https://github.com/gatieme/CodingInterviews/tree/master/064-数据流之中的中位数) |
 |[065-滑动窗口的最大值](http://www.nowcoder.com/practice/1624bc35a45c42c0bc17d17fa0cba788?tpId=13&tqId=11217&rp=4) | 未收录 |  [剑指Offer--065-滑动窗口的最大值](http://blog.csdn.net/gatieme/article/details/51915826) | [065-滑动窗口的最大值](https://github.com/gatieme/CodingInterviews/tree/master/065-滑动窗口的最大值) |
+
