@@ -19,12 +19,11 @@ using namespace std;
 #define debug 0 && cout
 
 #endif // __tmain
-#include <iostream>
-#include <climits>
-#define MAX 100
-using namespace std;
 
-class stack
+
+#define MAX 100
+
+class Stack
 {
 private:
     int stackItem[MAX];
@@ -32,7 +31,7 @@ private:
     int stackTop;
     int maxValueIndex;
 public:
-    stack() : stackTop(-1), maxValueIndex(-1) {}
+    Stack() : stackTop(-1), maxValueIndex(-1) {}
     int size() { return stackTop + 1; }
     int empty() { return stackTop < 0 ? 1 : 0; }
 
@@ -87,13 +86,20 @@ public:
     }
 
 };
-class queue
+class Queue
 {
 private:
-    stack stackIn;
-    stack stackOut;
+    Stack stackIn;
+    Stack stackOut;
 public:
-    int size() { return stackIn.size() + stackOut.size(); }
+    int size( )
+    {
+        return stackIn.size( ) + stackOut.size( );
+    }
+    int max( )
+    {
+        return std::max(stackIn.max( ), stackOut.max( ));
+    }
 
     void enQueue(int val)
     {
@@ -113,19 +119,38 @@ public:
 
 class Solution
 {
-public :
+public      :
    vector<int> maxInWindows(const vector<int>& num, unsigned int size)
    {
-        unsigned int length = num.size( );
-        vector<int> result;
+        unsigned int    length = num.size( );
+        vector<int>     res;
 
         if(length == 0 || size == 0 || length < size)
         {
-            return result;
+            return res;
         }
+
+        Queue           que;
         for(int i = 0; i < num.size( ); i++)
         {
+            if(que.size( ) < size)
+            {
+                que.enQueue(num[i]);
+            }
+            else
+            {
+                res.push_back(que.max( ));
+
+                que.enQueue(num[i]);
+                que.deQueue( );
+            }
         }
+        if(que.size( ) == size)
+        {
+            res.push_back(que.max( ));
+        }
+
+        return res;
     }
 
 
