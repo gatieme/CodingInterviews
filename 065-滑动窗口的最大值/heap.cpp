@@ -43,6 +43,7 @@ public :
             i < num.size( );
             i++)
         {
+            //Q.push(Pair(num[i], i));  //构建size个元素的最大堆
             Pair p = Q.top( );
             res.push_back(p.first); //res[i - size] = p.first;
             while (p.second <= (i - size))
@@ -50,7 +51,7 @@ public :
                 Q.pop( );
                 p = Q.top( );
             }
-            Q.push(Pair(num[i], i));
+            Q.push(Pair(num[i], i));  //res[num.size( ) - size] = Q.top( ).first;
         }
         res.push_back(Q.top( ).first);  //res[num.size( ) - size] = Q.top( ).first;
 
@@ -62,8 +63,8 @@ int __tmain( )
 {
     Solution solu;
 
-    int array[] = { 2, 3, 4, 2, 6, 2, 5, 1 };
-    vector<int> vec(array, array + 8);
+    int array[] = { 2, 3, 4, 6};
+    vector<int> vec(array, array + 4);
 
     vector<int> res = solu.maxInWindows(vec, 3);
     copy(res.begin( ), res.end( ), ostream_iterator<int>(cout," "));
