@@ -15,7 +15,8 @@
 | ------------- |:-------------:| -----:|
 |[旋转数组的最小数字](http://www.nowcoder.com/practice/9f3231a991af4f55b95579b44b7a01ba?tpId=13&tqId=11159&rp=1&ru=%2Fta%2Fcoding-interviews&qru=%2Fta%2Fcoding-interviews%2Fquestion-rankingg)  | [1386-旋转数组的最小数字](http://ac.jobdu.com/problem.php?pid=1386)   | [剑指Offer--008-旋转数组的最小数字](http://blog.csdn.net/gatieme/article/details/51115386) | [008-旋转数组的最小数字](https://github.com/gatieme/CodingInterviews/tree/master/008-%E6%97%8B%E8%BD%AC%E6%95%B0%E7%BB%84%E7%9A%84%E6%9C%80%E5%B0%8F%E6%95%B0%E5%AD%97) |
 
-
+<br>
+**您也可以选择[回到目录-剑指Offer--题集目录索引](http://blog.csdn.net/gatieme/article/details/51916802)**
 
 #题意
 
