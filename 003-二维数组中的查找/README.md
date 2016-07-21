@@ -14,6 +14,12 @@
 | ------------- |:-------------:| -----:|
 | [二维数组中的查找](http://www.nowcoder.com/practice/abc3fe2ce8e146608e868a70efebf62e?tpId=13&tqId=11154&rp=1&ru=/ta/coding-interviews&qru=/ta/coding-interviews/question-ranking) | [二维数组中的查找](http://ac.jobdu.com/problem.php?pid=1384) | [gatiemee/CodingInterviews--003二维数组中的查找](https://github.com/gatieme/CodingInterviews/tree/master/003-%E4%BA%8C%E7%BB%B4%E6%95%B0%E7%BB%84%E4%B8%AD%E7%9A%84%E6%9F%A5%E6%89%BE) | [剑指Offer--003--二维数组中的查找](http://blog.csdn.net/gatieme/article/details/51100125) |
 
+<br>
+
+你也可以[回到目录--剑指Offer--题集目录索引](http://blog.csdn.net/gatieme/article/details/51916802)
+
+
+
 #题意
 -------
 

@@ -15,6 +15,9 @@
 | ------------- |:-------------:| -----:|
 | [从尾到头打印链表](http://www.nowcoder.com/practice/d0267f7f55b3412ba93bd35cfa8e8035?tpId=13&tqId=11156&rp=1&ru=/ta/coding-interviews&qru=/ta/coding-interviews/question-ranking) | [1511-从尾到头打印链表](http://ac.jobdu.com/problem.php?pid=1511)   | [剑指Offer--005-从尾到头打印链表](http://blog.csdn.net/gatieme/article/details/51107632)   | [005-从尾到头打印链表](https://github.com/gatieme/CodingInterviews/tree/master/005-%E4%BB%8E%E5%B0%BE%E5%88%B0%E5%A4%B4%E6%89%93%E5%8D%B0%E9%93%BE%E8%A1%A8)  |
 
+<br>
+你也可以选择**[回到目录--剑指Offer--题集目录索引](http://blog.csdn.net/gatieme/article/details/51916802)**
+
 
 #题意
 -------
@@ -37,6 +40,8 @@
 
 ##反转链表
 -------
+
+
 首先我们想到的就是**反转链表**了,如果把链表反转了，然后再返回头，这样再次遍历的时候就相当于从尾到头打印了。
 
 但是修改输入数据真的可行么？
@@ -181,6 +186,10 @@ int __tmain( )
 *    在递归结束时，将元素压入
 
 这样当递归结束进行返回时，会将递归栈中的数据依次压入vector中，而压入的顺序就是栈中的顺序，即从尾到头
+
+
+
+```c
 class Solution
 {
 public:
