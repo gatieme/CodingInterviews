@@ -12,6 +12,10 @@
 | ------------- |:-------------:| -----:| 
 |[二进制中1的个数](http://www.nowcoder.com/practice/c6c7742f5ba7442aada113136ddea0c3?tpId=13&tqId=11160&rp=1&ru=%2Fta%2Fcoding-interviews&qru=%2Fta%2Fcoding-interviews%2Fquestion-rankingg) | [1513-二进制中1的个数](http://ac.jobdu.com/problem.php?pid=1513) | [剑指Offer--010-二进制中1的个数](http://blog.csdn.net/gatieme/article/details/51122144) | [010-二进制中1的个数](https://github.com/gatieme/CodingInterviews/tree/master/010-二进制中1的个数)|
 
+
+<br>
+**您也可以选择[回到目录-剑指Offer--题集目录索引](http://blog.csdn.net/gatieme/article/details/51916802)**
+
 #题意
 
 -------
@@ -93,24 +97,18 @@ public:
 为了负数时候避免死循环，我们可以**不右移数字n，转而去移动测试位**
 
 那么思考我们的循环结束条件，flag一直左移（乘以2），当超出表示标识范围的时候，我们就可以终止了，但是这样子的话，最高位的符号位没有测试，因此要单独测试，同时由于会溢出，我们的flag需要用long来标识
+
 | 类型 | 范围 |
-| ------------- |:-------------:| -----:|
+| ------------- |:-------------:|
 |unsigned   int   | 0～4294967295   |
 | int  | 2147483648～2147483647 |
 | unsigned long |0～4294967295|
-
 | long   |2147483648～2147483647|
-
 | long long|最大值：9223372036854775807|
-
 | long long|最小值：-9223372036854775808|
-
 | unsigned long long|最大值：1844674407370955161|
-
 | __int64|最大值：9223372036854775807|
-
 | __int64|最小值：-9223372036854775808|
-
 | unsigned __int64|最大值：18446744073709551615
 
 
