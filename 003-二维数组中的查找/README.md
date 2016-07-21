@@ -25,9 +25,15 @@
 **输出描述**
 >查找到返回true，查找不到返回false
 
+![题目](./find.jpg)
+
 #暴力解法
 -------
+
+
 暴力的解法，肯定是用两层大循环来查找，不多说直接上代码
+
+
 ```cpp
 #include <iostream>
 #include <vector>
@@ -79,25 +85,43 @@ public:
 3.    如果是数组中元素大于要查找的数字，说明要查找的数字应该在当前位置的左边或上边。
 
 
+即
+<font color=0x00ffff>
+对于数组中的任何一个元素, 比它小的元素都在它的**左方或者上方**, 比它大的元素都在它的**右边或者下方** 
+</font>
 
 但是这两个区域还有可能有重叠，比如右边或下边会在右下角有重叠。
 
-解决方法：
+
+为了不重复的处理重叠的数据, 我们可以找几个特殊的起点, 比如
+
+| 起点 | 性质 | 可否作为起点
+|:-------:|:-------:|:-------:|
+| 左上角 | 没有上方元素(小)和左方元素(小)<br>只有下方元素(大)和右方元素(大) | 否 |
+| 右上角 | 没有上方元素(小), 和右方元素(大)<br>只有下方元素(大)和左方元素(小) | 是 |
+| 左下角 | 没有下方元素(大), 和左方元素(小)<br>只有上方元素(小)和右方元素(大) | 是 |
+| 右下角 | 没有下方元素(大), 和右方元素(大)<br>只有上方元素(小)和左方元素(小) | 否 |
+
+因此重叠问题的解决方法：
 
 *    如果查找从右上角开始，如果要查找的数字不在右上角，则每次可以剔除一列或一行。
 
-*    也可以从左下角开始，但是不能从左上角或者右下角开始。
+*    也可以从左下角开始
 
+*    但是不能从左上角或者右下角开始。
+
+因为如果选择右上角的元素,
 
 
 如图，即是我们在二维数组中查找7的轨迹
 
 
 
-![find7](./find7.jpg)　
+![find7](./find7.jpg)
 
 
-##从右上角的元素出发-------
+##从右上角的元素出发
+-------
 
 比如我们从右上角的数据开始出发
 
@@ -106,7 +130,75 @@ public:
 *   比他大的数必定在它的下侧，就往下找 
 
 ```cpp
-#include <iostream>#include <vector>using namespace std;#define __main mainclass Solution{public:    bool Find(vector<vector<int> > array,int target)    {        bool res = false;        int row = array.size( );        int col = array[0].size( );        //  我们从右上角的元素找起来        //  如果查找的元素比当前位置元素小, 就向左走        //  如果查找的元素比当前位置元素大, 就向下走        for(int i = 0, j = col -1;            (i >=0 && i < row) && (j >= 0 && j < col);)        {            if(target == array[i][j])            {                res = true;                break;            }            else if(target < array[i][j])     // 小的元素在当前位置左侧            {#ifdef __tmain                cout <<target <<" < " <<array[i][j] <<" turn left" <<endl;#endif // __tmain                j--;            }            else            {#ifdef __tmain                cout <<target <<" > " <<array[i][j] <<" turn down" <<endl;#endif // __tmain                i++;            }        }        return res;    }};int __main(){    int a1[] = { 1, 2, 8, 9, };    int a2[] = { 2, 4, 9, 12, };    int a3[] = { 4, 7, 10, 13, };    int a4[] = { 6, 8, 11, 15, };    vector<vector<int>> array;    array.push_back(vector<int>(a1, a1 + 4));    array.push_back(vector<int>(a2, a2 + 4));    array.push_back(vector<int>(a3, a3 + 4));    array.push_back(vector<int>(a4, a4 + 4));    Solution solu;    cout <<solu.Find(array, 7) <<endl;    return 0;}
+#include <iostream>
+#include <vector>
+
+using namespace std;
+
+
+
+#define __main main
+
+class Solution
+{
+public:
+    bool Find(vector<vector<int> > array,int target)
+    {
+        bool res = false;
+        int row = array.size( );
+        int col = array[0].size( );
+
+        //  我们从右上角的元素找起来
+        //  如果查找的元素比当前位置元素小, 就向左走
+        //  如果查找的元素比当前位置元素大, 就向下走
+        for(int i = 0, j = col -1;
+            (i >=0 && i < row) && (j >= 0 && j < col);)
+        {
+            if(target == array[i][j])
+            {
+                res = true;
+                break;
+            }
+            else if(target < array[i][j])     // 小的元素在当前位置左侧
+            {
+#ifdef __tmain
+                cout <<target <<" < " <<array[i][j] <<" turn left" <<endl;
+#endif // __tmain
+
+                j--;
+            }
+            else
+            {
+#ifdef __tmain
+                cout <<target <<" > " <<array[i][j] <<" turn down" <<endl;
+#endif // __tmain
+                i++;
+            }
+        }
+        return res;
+    }
+};
+
+
+
+
+int __main()
+{
+    int a1[] = { 1, 2, 8, 9, };
+    int a2[] = { 2, 4, 9, 12, };
+    int a3[] = { 4, 7, 10, 13, };
+    int a4[] = { 6, 8, 11, 15, };
+    vector<vector<int>> array;
+    array.push_back(vector<int>(a1, a1 + 4));
+    array.push_back(vector<int>(a2, a2 + 4));
+    array.push_back(vector<int>(a3, a3 + 4));
+    array.push_back(vector<int>(a4, a4 + 4));
+
+    Solution solu;
+    cout <<solu.Find(array, 7) <<endl;
+    return 0;
+}
+
 ```
 
 
