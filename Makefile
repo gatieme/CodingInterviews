@@ -8,10 +8,10 @@ COMMIT_6="剑指Offer–006-重构二叉树--http://blog.csdn.net/gatieme/articl
 COMMIT_7="剑指Offer–007-用两个栈实现队列--http://blog.csdn.net/gatieme/article/details/51112580"
 COMMIT_8="剑指Offer–008-旋转数组的最小数字--http://blog.csdn.net/gatieme/article/details/51115386"
 COMMIT_9="剑指Offer–009-斐波那契数列--http://blog.csdn.net/gatieme/article/details/51115810"
+COMMIT_10="剑指Offer–010-二进制中1的个数--http://blog.csdn.net/gatieme/article/details/51122144"
 
 
-GITHUB_COMMIT=$(COMMIT_8)
-
+GITHUB_COMMIT=$(COMMIT_10)
 
 all:github
 

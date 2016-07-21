@@ -22,7 +22,7 @@ public:
     int NumberOf1(int n)
     {
         int count = 0;
-
+        //  当输入负数的时候会出现死循环
         while(n)
         {
             if(n & 1 == 1)

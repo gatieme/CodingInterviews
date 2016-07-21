@@ -50,6 +50,7 @@ int __tmain( )
     Solution solu;
     cout <<solu.NumberOf1(1) <<endl;;
     cout <<solu.NumberOf1(2) <<endl;;
+    cout <<solu.NumberOf1(-3) <<endl;;
     cout <<solu.NumberOf1(-2147483648) <<endl;;
 
     return 0;
