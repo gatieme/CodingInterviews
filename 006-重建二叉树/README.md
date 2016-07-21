@@ -12,7 +12,7 @@
 
 
 | 牛客OJ | 九度OJ | CSDN题解 | GitHub代码 |
-| ------------- |:-------------:| -----:|
+| ------------- |:-------------:| -----:| -----:|
 | [重建二叉树](http://www.nowcoder.com/practice/8a19cbe657394eeaac2f6ea9b0f6fcf6?tpId=13&tqId=11157&rp=1&ru=%2Fta%2Fcoding-interviews&qru=%2Fta%2Fcoding-interviews%2Fquestion-ranking) | [1385-重建二叉树](http://ac.jobdu.com/problem.php?pid=1385)   | [剑指Offer--006-重构二叉树](http://blog.csdn.net/gatieme/article/details/51108612) | [006-重建二叉树](https://github.com/gatieme/CodingInterviews/tree/master/006-%E9%87%8D%E5%BB%BA%E4%BA%8C%E5%8F%89%E6%A0%91)  |
 
 <br>
