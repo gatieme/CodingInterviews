@@ -24,15 +24,17 @@ public:
             return 0;
         }
 
+        int low = 0, high = rotateArray.size( ) - 1;
         //  如果把排序数组前面0个元素搬到后面，也就是说其实没有旋转，
         //  那么第0个元素就是最小的元素
         //  因此我们将mid初始化为0
-        int mid = 0;
-        int low = 0, high = rotateArray.size( ) - 1;
+        int mid = low;
+#ifdef __tmain
         if(rotateArray[low] < rotateArray[high])
         {
             debug <<"数组未被旋转" <<endl;
         }
+#endif
         while(rotateArray[low] >= rotateArray[high])
         {
             //  如果前一个元素与后一个元素差一位
@@ -55,6 +57,7 @@ public:
                 debug <<"low == mid == high, so we should order it" <<endl;
                 return MinOrder(rotateArray, low, high);
             }
+
             //  如果该中间元素位于前面的递增子数组，那么它应该大于或者等于第一个指针指向的元素
             if(rotateArray[mid] >= rotateArray[low])
             {
@@ -84,7 +87,6 @@ private:
         }//for
         return result;
     }
-
 };
 
 int __tmain( )
