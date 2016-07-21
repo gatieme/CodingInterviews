@@ -11,7 +11,7 @@ COMMIT_9="剑指Offer–009-斐波那契数列--http://blog.csdn.net/gatieme/art
 COMMIT_10="剑指Offer–010-二进制中1的个数--http://blog.csdn.net/gatieme/article/details/51122144"
 
 
-GITHUB_COMMIT=$(COMMIT_10)
+GITHUB_COMMIT=$(COMMIT_8)
 
 all:github
 
