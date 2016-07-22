@@ -12,15 +12,10 @@
 | ------------- |:-------------:| -----:| 
 |[二进制中1的个数](http://www.nowcoder.com/practice/c6c7742f5ba7442aada113136ddea0c3?tpId=13&tqId=11160&rp=1&ru=%2Fta%2Fcoding-interviews&qru=%2Fta%2Fcoding-interviews%2Fquestion-rankingg) | [1513-二进制中1的个数](http://ac.jobdu.com/problem.php?pid=1513) | [剑指Offer--010-二进制中1的个数](http://blog.csdn.net/gatieme/article/details/51122144) | [010-二进制中1的个数](https://github.com/gatieme/CodingInterviews/tree/master/010-二进制中1的个数)|
 
-
-<<<<<<< HEAD
-<br>                                                                                                      
-您也可以选择[回到目录索引--剑指Offer--题集目录索引](http://blog.csdn.net/gatieme/article/details/51916802)  
-
-=======
 <br>
 **您也可以选择[回到目录-剑指Offer--题集目录索引](http://blog.csdn.net/gatieme/article/details/51916802)**
->>>>>>> 7eb4fdf32c45df71efc2a23b7ce4eaf29c2e5d1b
+
+
 
 #题意
 

@@ -1,4 +1,5 @@
 #include <iostream>
+#include <bitset>
 
 using namespace std;
 
@@ -21,14 +22,9 @@ class Solution
 public:
     int NumberOf1(int n)
     {
-        int count = 0;
+        bitset<32> bit(n);
+        return bit.count();
 
-        while(n)
-        {
-            ++count;
-            n = (n - 1) & n;
-        }
-        return count;
     }
 
 };
@@ -42,7 +38,6 @@ int __tmain( )
     Solution solu;
     cout <<solu.NumberOf1(1) <<endl;;
     cout <<solu.NumberOf1(2) <<endl;;
-    cout <<solu.NumberOf1(-3) <<endl;;
     cout <<solu.NumberOf1(-2147483648) <<endl;;
 
     return 0;
