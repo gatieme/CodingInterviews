@@ -3,7 +3,7 @@
 
 using namespace std;
 
-//  µ÷ÊÔ¿ª¹Ø
+//  è°ƒè¯•å¼€å…³
 #define __tmain main
 
 #ifdef __tmain
@@ -23,17 +23,11 @@ class Solutin
 public :
     void Print(int n)
     {
-        if(n <= 0)
+        int max = pow(10, n);
+        for(int i = 1; i < max; i++)
         {
-            return;
+            cout <<i <<endl;
         }
-
-    }
-
-
-    void Increment(int n)
-    {
-
     }
 
 };

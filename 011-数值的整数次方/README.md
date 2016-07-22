@@ -12,6 +12,11 @@
 | ------------- |:-------------:| -----:| 
 |[数值的整数次方](http://www.nowcoder.com/practice/1a834e5e3e1a4b7ba251417554e07c00?tpId=13&tqId=11165&rp=1&ru=/ta/coding-interviews&qru=/ta/coding-interviews/question-ranking) | [1514-数值的整数次方](http://ac.jobdu.com/problem.php?pid=1514) | [剑指Offer--011-数值的整数次方](http://blog.csdn.net/gatieme/article/details/51123043) | [011-数值的整数次方](https://github.com/gatieme/CodingInterviews/tree/master/011-数值的整数次方)|
 
+<br>
+**您也可以选择[回到目录-剑指Offer--题集目录索引](http://blog.csdn.net/gatieme/article/details/51916802)**
+
+
+
 
 #题意
 
