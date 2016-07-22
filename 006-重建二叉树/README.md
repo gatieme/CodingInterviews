@@ -1,56 +1,59 @@
-#Á´½Ó
+#é“¾æ¥
 ------- 
 
->Å£¿ÍOJ£º[ÖØ½¨¶ş²æÊ÷](http://www.nowcoder.com/practice/8a19cbe657394eeaac2f6ea9b0f6fcf6?tpId=13&tqId=11157&rp=1&ru=%2Fta%2Fcoding-interviews&qru=%2Fta%2Fcoding-interviews%2Fquestion-ranking) 
+>ç‰›å®¢OJï¼š[é‡å»ºäºŒå‰æ ‘](http://www.nowcoder.com/practice/8a19cbe657394eeaac2f6ea9b0f6fcf6?tpId=13&tqId=11157&rp=1&ru=%2Fta%2Fcoding-interviews&qru=%2Fta%2Fcoding-interviews%2Fquestion-ranking) 
 >
->¾Å¶ÈOJ£ºhttp://ac.jobdu.com/problem.php?pid=1385
+>ä¹åº¦OJï¼šhttp://ac.jobdu.com/problem.php?pid=1385
 >
->GitHub´úÂë£º [006-ÖØ½¨¶ş²æÊ÷](https://github.com/gatieme/CodingInterviews/tree/master/006-%E9%87%8D%E5%BB%BA%E4%BA%8C%E5%8F%89%E6%A0%91)  
+>GitHubä»£ç ï¼š [006-é‡å»ºäºŒå‰æ ‘](https://github.com/gatieme/CodingInterviews/tree/master/006-%E9%87%8D%E5%BB%BA%E4%BA%8C%E5%8F%89%E6%A0%91)  
 >
->CSDNÌâ½â£º[½£Ö¸Offer--006-ÖØ¹¹¶ş²æÊ÷](http://blog.csdn.net/gatieme/article/details/51108612)
+>CSDNé¢˜è§£ï¼š[å‰‘æŒ‡Offer--006-é‡æ„äºŒå‰æ ‘](http://blog.csdn.net/gatieme/article/details/51108612)
 
 
 
-| Å£¿ÍOJ | ¾Å¶ÈOJ | CSDNÌâ½â | GitHub´úÂë |
-| ------------- |:-------------:| -----:|
-| [ÖØ½¨¶ş²æÊ÷](http://www.nowcoder.com/practice/8a19cbe657394eeaac2f6ea9b0f6fcf6?tpId=13&tqId=11157&rp=1&ru=%2Fta%2Fcoding-interviews&qru=%2Fta%2Fcoding-interviews%2Fquestion-ranking) | [1385-ÖØ½¨¶ş²æÊ÷](http://ac.jobdu.com/problem.php?pid=1385)   | [½£Ö¸Offer--006-ÖØ¹¹¶ş²æÊ÷](http://blog.csdn.net/gatieme/article/details/51108612) | [006-ÖØ½¨¶ş²æÊ÷](https://github.com/gatieme/CodingInterviews/tree/master/006-%E9%87%8D%E5%BB%BA%E4%BA%8C%E5%8F%89%E6%A0%91)  |
+| ç‰›å®¢OJ | ä¹åº¦OJ | CSDNé¢˜è§£ | GitHubä»£ç  |
+| ------------- |:-------------:| -----:| -----:|
+| [é‡å»ºäºŒå‰æ ‘](http://www.nowcoder.com/practice/8a19cbe657394eeaac2f6ea9b0f6fcf6?tpId=13&tqId=11157&rp=1&ru=%2Fta%2Fcoding-interviews&qru=%2Fta%2Fcoding-interviews%2Fquestion-ranking) | [1385-é‡å»ºäºŒå‰æ ‘](http://ac.jobdu.com/problem.php?pid=1385)   | [å‰‘æŒ‡Offer--006-é‡æ„äºŒå‰æ ‘](http://blog.csdn.net/gatieme/article/details/51108612) | [006-é‡å»ºäºŒå‰æ ‘](https://github.com/gatieme/CodingInterviews/tree/master/006-%E9%87%8D%E5%BB%BA%E4%BA%8C%E5%8F%89%E6%A0%91)  |
 
+<br>
+**æ‚¨ä¹Ÿå¯ä»¥é€‰æ‹©[å›åˆ°ç›®å½•-å‰‘æŒ‡Offer--é¢˜é›†ç›®å½•ç´¢å¼•](http://blog.csdn.net/gatieme/article/details/51916802)**
 
-#ÌâÒâ
+#é¢˜æ„
 -------
-ÌâÄ¿ÃèÊö
+é¢˜ç›®æè¿°
 
 
->ÊäÈëÄ³¶ş²æÊ÷µÄÇ°Ğò±éÀúºÍÖĞĞò±éÀúµÄ½á¹û£¬ÇëÖØ½¨³ö¸Ã¶ş²æÊ÷¡£
+>è¾“å…¥æŸäºŒå‰æ ‘çš„å‰åºéå†å’Œä¸­åºéå†çš„ç»“æœï¼Œè¯·é‡å»ºå‡ºè¯¥äºŒå‰æ ‘ã€‚
 >
->¼ÙÉèÊäÈëµÄÇ°Ğò±éÀúºÍÖĞĞò±éÀúµÄ½á¹ûÖĞ¶¼²»º¬ÖØ¸´µÄÊı×Ö¡£
+>å‡è®¾è¾“å…¥çš„å‰åºéå†å’Œä¸­åºéå†çš„ç»“æœä¸­éƒ½ä¸å«é‡å¤çš„æ•°å­—ã€‚
 
-ÊäÈë
->Ç°Ğò±éÀúĞòÁĞ{1,2,4,7,3,5,6,8}
+è¾“å…¥
+>å‰åºéå†åºåˆ—{1,2,4,7,3,5,6,8}
 >
->ÖĞĞò±éÀúĞòÁĞ{4,7,2,1,5,3,8,6}
+>ä¸­åºéå†åºåˆ—{4,7,2,1,5,3,8,6}
 
 
-ÔòÖØ½¨¶ş²æÊ÷²¢·µ»Ø¡£
+åˆ™é‡å»ºäºŒå‰æ ‘å¹¶è¿”å›ã€‚
 
-#·ÖÎö
+#åˆ†æ
 -------
 
-ÕâµÀÌâ»¹ÊÇ±È½Ï¼òµ¥µÄ£¬ÎÒÃÇÖªµÀ
-*    Ç°Ğò±éÀúµÄË³ĞòÎª£º¸ù×óÓÒ
-*    ÖĞĞò±éÀúµÄË³ĞòÎª£º×ó¸ùÓÒ
+è¿™é“é¢˜è¿˜æ˜¯æ¯”è¾ƒç®€å•çš„ï¼Œæˆ‘ä»¬çŸ¥é“
+*    å‰åºéå†çš„é¡ºåºä¸ºï¼šæ ¹å·¦å³
+*    ä¸­åºéå†çš„é¡ºåºä¸ºï¼šå·¦æ ¹å³
 
-µİ¹éË¼Ïë
-1.    ÎÒÃÇÏÈ¸ù¾İÇ°Ğò±éÀúĞòÁĞµÄµÚÒ»¸öÈ·¶¨¸ù£¬È»ºóÔÚÖĞĞò±éÀúµÄĞòÁĞÖĞÕÒµ½¸ùµÄÎ»ÖÃ£¬¸ù×ó±ßµÄ¾ÍÊÇÆä×ó×ÓÊ÷£¬ÓÒ±ß¾ÍÊÇÆäÓÒ×ÓÊ÷
-2.    ¹¹½¨¸ùºÍ×óÓÒ×ÓÊ÷
-3.    µİ¹éµÄ½øĞĞ1ºÍ2
+é€’å½’æ€æƒ³
+1.    æˆ‘ä»¬å…ˆæ ¹æ®å‰åºéå†åºåˆ—çš„ç¬¬ä¸€ä¸ªç¡®å®šæ ¹ï¼Œç„¶ååœ¨ä¸­åºéå†çš„åºåˆ—ä¸­æ‰¾åˆ°æ ¹çš„ä½ç½®ï¼Œæ ¹å·¦è¾¹çš„å°±æ˜¯å…¶å·¦å­æ ‘ï¼Œå³è¾¹å°±æ˜¯å…¶å³å­æ ‘
+2.    æ„å»ºæ ¹å’Œå·¦å³å­æ ‘
+3.    é€’å½’çš„è¿›è¡Œ1å’Œ2
+
 ```cpp
 #include <iostream>
 #include <vector>
 
 using namespace std;
 
-//  µ÷ÊÔ¿ª¹Ø
+//  è°ƒè¯•å¼€å…³
 #define __tmain main
 
 #ifdef __tmain
@@ -116,14 +119,14 @@ class Solution
 public:
     struct TreeNode* reConstructBinaryTree(vector<int> pre,vector<int> in)
     {
-        //  Ç°Ğò±éÀúµÄ³¤¶È¸úÖĞĞò±éÀúµÄ³¤¶ÈÓ¦¸ÃÏàÍ¬
+        //  å‰åºéå†çš„é•¿åº¦è·Ÿä¸­åºéå†çš„é•¿åº¦åº”è¯¥ç›¸åŒ
         if(pre.size( ) != in.size( ))
         {
             debug <<"the length of PRE and IN should be smae" <<endl;
             return NULL;
         }
 
-        // ³¤¶È²»ÄÜÎª0
+        // é•¿åº¦ä¸èƒ½ä¸º0
         int size = pre.size( );
         if(size == 0)
         {
@@ -133,11 +136,11 @@ public:
 
         int length = pre.size( );
         debug <<"the length of your tree = " <<length <<endl;
-        int value = pre[0];      //  Ç°Ğò±éÀúµÄµÚÒ»¸ö½áµãÊÇ¸ù½Úµã
+        int value = pre[0];      //  å‰åºéå†çš„ç¬¬ä¸€ä¸ªç»“ç‚¹æ˜¯æ ¹èŠ‚ç‚¹
         TreeNode *root = new TreeNode(value);
 
         debug <<"the root is" <<root->val <<endl;
-        //  ÔÚÖĞĞò±éÀúÖĞ²éÕÒµ½¸ùµÄÎ»ÖÃ
+        //  åœ¨ä¸­åºéå†ä¸­æŸ¥æ‰¾åˆ°æ ¹çš„ä½ç½®
         int rootIndex = 0;
         for(rootIndex = 0; rootIndex < length; rootIndex++)
         {
@@ -153,11 +156,11 @@ public:
             return NULL;
         }
 
-        ///  Çø·Ö×ó×ÓÊ÷ºÍÓÒ×ÓÊ÷
-        ///  ÖĞĞò±éÀúÖĞ, ¸ù×ó±ßµÄ¾ÍÊÇ×ó×ÓÊı, ÓÒ±ßµÄ¾ÍÊÇÓÒ×ÓÊ÷
-        ///  Ç°Ğò±éÀúÖĞ, ¸ùºóÃæÊÇÏÈ±éÀú×ó×ÓÊ÷, È»ºóÊÇÓÒ×ÓÊ÷
+        ///  åŒºåˆ†å·¦å­æ ‘å’Œå³å­æ ‘
+        ///  ä¸­åºéå†ä¸­, æ ¹å·¦è¾¹çš„å°±æ˜¯å·¦å­æ•°, å³è¾¹çš„å°±æ˜¯å³å­æ ‘
+        ///  å‰åºéå†ä¸­, æ ¹åé¢æ˜¯å…ˆéå†å·¦å­æ ‘, ç„¶åæ˜¯å³å­æ ‘
 
-        ///  Ê×ÏÈÈ·¶¨×óÓÒ×ÓÊ÷µÄ³¤¶È, ´ÓÖĞĞò±éÀúinÖĞÈ·¶¨
+        ///  é¦–å…ˆç¡®å®šå·¦å³å­æ ‘çš„é•¿åº¦, ä»ä¸­åºéå†inä¸­ç¡®å®š
         int leftLength = rootIndex;
         int rightLength = length - 1 - rootIndex;
         debug <<"left length = " <<leftLength <<", rightLength = " <<rightLength <<endl;
@@ -167,18 +170,18 @@ public:
         {
             if(i < rootIndex)
             {
-                //  Ç°Ğò±éÀúµÄµÚÒ»¸öÊÇ¸ù½Úµã, ¸ùºóÃæµÄ(leftLegnth = rootIndex) - 1¸ö½ÚµãÊÇ×ó×ÓÊ÷, Òò´ËÊÇi+1
+                //  å‰åºéå†çš„ç¬¬ä¸€ä¸ªæ˜¯æ ¹èŠ‚ç‚¹, æ ¹åé¢çš„(leftLegnth = rootIndex) - 1ä¸ªèŠ‚ç‚¹æ˜¯å·¦å­æ ‘, å› æ­¤æ˜¯i+1
                 preLeft[i] = pre[i + 1];
-                //  ÖĞĞò±éÀúÇ°(leftLength = rootIndex) - 1¸ö½ÚµãÊÇ×ó×ÓÊ÷, µÚrootIndex¸ö½ÚµãÊÇ¸ù
+                //  ä¸­åºéå†å‰(leftLength = rootIndex) - 1ä¸ªèŠ‚ç‚¹æ˜¯å·¦å­æ ‘, ç¬¬rootIndexä¸ªèŠ‚ç‚¹æ˜¯æ ¹
                 inLeft[i] = in[i];
                 debug <<preLeft[i] <<inLeft[i] <<" ";
 
             }
             else if(i > rootIndex)
             {
-                //  Ç°Ğò±éÀúµÄµÚÒ»¸öÊÇ¸ù½Úµã, ¸ùºóÃæµÄ(leftLegnth = rootIndex) - 1¸ö½ÚµãÊÇ×ó×ÓÊ÷, ºóÃæÊÇÓÒ×ÓÊ÷
+                //  å‰åºéå†çš„ç¬¬ä¸€ä¸ªæ˜¯æ ¹èŠ‚ç‚¹, æ ¹åé¢çš„(leftLegnth = rootIndex) - 1ä¸ªèŠ‚ç‚¹æ˜¯å·¦å­æ ‘, åé¢æ˜¯å³å­æ ‘
                 preRight[i - rootIndex - 1] = pre[i];
-                //  ÖĞĞò±éÀúÇ°(leftLength = rootIndex) - 1¸ö½ÚµãÊÇ×ó×ÓÊ÷, µÚrootIndex¸ö½ÚµãÊÇ¸ù, È»ºóÊÇÓÒ×ÓÊ÷
+                //  ä¸­åºéå†å‰(leftLength = rootIndex) - 1ä¸ªèŠ‚ç‚¹æ˜¯å·¦å­æ ‘, ç¬¬rootIndexä¸ªèŠ‚ç‚¹æ˜¯æ ¹, ç„¶åæ˜¯å³å­æ ‘
                 inRight[i - rootIndex - 1] = in[i];
                 debug <<preRight[i - rootIndex - 1] <<inRight[i - rootIndex - 1] <<" ";
 

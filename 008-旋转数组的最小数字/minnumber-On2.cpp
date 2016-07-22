@@ -20,11 +20,13 @@ public:
     {
         for(int i = 0; i < rotateArray.size( ); i++)
         {
+            //  最大的元素后面哪个就是最小的元素
             if(rotateArray[i] > rotateArray[i + 1])
             {
                 return rotateArray[i + 1];
             }
         }
+        //  否则的话, 旋转次数为0, 第一个元素即是最小元素
         return rotateArray[0];
     }
 
