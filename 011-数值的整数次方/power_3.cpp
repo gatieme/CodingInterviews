@@ -1,5 +1,9 @@
 #include <iostream>
+#include <bitset>
+
 #include <cmath>
+
+
 using namespace std;
 
 //  调试开关
@@ -27,6 +31,7 @@ public:
         {
             return 1.0;
         }
+
         //  指数为负数的情况下，底数不能为0
         if(Equal(base, 0.0) == true && exponent < 0)
         {
@@ -66,8 +71,10 @@ private :
             if((exponent & 1) == 1) //  当前指数为不为0
             {
                 res *= temp;        //  就计算一个乘积
+                debug <<"temp = " <<temp <<", " <<bitset<32>(exponent) <<endl;
             }
-            //  移位后, curr需要翻倍, 这样到下个
+
+            //  移位后, curr需要翻倍
             temp *= temp;           // 翻倍
             exponent >>= 1;         // 右移一位
         }
@@ -94,6 +101,6 @@ int __tmain( )
 {
     Solution solu;
 
-    cout <<solu.Power(10, 13) <<endl;
+    cout <<solu.Power(10, 8) <<endl;
     return 0;
 }

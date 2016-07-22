@@ -1,5 +1,8 @@
 #include <iostream>
+#include <bitset>
+
 #include <cmath>
+
 using namespace std;
 
 //  µ÷ÊÔ¿ª¹Ø
@@ -59,10 +62,12 @@ private :
         {
             return base;
         }
+
         double res = PowerNormal(base, exponent >> 1);
         res *= res;
         if((exponent & 1) == 1)
         {
+            debug <<"res = " <<res <<", exponent = " <<bitset<32>(exponent) <<endl;
             res *= base;
         }
 

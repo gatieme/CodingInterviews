@@ -9,9 +9,10 @@ COMMIT_7="剑指Offer–007-用两个栈实现队列--http://blog.csdn.net/gatie
 COMMIT_8="剑指Offer–008-旋转数组的最小数字--http://blog.csdn.net/gatieme/article/details/51115386"
 COMMIT_9="剑指Offer–009-斐波那契数列--http://blog.csdn.net/gatieme/article/details/51115810"
 COMMIT_10="剑指Offer–010-二进制中1的个数--http://blog.csdn.net/gatieme/article/details/51122144"
+COMMIT_11="剑指Offer--011-数值的整数次方--http://blog.csdn.net/gatieme/article/details/51123043"
+COMMIT_12=""
 
-
-GITHUB_COMMIT=$(COMMIT_10)
+GITHUB_COMMIT=$(COMMIT_11)
 
 all:github
 

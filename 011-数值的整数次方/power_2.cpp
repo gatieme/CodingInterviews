@@ -27,6 +27,7 @@ public:
         {
             return 1.0;
         }
+
         //  指数为负数的情况下，底数不能为0
         if(Equal(base, 0.0) == true && exponent < 0)
         {
