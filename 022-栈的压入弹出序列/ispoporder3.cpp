@@ -1,6 +1,8 @@
 #include <iostream>
 #include <stack>
 #include <vector>
+#include <iterator>
+
 
 using namespace std;
 
@@ -32,13 +34,33 @@ public:
         {
             if(pushV[i] == popV[0])
             {
+                debug <<"push  " <<pushV[i] <<endl;
+#ifdef  __tmain
+                cout <<"STACK : ";
+                copy(pushV.begin( ), pushV.begin( ) + i + 1, ostream_iterator<int>(cout," "));
+                cout <<endl;
+#endif
+                debug <<"pop  " <<pushV[i] <<endl;
                 pushV.erase(pushV.begin( ) + i);
                 popV.erase(popV.begin( ));
-                i--;                                // 模拟出栈
+                i--;
+                // 模拟出栈
+#ifdef  __tmain
+                cout <<"STACK : ";
+                copy(pushV.begin( ), pushV.begin( ) + i + 1, ostream_iterator<int>(cout," "));
+                cout <<endl;
+#endif
+                debug <<"stack top  " <<pushV[i] <<", popV[0]= " <<popV[0] <<endl;
             }
             else
             {
+                debug <<"push " <<pushV[i] <<endl;
                 i++;                                //  模拟入栈
+#ifdef  __tmain
+                cout <<"STACK : ";
+                copy(pushV.begin( ), pushV.begin( ) + i, ostream_iterator<int>(cout," "));
+                cout <<endl;
+#endif
             }
         }
 
@@ -60,7 +82,7 @@ int __tmain( )
 
 	Solution solu;
 
-	cout <<solu.IsPopOrder(vector<int>(nPush, nPush + 5), vector<int>(nPop1, nPop1 + 5)) <<endl;
+	//cout <<solu.IsPopOrder(vector<int>(nPush, nPush + 5), vector<int>(nPop1, nPop1 + 5)) <<endl;
 	cout <<solu.IsPopOrder(vector<int>(nPush, nPush + 5), vector<int>(nPop2, nPop2 + 5)) <<endl;
 	cout <<solu.IsPopOrder(vector<int>(nPush, nPush + 5), vector<int>(nPop3, nPop3 + 5)) <<endl;
 	cout <<solu.IsPopOrder(vector<int>(nPush, nPush + 5), vector<int>(nPop4, nPop4 + 5)) <<endl;
