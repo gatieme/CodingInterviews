@@ -23,7 +23,7 @@ RETURN_TOP ="<br>**您也可以选择[回到目录-剑指Offer--题集目录索�
 
 
 
-GITHUB_COMMIT=$(COMMIT_18)
+GITHUB_COMMIT=$(COMMIT_19)
 
 all:github
 
