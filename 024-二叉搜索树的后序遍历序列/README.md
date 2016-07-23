@@ -1,17 +1,22 @@
 #链接
-------- 
+-------
 >牛客OJ：[二叉搜索树的后序遍历序列](http://www.nowcoder.com/practice/a861533d45854474ac791d90e447bafd?tpId=13&tqId=11176&rp=2&ru=/ta/coding-interviews&qru=/ta/coding-interviews/question-ranking)
-> 
+>
 >九度OJ：http://ac.jobdu.com/problem.php?pid=1367
-> 
+>
 >GitHub代码： [024-二叉搜索树的后序遍历序列](https://github.com/gatieme/CodingInterviews/tree/master/024-二叉搜索树的后序遍历序列)
 >
 >CSDN题解：[剑指Offer--024-二叉搜索树的后序遍历序列](http://blog.csdn.net/gatieme/article/details/51213665)
 
 
-| 牛客OJ | 九度OJ | CSDN题解 | GitHub代码 | 
-| ------------- |:-------------:| -----:| 
+| 牛客OJ | 九度OJ | CSDN题解 | GitHub代码 |
+| ------- |:-------:| -----:|:-------:|
 |[二叉搜索树的后序遍历序列](http://www.nowcoder.com/practice/a861533d45854474ac791d90e447bafd?tpId=13&tqId=11176&rp=2&ru=/ta/coding-interviews&qru=/ta/coding-interviews/question-ranking) | [1523-二叉搜索树的后序遍历序列](http://ac.jobdu.com/problem.php?pid=1367) | [剑指Offer--024-二叉搜索树的后序遍历序列](http://blog.csdn.net/gatieme/article/details/51213665) | [024-二叉搜索树的后序遍历序列](https://github.com/gatieme/CodingInterviews/tree/master/024-二叉搜索树的后序遍历序列) |
+
+
+<br>**您也可以选择[回到目录-剑指Offer--题集目录索引](http://blog.csdn.net/gatieme/article/details/51916802)**
+
+
 
 #题意
 -------

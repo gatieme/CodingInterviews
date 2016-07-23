@@ -1,17 +1,17 @@
 #链接
-------- 
+-------
 
 
 >牛客OJ：[从上往下打印二叉树](http://www.nowcoder.com/practice/7fe2212963db4790b57431d9ed259701?tpId=13&tqId=11175&rp=2&ru=/ta/coding-interviews&qru=/ta/coding-interviews/question-ranking)
-> 
+>
 >九度OJ：http://ac.jobdu.com/problem.php?pid=1523
-> 
+>
 >GitHub代码： [023-从上往下打印二叉树](https://github.com/gatieme/CodingInterviews/tree/master/023-从上往下打印二叉树)
 >
 >CSDN题解：[剑指Offer--023-从上往下打印二叉树](http://blog.csdn.net/gatieme/article/details/51204976)
 
 
-| 牛客OJ | 九度OJ | CSDN题解 | GitHub代码 | 
+| 牛客OJ | 九度OJ | CSDN题解 | GitHub代码 |
 | ------------- |:-------------:| -----:| -------:|
 |[从上往下打印二叉树](http://www.nowcoder.com/practice/7fe2212963db4790b57431d9ed259701?tpId=13&tqId=11175&rp=2&ru=/ta/coding-interviews&qru=/ta/coding-interviews/question-ranking) | [1523-从上往下打印二叉树](http://ac.jobdu.com/problem.php?pid=1523) | [剑指Offer--023-从上往下打印二叉树](http://blog.csdn.net/gatieme/article/details/51204976) | [023-从上往下打印二叉树](https://github.com/gatieme/CodingInterviews/tree/master/023-从上往下打印二叉树) |
 
