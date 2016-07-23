@@ -21,14 +21,14 @@ COMMIT_20="剑指Offer–020-顺时针打印矩阵--http://blog.csdn.net/gatieme
 COMMIT_21="剑指Offer--021-支持min操作的栈--http://blog.csdn.net/gatieme/article/details/51184578"
 COMMIT_22="剑指Offer–022栈的压入、弹出序列--http://blog.csdn.net/gatieme/article/details/51190653"
 COMMIT_23="剑指Offer–023-从上往下打印二叉树--http://blog.csdn.net/gatieme/article/details/51204976"
-
+COMMIT_24="剑指Offer–024-二叉搜索树的后序遍历序列--http://blog.csdn.net/gatieme/article/details/51213665"
 
 
 RETURN_TOP ="<br>**您也可以选择[回到目录-剑指Offer--题集目录索引](http://blog.csdn.net/gatieme/article/details/51916802)**"
 
 
 
-GITHUB_COMMIT=$(COMMIT_23)
+GITHUB_COMMIT=$(COMMIT_24)
 
 all:github
 
