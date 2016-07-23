@@ -13,6 +13,11 @@
 | ------------- |:-------------:| -----:| 
 |[栈的压入、弹出序列](http://www.nowcoder.com/practice/4c776177d2c04c2494f2555c9fcc1e49?tpId=13&tqId=11173&rp=1&ru=/ta/coding-interviews&qru=/ta/coding-interviews/question-ranking) | [1522-包含min函数的栈](http://ac.jobdu.com/problem.php?pid=1522) | [剑指Offer--021-包含min函数的栈](http://blog.csdn.net/gatieme/article/details/51184578) | [021-包含min函数的栈](https://github.com/gatieme/CodingInterviews/tree/master/021-包含min函数的栈) |
 
+
+
+<br>**您也可以选择[回到目录-剑指Offer--题集目录索引](http://blog.csdn.net/gatieme/article/details/51916802)**
+
+
 #题意
 -------
 
