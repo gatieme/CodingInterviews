@@ -11,8 +11,19 @@ COMMIT_9="剑指Offer–009-斐波那契数列--http://blog.csdn.net/gatieme/art
 COMMIT_10="剑指Offer–010-二进制中1的个数--http://blog.csdn.net/gatieme/article/details/51122144"
 COMMIT_11="剑指Offer--011-数值的整数次方--http://blog.csdn.net/gatieme/article/details/51123043"
 COMMIT_12="剑指Offer--012-打印1到最大的N位数--http://blog.csdn.net/gatieme/article/details/51132108"
+COMMIT_14="剑指Offer–014-调整数组顺序使奇数位于偶数前面--http://blog.csdn.net/gatieme/article/details/51133277"
+COMMIT_15="剑指Offer–015-链表中倒数第k个结点--http://blog.csdn.net/gatieme/article/details/51133817"
+COMMIT_16=" 剑指Offer--016-反转链表--http://blog.csdn.net/gatieme/article/details/51135119"
+COMMIT_17=""
+COMMIT_18=""
+COMMIT_19=""
+COMMIT_20=""
 
-GITHUB_COMMIT=$(COMMIT_12)
+RETURN_TOP ="<br>**您也可以选择[回到目录-剑指Offer--题集目录索引](http://blog.csdn.net/gatieme/article/details/51916802)**"
+
+
+
+GITHUB_COMMIT=$(COMMIT_16)
 
 all:github
 
