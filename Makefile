@@ -19,13 +19,13 @@ COMMIT_18="剑指Offer–018-树的子结构--http://blog.csdn.net/gatieme/artic
 COMMIT_19="剑指Offer--019-二叉树的镜像--http://blog.csdn.net/gatieme/article/details/51175749"
 COMMIT_20="剑指Offer–020-顺时针打印矩阵--http://blog.csdn.net/gatieme/article/details/51916802"
 COMMIT_21="剑指Offer--021-支持min操作的栈--http://blog.csdn.net/gatieme/article/details/51184578"
-COMMIT_22=""
+COMMIT_22="剑指Offer–022栈的压入、弹出序列--http://blog.csdn.net/gatieme/article/details/51190653"
 
 RETURN_TOP ="<br>**您也可以选择[回到目录-剑指Offer--题集目录索引](http://blog.csdn.net/gatieme/article/details/51916802)**"
 
 
 
-GITHUB_COMMIT=$(COMMIT_21)
+GITHUB_COMMIT=$(COMMIT_22)
 
 all:github
 
