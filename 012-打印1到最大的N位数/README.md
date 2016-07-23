@@ -15,6 +15,12 @@
 | 未收录  | [1515-打印1到最大的N位数](http://ac.jobdu.com/problem.php?pid=1515) | [剑指Offer--012-打印1到最大的N位数](http://blog.csdn.net/gatieme/article/details/51132108) | [012-打印1到最大的N位数](https://github.com/gatieme/CodingInterviews/tree/master/012-%E6%89%93%E5%8D%B01%E5%88%B0%E6%9C%80%E5%A4%A7%E7%9A%84N%E4%BD%8D%E6%95%B0)|
 
 
+
+<br>
+**您也可以选择[回到目录-剑指Offer--题集目录索引](http://blog.csdn.net/gatieme/article/details/51916802)**
+
+
+
 #题意
 -------
 
