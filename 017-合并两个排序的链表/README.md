@@ -24,6 +24,9 @@
 >[LeetCodet题解--23. Merge k Sorted Lists（合并K个已排序的链表）](http://blog.csdn.net/gatieme/article/details/51097730)
 
 
+<br>**您也可以选择[回到目录-剑指Offer--题集目录索引](http://blog.csdn.net/gatieme/article/details/51916802)**
+
+
 
 #题意
 -------
