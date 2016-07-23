@@ -115,6 +115,7 @@ public :
             }
         }
     }
+
 private :
     int             m_N;                    //  N位数
     char            *m_number;              //  存储数据的字符串

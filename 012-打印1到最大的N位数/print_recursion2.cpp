@@ -31,14 +31,15 @@ public :
         char *number = new char[n + 1];
         number[n] = '\0';
 
-
-        //  最高位位循环0~9
+        PrintToMaxOfNDigitsRecursively(number, n, -1);
+        //  最地位循环0~9
+        /*
         for(int i = 0; i < 10; i++)
         {
             debug <<"now list all " <<i <<"in the low position" <<endl;
             number[0] = i + '0';
             PrintToMaxOfNDigitsRecursively(number, n, 0);
-        }
+        }*/
 
         delete[] number;
     }
