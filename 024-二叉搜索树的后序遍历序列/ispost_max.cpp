@@ -1,6 +1,7 @@
 #include <iostream>
 #include <vector>
 #include <stack>
+
 using namespace std;
 
 //  调试开关
@@ -16,7 +17,8 @@ using namespace std;
 
 #endif // __tmain
 
-class Solution {
+class Solution
+{
 public:
     ///  后序是 左右根
     ///  那么我们的节点
@@ -31,6 +33,7 @@ public:
         int it = sequence.size( ) - 1;
         do
         {
+            debug <<"push " <<sequence[it] <<endl;
             s.push(sequence[it]);
             it--;
         }while(it >= 0 && sequence[it] > sequence[it + 1]);
@@ -51,8 +54,8 @@ public:
             {
 
                 max = s.top();
-                cout <<"max = " <<max <<endl;
-                s.pop();
+                debug <<"pop max = " <<max <<endl;
+                s.pop( );
             }
             s.push(sequence[it]);
         }
@@ -71,9 +74,9 @@ int __tmain( )
 
 
 
-    int a[] = { 1, 2, 3 };
+    int a[] = { 4, 8, 6, 12, 16, 14, 10 };
 
-    vector<int> vec(a, a + 3);
+    vector<int> vec(a, a + 7);
 
     Solution solu;
     cout <<solu.VerifySquenceOfBST(vec) <<endl;
