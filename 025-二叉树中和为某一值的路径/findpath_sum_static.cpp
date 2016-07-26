@@ -18,14 +18,16 @@ using namespace std;
 
 
 #ifdef __tmain
-struct TreeNode {
+
+struct TreeNode
+{
 	int val;
 	struct TreeNode *left;
 	struct TreeNode *right;
-//	TreeNode(int x)
-//	:val(x), left(NULL), right(NULL)
-//    {
-//	}
+	TreeNode(int x = 0)
+	:val(x), left(NULL), right(NULL)
+    {
+	}
 };
 
 #endif // __tmain
@@ -33,35 +35,30 @@ struct TreeNode {
 class Solution
 {
 public:
+    vector< vector<int> > m_res;
 
     vector< vector<int> > FindPath(TreeNode* root, int expectNumber)
     {
-        vector< vector<int> > res;
-
         if(root == NULL)
         {
-            return res;
+            return m_res;
         }
-        FindPath(root, expectNumber, res);
+        vector<int> path;
+        FindPathRecursion(root, expectNumber);
 
-        return res;
+        return m_res;
     }
-protected :
-    void FindPath(TreeNode* root, int leftSum, vector< vector<int> > &res)
-    {
-        if(root == NULL)
-        {
-            return;
-        }
 
-        /// 用一个静态的变量来存储路径
+    void FindPathRecursion(TreeNode* root, int expectNumber)
+    {
+        static int currentSum = 0;
         static vector<int> path;
 
-        leftSum -= root->val;
+        currentSum += root->val;
         path.push_back(root->val);
-
+        debug <<"currentSum = " <<currentSum - root->val <<", now get " <<root->val <<", currentSum = "<<currentSum <<endl;
         ///
-        if(leftSum == 0
+        if(currentSum == expectNumber
         && ((root->left == NULL && root->right == NULL)))
         {
             debug <<"find a path" <<endl;
@@ -71,28 +68,29 @@ protected :
             }
             debug <<endl;
 
-            res.push_back(path);
-            cout <<"size = " <<res.size( ) <<endl;
+            m_res.push_back(path);
         }
-        else
+
+        if(root->left != NULL)
         {
-
-            if(root->left != NULL)
-            {
-                FindPath(root->left, leftSum, res);
-            }
-
-            if(root->right != NULL)
-            {
-                FindPath(root->right, leftSum, res);
-            }
+            FindPathRecursion(root->left, expectNumber);
         }
-        leftSum += root->val;
+        if(root->right != NULL)
+        {
+            FindPathRecursion(root->right, expectNumber);
+        }
+
+        ///
+        debug <<"currentSum = " <<currentSum <<", now pop " <<*(path.end( ) - 1)  <<", currentSum = "<<currentSum - root->val<<endl;
+        //  此处需要恢复currentSum的值,
+        //  因为currentSum作为静态变量存储
+        //  在函数递归调用返回时并不会自动恢复
+        //  而相反如果作为递归函数参数存储则不需要进行恢复
+        currentSum -= root->val;
         path.pop_back( );
     }
 
 };
-
 
 int __tmain( )
 {
@@ -120,7 +118,7 @@ int __tmain( )
     tree[4].right = NULL;
 
     Solution solu;
-    vector< vector<int> > res = solu.FindPath(&tree[0], 15);
+    vector< vector<int> > res = solu.FindPath(&tree[0], 22);
     cout <<"size = " <<res.size( ) <<endl;
     for(int i = 0; i < res.size( ); i++)
     {

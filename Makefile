@@ -22,13 +22,16 @@ COMMIT_21="剑指Offer--021-支持min操作的栈--http://blog.csdn.net/gatieme/
 COMMIT_22="剑指Offer–022栈的压入、弹出序列--http://blog.csdn.net/gatieme/article/details/51190653"
 COMMIT_23="剑指Offer–023-从上往下打印二叉树--http://blog.csdn.net/gatieme/article/details/51204976"
 COMMIT_24="剑指Offer–024-二叉搜索树的后序遍历序列--http://blog.csdn.net/gatieme/article/details/51213665"
-
+COMMIT_25="剑指Offer–025-二叉树中和为某一值的路径--http://blog.csdn.net/gatieme/article/details/51214182"
+COMMIT_26=""
+COMMIT_27=""
 
 RETURN_TOP ="<br>**您也可以选择[回到目录-剑指Offer--题集目录索引](http://blog.csdn.net/gatieme/article/details/51916802)**"
 
 
 
-GITHUB_COMMIT=$(COMMIT_24)
+GITHUB_COMMIT=$(COMMIT_25)
+
 
 all:github
 
