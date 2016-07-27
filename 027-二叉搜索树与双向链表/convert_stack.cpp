@@ -71,19 +71,20 @@ public:
                 currNode = nstack.top( );
                 debug <<currNode->val;
                 nstack.pop( );
-                
+
                 //  第一个节点
                 if(preNode == NULL)
                 {
                     head = currNode;
-                    preNode = currNode;
+                    // preNode = currNode;
                 }
                 else
                 {
                     preNode->right = currNode;
                     currNode->left = preNode;
-                    preNode = currNode;
+                    // preNode = currNode;
                 }
+                preNode = currNode;
                 currNode = currNode->right;
 
             }
@@ -121,6 +122,6 @@ int __tmain( )
         cout <<head->val <<" ";
         head = head->right;
     }
-    
+
     return 0;
 }
