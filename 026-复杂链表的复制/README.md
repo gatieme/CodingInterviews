@@ -24,6 +24,9 @@
 | ------------- |:-------------:| -----:| 
 |[复杂链表的复制](http://www.nowcoder.com/practice/f836b2c43afc4b35ad6adc41ec941dba?tpId=13&tqId=11178&rp=2&ru=%2Fta%2Fcoding-interviews&qru=%2Fta%2Fcoding-interviews%2Fquestion-ranking) | [1524-复杂链表的复制](http://ac.jobdu.com/problem.php?pid=1524) | [剑指Offer--026-复杂链表的复制](http://blog.csdn.net/gatieme/article/details/51227939) | [026-复杂链表的复制](https://github.com/gatieme/CodingInterviews/tree/master/026-复杂链表的复制) |
 
+<br>**您也可以选择[回到目录-剑指Offer--题集目录索引](http://blog.csdn.net/gatieme/article/details/51916802)**
+
+
 #题意
 -------
 
