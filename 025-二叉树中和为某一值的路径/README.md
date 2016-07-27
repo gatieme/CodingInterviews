@@ -1,5 +1,7 @@
 #链接
 ------- 
+
+
 >牛客OJ：[二叉树中和为某一值的路径](http://www.nowcoder.com/practice/b736e784e3e34731af99065031301bca?tpId=13&tqId=11177&rp=2&ru=%2Fta%2Fcoding-interviews&qru=%2Fta%2Fcoding-interviews%2Fquestion-ranking)
 > 
 >九度OJ：http://ac.jobdu.com/problem.php?pid=1368
@@ -9,8 +11,8 @@
 >CSDN题解：[剑指Offer--025-二叉树中和为某一值的路径](http://blog.csdn.net/gatieme/article/details/51214182)
 
 
-| 牛客OJ | 九度OJ | CSDN题解 | GitHub代码 | 
-| ------------- |:-------------:| -----:| 
+| 牛客OJ | 九度OJ  | CSDN题解 | GitHub代码 | 
+| ------ |:-------:| --------:|:----------:|
 |[二叉树中和为某一值的路径](http://www.nowcoder.com/practice/b736e784e3e34731af99065031301bca?tpId=13&tqId=11177&rp=2&ru=%2Fta%2Fcoding-interviews&qru=%2Fta%2Fcoding-interviews%2Fquestion-ranking) | [1368-二叉树中和为某一值的路径](http://ac.jobdu.com/problem.php?pid=1368) | [剑指Offer--025-二叉树中和为某一值的路径](http://blog.csdn.net/gatieme/article/details/51214182) | [025-二叉树中和为某一值的路径](https://github.com/gatieme/CodingInterviews/tree/master/025-二叉树中和为某一值的路径) |
 
 
@@ -34,6 +36,7 @@
 *    如果当前权值和与期待的和一致，那么说明我们找到了一个路径，保存或者输出
 *    否则的话就递归其左右孩子节点
 这里需要注意一个问题，就是递归退出的时候，权值和的信息是保存在递归栈中的会恢复，但是我们保存的路径是无法恢复的，那么我们就需要在递归返回时将数据弹出
+
 ```cpp
 #include <iostream>
 #include <vector>
@@ -56,13 +59,13 @@ using namespace std;
 
 #ifdef __tmain
 struct TreeNode {
-	int val;
-	struct TreeNode *left;
-	struct TreeNode *right;
-	TreeNode(int x)
-	:val(x), left(NULL), right(NULL)
+    int val;
+    struct TreeNode *left;
+    struct TreeNode *right;
+    TreeNode(int x)
+    :val(x), left(NULL), right(NULL)
     {
-	}
+    }
 };
 
 #endif // __tmain
@@ -112,19 +115,92 @@ public:
             FindPath(root->right, expectNumber, path, currentSum);
         }
 
+        //  此处不需要恢复currentSum和path的值:                                  
+        //  因为currentSum作为参数在函数递归调用返回时会自动恢复                 
+        //  而如果作为静态局部变量存储则需要进行恢复                             
+        //currentSum -= root->val;                                               
+       //path.pop_back( );      
+    }
+
+};
+```
+
+或者
+```c
+class Solution
+{
+public:
+    vector< vector<int> > m_res;
+
+    vector< vector<int> > FindPath(TreeNode* root, int expectNumber)
+    {
+        if(root == NULL)
+        {
+            return m_res;
+        }
+        vector<int> path;
+        FindPathRecursion(root, expectNumber);
+
+        return m_res;
+    }
+
+    void FindPathRecursion(TreeNode* root, int expectNumber)
+    {
+        static int currentSum = 0;
+        static vector<int> path;
+
+        currentSum += root->val;
+        path.push_back(root->val);
+        debug <<"currentSum = " <<currentSum - root->val <<", now get " <<root->val <<", currentSum = "<<currentSum <<endl;
         ///
+        if(currentSum == expectNumber
+        && ((root->left == NULL && root->right == NULL)))
+        {
+            debug <<"find a path" <<endl;
+            for(int i = 0; i < path.size( ); i++)
+            {
+                debug <<path[i] <<" ";
+            }
+            debug <<endl;
+
+            m_res.push_back(path);
+        }
+
+        if(root->left != NULL)
+        {
+            FindPathRecursion(root->left, expectNumber);
+        }
+        if(root->right != NULL)
+        {
+            FindPathRecursion(root->right, expectNumber);
+        }
+
+        debug <<"currentSum = " <<currentSum <<", now pop " <<*(path.end( ) - 1)  <<", currentSum = "<<currentSum - root->val<<endl;
+        //  作为静态变量存储需要恢复现场
+        currentSum -= root->val;
         path.pop_back( );
     }
 
 };
 ```
 
-
 #另外一种写法
 -------
 *    前面我们是求和，当然也可以用递减的方式
 *    结果我们保存在数据成员里面，我们肯定也可以用传参的方式实现
 *    单次的路径path原来是通过参数保存在栈中的，也可以用static来保存
+
+>在递归的过程中，用static的变量保存path参数的信息，用于这个变量在函数的静态生存周期内部，因此这种方法有个致命的缺点
+>
+>*  所有的对象共享这个函数，当多个对象同时操作的时候，path变量只有一个副本，因此线程不安全。
+>
+>*  如果在函数结束的时候，path变量没有被清空，那么即使不是多线程共享访问，两个对象顺序的访问这个对象，依然会造成根共享访问同样的问题
+>
+>我们会在解决第27题的过程中，就会体会到这个问题
+>
+>[剑指Offer--027-二叉搜索树与双向链表](http://blog.csdn.net/gatieme/article/details/51234524)
+
+
 ```cpp
 #include <iostream>
 #include <vector>
@@ -147,13 +223,13 @@ using namespace std;
 
 #ifdef __tmain
 struct TreeNode {
-	int val;
-	struct TreeNode *left;
-	struct TreeNode *right;
-//	TreeNode(int x)
-//	:val(x), left(NULL), right(NULL)
+    int val;
+    struct TreeNode *left;
+    struct TreeNode *right;
+//  TreeNode(int x)
+//  :val(x), left(NULL), right(NULL)
 //    {
-//	}
+//  }
 };
 
 #endif // __tmain
