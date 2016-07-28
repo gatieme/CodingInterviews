@@ -1,6 +1,8 @@
 #include <iostream>
 #include <vector>
 #include <algorithm>
+
+
 using namespace std;
 
 //  µ÷ÊÔ¿ª¹Ø
@@ -16,13 +18,13 @@ using namespace std;
 
 #endif // __tmain
 
+
 class Solution
 {
-protected:
 public:
     class greater_class
     {
-    public:
+      public:
         bool operator()(int a, int b)
         {
             return a > b;

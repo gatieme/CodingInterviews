@@ -20,8 +20,6 @@ using namespace std;
 
 class Solution
 {
-protected :
-
 public:
     vector<int> GetLeastNumbers_Solution(vector<int> numbers, int k)
     {

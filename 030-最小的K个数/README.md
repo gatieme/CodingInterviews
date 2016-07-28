@@ -1,18 +1,20 @@
 #链接
-------- 
+-------
 >牛客OJ：[最小的K个数](http://www.nowcoder.com/practice/6a296eb82cf844ca8539b57c23e6e9bf?tpId=13&tqId=11182&rp=2&ru=%2Fta%2Fcoding-interviews&qru=%2Fta%2Fcoding-interviews%2Fquestion-ranking)
-> 
+>
 >九度OJ：http://ac.jobdu.com/problem.php?pid=1371
-> 
+>
 >GitHub代码： [030-最小的K个数](https://github.com/gatieme/CodingInterviews/tree/master/030-最小的K个数)
 >
 >CSDN题解：[剑指Offer--030-最小的K个数](http://blog.csdn.net/gatieme/article/details/51277505)
 
 
-| 牛客OJ | 九度OJ | CSDN题解 | GitHub代码 | 
-| ------------- |:-------------:| -----:| 
+| 牛客OJ | 九度OJ | CSDN题解 | GitHub代码 |
+| ------ |:------:| --------:|:----------:|
 |[最小的K个数](http://www.nowcoder.com/practice/6a296eb82cf844ca8539b57c23e6e9bf?tpId=13&tqId=11182&rp=2&ru=%2Fta%2Fcoding-interviews&qru=%2Fta%2Fcoding-interviews%2Fquestion-ranking) | [1371-最小的K个数](http://ac.jobdu.com/problem.php?pid=1371) | [剑指Offer--030-最小的K个数](http://blog.csdn.net/gatieme/article/details/51277505) | [030-最小的K个数](https://github.com/gatieme/CodingInterviews/tree/master/030-最小的K个数) |
 
+
+<br>**您也可以选择[回到目录-剑指Offer--题集目录索引](http://blog.csdn.net/gatieme/article/details/51916802)**
 
 
 

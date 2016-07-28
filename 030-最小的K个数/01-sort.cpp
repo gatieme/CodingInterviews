@@ -169,9 +169,6 @@ public:
 
         return m_res;
     }
-
-
-
 };
 
 
