@@ -33,6 +33,7 @@ public:
         {
             return m_res;
         }
+
         sort(m_res.begin( ), m_res.end( ));
         PermutationRecursion(str, 0);
 
