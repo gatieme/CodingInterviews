@@ -44,7 +44,6 @@ public:
             {
                 debug <<numbers[i] <<", count = " <<count <<endl;
                 count = 1;
-
             }
             ///  最后一个数的个数需要特殊处理下
 #ifdef __tmain

@@ -1,17 +1,21 @@
 #链接
-------- 
+-------
 >牛客OJ：[数组中出现次数超过一半的数字](http://www.nowcoder.com/practice/e8a1b01a2df14cb2b228b30ee6a92163?tpId=13&tqId=11181&rp=2&ru=/ta/coding-interviews&qru=/ta/coding-interviews/question-ranking)
-> 
+>
 >九度OJ：http://ac.jobdu.com/problem.php?pid=1370
-> 
+>
 >GitHub代码： [029-数组中出现次数超过一半的数字](https://github.com/gatieme/CodingInterviews/tree/master/029-数组中出现次数超过一半的数字)
 >
 >CSDN题解：[剑指Offer--029-数组中出现次数超过一半的数字](http://blog.csdn.net/gatieme/article/details/51251311)
 
 
-| 牛客OJ | 九度OJ | CSDN题解 | GitHub代码 | 
-| ------------- |:-------------:| -----:| 
+| 牛客OJ | 九度OJ | CSDN题解 | GitHub代码 |
+| ------ |:------:| --------:|:----------:|
 |[数组中出现次数超过一半的数字](http://www.nowcoder.com/practice/e8a1b01a2df14cb2b228b30ee6a92163?tpId=13&tqId=11181&rp=2&ru=/ta/coding-interviews&qru=/ta/coding-interviews/question-ranking) | [1370-数组中出现次数超过一半的数字](http://ac.jobdu.com/problem.php?pid=1370) | [剑指Offer--029-数组中出现次数超过一半的数字](http://blog.csdn.net/gatieme/article/details/51251311) | [029-数组中出现次数超过一半的数字](https://github.com/gatieme/CodingInterviews/tree/master/029-数组中出现次数超过一半的数字) |
+
+<br>**您也可以选择[回到目录-剑指Offer--题集目录索引](http://blog.csdn.net/gatieme/article/details/51916802)**
+
+
 
 
 
@@ -24,9 +28,9 @@
 >
 >例如输入字符串abc,
 >
->则打印出由字符a,b,c所能排列出来的所有字符串abc,acb,bac,bca,cab和cba。 
+>则打印出由字符a,b,c所能排列出来的所有字符串abc,acb,bac,bca,cab和cba。
 >
->结果请按字母顺序输出。 
+>结果请按字母顺序输出。
 >
 >**注意**
 >输入一个字符串,长度不超过9(可能有字符重复),字符只包括大小写字母
@@ -340,7 +344,7 @@ public:
 
 *    遇到相同元素，count++; 遇到不相同元素，即为敌人，同归于尽,count--；
 
-*    当遇到count为0的情况，又以新的i值作为守阵地的士兵，继续下去，到最后还留在阵地上的士兵，有可能是主元素。 
+*    当遇到count为0的情况，又以新的i值作为守阵地的士兵，继续下去，到最后还留在阵地上的士兵，有可能是主元素。
 
 *    再加一次循环，记录这个士兵的个数看是否大于数组一般即可。
 
@@ -423,20 +427,20 @@ public:
 STL的count函数原型如下
 
 ```cpp
-template<class InputIterator, class T> inline  
-   size_t count(  
-      InputIterator First,  
-      InputIterator Last,  
-      const T& Value  
-)  
+template<class InputIterator, class T> inline
+   size_t count(
+      InputIterator First,
+      InputIterator Last,
+      const T& Value
+)
 ```
 algorithm头文件定义了一个count的函数，其功能类似于find。
 这个函数使用一对迭代器和一个值做参数，返回这个值出现次数的统计结果。
 count只能统计某个特定元素出现的次数，不够灵活，因此STL提供了count_if，前两个参数是iterator(迭代器)，表示查找半闭合区间的前后两个位置，第三个参数为一个用户定义的predicate function object，而predicate意思就是说是一个返回值是bool型的仿函数(function object，也称functor)。
 ```cpp
-template<class _InIt, class _Pr> inline  
-typename iterator_traits<_InIt>::difference_type  
-count_if(_InIt _First, _InIt _Last, _Pr _Pred);  
+template<class _InIt, class _Pr> inline
+typename iterator_traits<_InIt>::difference_type
+count_if(_InIt _First, _InIt _Last, _Pr _Pred);
 ```
 核心代码：
 ```cpp

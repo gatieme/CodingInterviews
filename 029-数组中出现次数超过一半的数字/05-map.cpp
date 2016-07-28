@@ -22,11 +22,11 @@ class Solution
 public:
     int MoreThanHalfNum_Solution(vector<int> numbers)
     {
-        map<int,int> hmap;  //  建立数字到出现次数的映射
+        map<int, int> hmap;  //  建立数字到出现次数的映射
 
-        int nsize = numbers.size();
+        int nsize = numbers.size( );
 
-        for(int i = 0 ; i < nsize; i ++)
+        for(int i = 0; i < nsize; i++)
         {
             if(hmap.find(numbers[i]) != hmap.end( ))
             {
@@ -37,8 +37,6 @@ public:
                 hmap[numbers[i]] = 1;
             }
         }
-
-
 
         //  查找到出现次数最多的那个元素
         for(map<int,int>::iterator it = hmap.begin( );

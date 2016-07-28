@@ -31,7 +31,8 @@ public:
         }
 
         int num = numbers[0], count = 1;
-        ///  阵地攻守
+
+        //  阵地攻守
         for(int i = 1; i < numbers.size( ); i++)
         {
             if(numbers[i] == num)    /// 友军, 计数器增加
@@ -43,10 +44,11 @@ public:
                 count--;
             }
             debug <<"numbers[i] = " <<numbers[i] <<", count = " <<count <<endl;
-            /// 所有士兵已经阵亡
+
+            // 所有士兵已经阵亡
             if(count == 0)
             {
-                num = numbers[i];    ///  重新设置镇守阵地的士兵
+                num = numbers[i];    //  重新设置镇守阵地的士兵
                 count = 1;
             }
         }
