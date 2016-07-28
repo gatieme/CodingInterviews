@@ -40,20 +40,24 @@ public:
 
             debug <<"n = " << n <<", " <<before <<" " <<current <<" " <<after <<endl;
 
-            if (current > 1)
+            if (current >= 1)
             {
+                // 如果current大于1，则出现1的次数为其高位before的数字加1
                 count += (before + 1) * i;
                 debug <<"count += (" <<before <<" + 1) * " <<i <<endl;
             }
             else if (current == 0)
             {
+                //  如果current位数为0, 1出现位数出现是其高位数字before
                 debug <<"count += " <<before <<" * " <<i <<endl;
                 count += before * i;
             }
+
             else if(current == 1)
             {
+                //  如果current等于1，则1出现的次数为其高位before + 其低位after
                 debug <<"count += " <<before <<" * " <<i <<" + " <<after <<" + 1" <<endl;
-                count += before * i + after + 1;
+                count += (before + after) + 1;
             }
             debug <<"count = " <<count <<endl;
 
