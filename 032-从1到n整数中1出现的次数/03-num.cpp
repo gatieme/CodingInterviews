@@ -33,7 +33,7 @@ public:
         long current = 0,after = 0,before = 0;
 
         while((n / i) != 0)
-        {          
+        {
             before = n / (i * 10);
             current = (n / i) % 10;
             after = n - (n / i) * i;

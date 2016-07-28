@@ -1,5 +1,7 @@
 #include <iostream>
+
 #include <cmath>
+
 using namespace std;
 
 //  调试开关
@@ -32,14 +34,17 @@ public:
 
     int CountOne(int n)
     {
+        debug <<"now N = " <<n <<endl;
         long count = 0;
 
         if (n == 0)
         {
+            debug <<"Fun(0) = " <<0 <<endl;
             count = 0;
         }
         else if (n > 1 && n < 10)
         {
+            debug <<"Fun(" <<n <<") = " <<1 <<endl;
             count =  1;
         }
         else
@@ -49,26 +54,28 @@ public:
             int bit = 0;
             while (highest >= 10)
             {
-                highest = highest / 10;
+                highest /= 10;
                 bit++;
             }
             //  循环结束时, bit表示n的位数, 而highest是其最高位的数字
 
             //int weight = (int)Math.Pow(10, bit);//代表最高位的权重，即最高位一个1代表的大小
             int weight = pow(10, bit);//代表最高位的权重，即最高位一个1代表的大小
+            int left = (highest == 1) ? (n - weight + 1) : weight;
 
-            if (highest == 1)
-            {
-                count = CountOne(weight - 1)
-                      + CountOne(n - weight)
-                      + (n - weight + 1);
-            }
-            else
-            {
-                count = highest * CountOne(weight - 1)
+            debug <<"Fun(" <<n <<") = "
+                  /*
+                  <<"Fun(10^" <<bit <<" - 1) + "
+                  <<"Fun(" <<n <<" - 10^" <<bit <<") + "
+                  <<weight <<" = "
+                  */
+                  <<highest <<" * Fun(" <<weight <<" - 1) + "
+                  <<"Fun(" <<n <<" - " <<highest <<" * " <<weight <<") + "
+                  <<weight <<endl;
+            count = highest * CountOne(weight - 1)
                       + CountOne(n - highest * weight)
-                      + weight;
-            }
+                      + left;
+            debug <<"Now will continue " <<weight - 1 <<", " <<n - highest * weight <<endl <<endl;
         }
 
         return count;
@@ -80,8 +87,10 @@ public:
 int __tmain( )
 {
     Solution solu;
+
     cout <<solu.NumberOf1Between1AndN_Solution(12) <<endl;
-    cout <<solu.NumberOf1Between1AndN_Solution(100) <<endl;
-    cout <<solu.NumberOf1Between1AndN_Solution(1000000000) <<endl;
+    cout <<solu.NumberOf1Between1AndN_Solution(132) <<endl;
+    cout <<solu.NumberOf1Between1AndN_Solution(232) <<endl;
+
     return 0;
 }
