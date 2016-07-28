@@ -37,20 +37,25 @@ public:
             before = n / (i * 10);
             current = (n / i) % 10;
             after = n - (n / i) * i;
+
+            debug <<"n = " << n <<", " <<before <<" " <<current <<" " <<after <<endl;
+
             if (current > 1)
             {
-                count = count + (before + 1) * i;
+                count += (before + 1) * i;
+                debug <<"count += (" <<before <<" + 1) * " <<i <<endl;
             }
             else if (current == 0)
             {
-                 count = count + before * i;
+                debug <<"count += " <<before <<" * " <<i <<endl;
+                count += before * i;
             }
             else if(current == 1)
             {
-                count = count + before * i + after + 1;
+                debug <<"count += " <<before <<" * " <<i <<" + " <<after <<" + 1" <<endl;
+                count += before * i + after + 1;
             }
-            debug <<before <<" " <<current <<" " <<after <<", count = " <<count <<endl;
-
+            debug <<"count = " <<count <<endl;
 
             i = i * 10;
 
@@ -67,7 +72,7 @@ int __tmain( )
 {
     Solution solu;
     cout <<solu.NumberOf1Between1AndN_Solution(12) <<endl;
-    cout <<solu.NumberOf1Between1AndN_Solution(100) <<endl;
-    cout <<solu.NumberOf1Between1AndN_Solution(1234) <<endl;
+    cout <<solu.NumberOf1Between1AndN_Solution(132) <<endl;
+    cout <<solu.NumberOf1Between1AndN_Solution(232) <<endl;
     return 0;
 }
