@@ -5,19 +5,23 @@
 >[字符串的全排列和组合算法](http://blog.csdn.net/hackbuteer1/article/details/7462447)
 
 #链接
-------- 
+-------
 >牛客OJ：[字符串的排列](http://www.nowcoder.com/practice/fe6b651b66ae47d7acce78ffdd9a96c7?tpId=13&tqId=11180&rp=2&ru=%2Fta%2Fcoding-interviews&qru=%2Fta%2Fcoding-interviews%2Fquestion-ranking)
-> 
+>
 >九度OJ：http://ac.jobdu.com/problem.php?pid=1369
-> 
+>
 >GitHub代码： [028-字符串的排列](https://github.com/gatieme/CodingInterviews/tree/master/028-字符串的排列)
 >
 >CSDN题解：[剑指Offer--028-字符串的排列](http://blog.csdn.net/gatieme/article/details/51251158)
 
 
-| 牛客OJ | 九度OJ | CSDN题解 | GitHub代码 | 
-| ------------- |:-------------:| -----:| 
+| 牛客OJ | 九度OJ | CSDN题解 | GitHub代码 |
+| ------ |:------:| --------:|:----------:|
 |[字符串的排列](http://www.nowcoder.com/practice/fe6b651b66ae47d7acce78ffdd9a96c7?tpId=13&tqId=11180&rp=2&ru=%2Fta%2Fcoding-interviews&qru=%2Fta%2Fcoding-interviews%2Fquestion-ranking) | [1369-字符串的排列](http://ac.jobdu.com/problem.php?pid=1369) | [剑指Offer--028-字符串的排列](http://blog.csdn.net/gatieme/article/details/51251158) | [028-字符串的排列](https://github.com/gatieme/CodingInterviews/tree/master/028-字符串的排列) |
+
+
+<br>**您也可以选择[回到目录-剑指Offer--题集目录索引](http://blog.csdn.net/gatieme/article/details/51916802)**
+
 
 
 #题意
@@ -29,9 +33,9 @@
 >
 >例如输入字符串abc,
 >
->则打印出由字符a,b,c所能排列出来的所有字符串abc,acb,bac,bca,cab和cba。 
+>则打印出由字符a,b,c所能排列出来的所有字符串abc,acb,bac,bca,cab和cba。
 >
->结果请按字母顺序输出。 
+>结果请按字母顺序输出。
 >
 >**注意**
 >输入一个字符串,长度不超过9(可能有字符重复),字符只包括大小写字母
@@ -111,7 +115,7 @@ public:
 
  ![全排列](./abc.jpg)
 
- 
+
 由于全排列就是从第一个数字起，每个数分别与它后面的数字交换，我们先尝试加个这样的判断——如果一个数与后面的数字相同那么这两个数就不交换 了。例如abb，第一个数与后面两个数交换得bab，bba。然后abb中第二个数和第三个数相同，就不用交换了。但是对bab，第二个数和第三个数不 同，则需要交换，得到bba。由于这里的bba和开始第一个数与第三个数交换的结果相同了，因此这个方法不行。
 
 换种思维，对abb，第一个数a与第二个数b交换得到bab，然后考虑第一个数与第三个数交换，此时由于第三个数等于第二个数，所以第一个数就不再用与第三个数交换了。再考虑bab，它的第二个数与第三个数交换可以解决bba。此时全排列生成完毕！

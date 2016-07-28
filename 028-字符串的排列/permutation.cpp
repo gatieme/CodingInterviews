@@ -23,7 +23,6 @@ class Solution
 {
 protected:
     vector<string> m_res;
-
 public:
 
     vector<string> Permutation(string str)
@@ -34,9 +33,9 @@ public:
         {
             return m_res;
         }
+        sort(m_res.begin( ), m_res.end( ));
         PermutationRecursion(str, 0);
 
-        sort(m_res.begin( ), m_res.end( ));
         return m_res;
     }
 
@@ -57,13 +56,11 @@ public:
                 //debug <<str[i] <<str[begin] <<endl;
                 if(i == begin || str[i] != str[begin])
                 {
-
                     swap(str[i], str[begin]);
-
+                    debug <<"swap " <<str[i] <<"(" <<i <<")" <<" and " <<str[begin] <<"(" <<begin <<")" <<endl;
                     PermutationRecursion(str, begin + 1);
-
+                    //copy(str.begin( ), str.degin( ) + i, ostream_iterator<char>(cout," "));
                     swap(str[i], str[begin]);
-
                 }
             }
         }
@@ -74,7 +71,7 @@ public:
 int __tmain( )
 {
     Solution solu;
-    solu.Permutation("abc");
+    solu.Permutation("abcd");
 
     return 0;
 }

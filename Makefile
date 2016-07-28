@@ -25,7 +25,7 @@ COMMIT_24="剑指Offer–024-二叉搜索树的后序遍历序列--http://blog.c
 COMMIT_25="剑指Offer–025-二叉树中和为某一值的路径--http://blog.csdn.net/gatieme/article/details/51214182"
 COMMIT_26="剑指Offer--026-复杂链表的复制--http://blog.csdn.net/gatieme/article/details/51227939"
 COMMIT_27="剑指Offer--027-二叉搜索树与双向链表--http://blog.csdn.net/gatieme/article/details/51234524"
-COMMIT_28=""
+COMMIT_28="剑指Offer--028-字符串的排列--http://blog.csdn.net/gatieme/article/details/51251158"
 COMMIT_29=""
 COMMIT_30=""
 COMMIT_31=""
@@ -35,7 +35,7 @@ RETURN_TOP ="<br>**您也可以选择[回到目录-剑指Offer--题集目录索�
 
 
 
-GITHUB_COMMIT=$(COMMIT_27)
+GITHUB_COMMIT=$(COMMIT_28)
 
 
 all:github
