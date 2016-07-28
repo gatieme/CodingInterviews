@@ -1,18 +1,22 @@
 #链接
-------- 
+-------
 >牛客OJ：[连续子数组的最大和](http://www.nowcoder.com/practice/459bd355da1549fa8a49e350bf3df484?tpId=13&tqId=11183&rp=2&ru=%2Fta%2Fcoding-interviews&qru=%2Fta%2Fcoding-interviews%2Fquestion-ranking)
-> 
+>
 >九度OJ：http://ac.jobdu.com/problem.php?pid=1372
-> 
+>
 >GitHub代码： [031-连续子数组的最大和](https://github.com/gatieme/CodingInterviews/tree/master/031-连续子数组的最大和)
 >
 >CSDN题解：[剑指Offer--031-连续子数组的最大和](http://blog.csdn.net/gatieme/article/details/51287801)
 
 
 
-| 牛客OJ | 九度OJ | CSDN题解 | GitHub代码 | 
-| ------------- |:-------------:| -----:| 
+| 牛客OJ | 九度OJ | CSDN题解 | GitHub代码 |
+| ------ |:------:| --------:|:----------:|
 |[031-连续子数组的最大和](http://www.nowcoder.com/practice/459bd355da1549fa8a49e350bf3df484?tpId=13&tqId=11183&rp=2&ru=%2Fta%2Fcoding-interviews&qru=%2Fta%2Fcoding-interviews%2Fquestion-ranking) | [1372-连续子数组的最大和](http://ac.jobdu.com/problem.php?pid=1372) | [剑指Offer--031-连续子数组的最大和](http://blog.csdn.net/gatieme/article/details/51287801) | [031-连续子数组的最大和](https://github.com/gatieme/CodingInterviews/tree/master/031-连续子数组的最大和) |
+
+
+<br>**您也可以选择[回到目录-剑指Offer--题集目录索引](http://blog.csdn.net/gatieme/article/details/51916802)**
+
 
 
 
@@ -159,7 +163,7 @@ public:
 #endif  // __tmain
 
         int maxSum = INT_MIN;
-        dp[0] = array[0];      
+        dp[0] = array[0];
 
         for(unsigned int i = 1; i < array.size( ); i++)
         {
@@ -191,7 +195,7 @@ public:
                 end = i;
 
 #endif  // __tmain
-            }        
+            }
 
         }
 
@@ -341,7 +345,7 @@ public:
             else if(sum > maxSum)   ///  否则的话累计当前和
             {
                 maxSum = sum;
-            }       
+            }
 
             ///  保存数据中的最大值
             ///  这种情况下是为了排除整个数组全为负数的特殊情况
@@ -351,7 +355,7 @@ public:
             }
         }
 
-        
+
 
         ///  如果数组最大值大于0, 那么我们就直接返回累计的最大和
         ///  如果数组最大值为负数, 说明整个数组都是负数, 那么就返回数组最大值
@@ -394,15 +398,15 @@ public:
             {
                 sum += array[i];
             }
-            
+
             debug <<"num = " <<array[i] <<", sum = " <<sum <<endl;
-            
-            if(sum > maxSum)   
+
+            if(sum > maxSum)
             {
                 maxSum = sum;
             }
         }
-        
+
         return maxSum;
     }
 };

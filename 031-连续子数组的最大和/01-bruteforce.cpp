@@ -1,9 +1,12 @@
 #include <iostream>
 #include <vector>
+#include <iterator>
+
+#include <climits>
 
 using namespace std;
 
-
+//  调试开关
 #define __tmain main
 
 #ifdef __tmain
@@ -19,7 +22,6 @@ using namespace std;
 
 class Solution
 {
-    int dp[1000];
 public:
     int FindGreatestSumOfSubArray(vector<int> array)
     {
@@ -27,48 +29,33 @@ public:
         {
             return 0;
         }
-
 #ifdef __tmain
-        int temp, start, end;
-#endif  // __tmain
-
-        int maxSum = INT_MIN;
-        dp[0] = array[0];
-        
-        for(unsigned int i = 1; i < array.size( ); i++)
+        cout <<"vector : ";
+        copy(array.begin( ), array.end( ), ostream_iterator<int>(cout, " "));
+        cout <<endl;
+#endif  //  __tmain
+        int sum, maxSum = INT_MIN;
+        //  循环每个子数组的开始位置
+        for(unsigned int i = 0; i < array.size( ); i++)
         {
-            if(dp[i - 1] <= 0)
+            sum = 0;
+            //  循环以i开始的所有子数组
+            for(unsigned int j = i; j < array.size( ); j++)
             {
-                dp[i] = array[i];
-#ifdef __tmain
-                temp = i;
-#endif  // __tmain
+                sum += array[j];        //  子数组的和array[i] ~ array[j]
+                if(sum > maxSum)
+                {
+                    debug <<"[" <<i <<", " <<j <<"] = " <<sum <<endl;
+                    maxSum = sum;
+                }
             }
-            else
-            {
-                dp[i] = array[i] + dp[i - 1];
-            }
-            
-            if(dp[i] > maxSum)
-            {
-                maxSum = dp[i];
-#ifdef __tmain
-                start = temp;
-                end = i;
-#endif  // __tmain
-            }        
         }
-
-        debug <<"[" <<start <<", " <<end <<"] = " <<maxSum <<endl;
         return maxSum;
-
     }
 };
 
 int __tmain( )
 {
-
-
     Solution solu;
 
     int arr1[] = { 6, -3, -2, 7, -15, 1, 2, 2};

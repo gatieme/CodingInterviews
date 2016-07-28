@@ -1,6 +1,8 @@
 #include <iostream>
 #include <vector>
 
+#include <climits>
+
 using namespace std;
 
 //  µ÷ÊÔ¿ª¹Ø
@@ -27,19 +29,25 @@ public:
             return 0;
         }
 
-        int sum, maxSum = INT_MIN;
+        int sum = 0, maxSum = INT_MIN;
         for(unsigned int i = 0; i < array.size( ); i++)
         {
-            sum = 0;
-            for(unsigned int j = i; j < array.size( ); j++)
+            if(sum <= 0)
             {
-                sum += array[j];
-                if(sum > maxSum)
-                {
-                    maxSum = sum;
-                }
+                sum = array[i];
+            }
+            else
+            {
+                sum += array[i];
+            }
+            debug <<"num = " <<array[i] <<", sum = " <<sum <<endl;
+
+            if(sum > maxSum)
+            {
+                maxSum = sum;
             }
         }
+
         return maxSum;
     }
 };

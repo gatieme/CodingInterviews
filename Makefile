@@ -28,14 +28,14 @@ COMMIT_27="剑指Offer--027-二叉搜索树与双向链表--http://blog.csdn.net
 COMMIT_28="剑指Offer--028-字符串的排列--http://blog.csdn.net/gatieme/article/details/51251158"
 COMMIT_29="剑指Offer--029-数组中出现次数超过一半的数字--http://blog.csdn.net/gatieme/article/details/51251311"
 COMMIT_30="剑指Offer--030-最小的K个数--http://blog.csdn.net/gatieme/article/details/51277505"
-COMMIT_31=""
+COMMIT_31="剑指Offer--031-连续子数组的最大和--http://blog.csdn.net/gatieme/article/details/51287801"
 
 
 RETURN_TOP ="<br>**您也可以选择[回到目录-剑指Offer--题集目录索引](http://blog.csdn.net/gatieme/article/details/51916802)**"
 
 
 
-GITHUB_COMMIT=$(COMMIT_30)
+GITHUB_COMMIT=$(COMMIT_31)
 
 
 all:github
