@@ -86,7 +86,6 @@ public:
                 }
                 preNode = currNode;
                 currNode = currNode->right;
-
             }
         }
         return head;
