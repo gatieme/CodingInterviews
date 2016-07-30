@@ -1,17 +1,23 @@
 #链接
-------- 
+-------
+
 >牛客OJ：[丑数](http://www.nowcoder.com/practice/6aa9e04fc3794f68acf8778237ba065b?tpId=13&tqId=11186&rp=2&ru=%2Fta%2Fcoding-interviews&qru=%2Fta%2Fcoding-interviews%2Fquestion-ranking)
-> 
+>
 >九度OJ：http://ac.jobdu.com/problem.php?pid=1214
-> 
+>
 >GitHub代码： [034-丑数](https://github.com/gatieme/CodingInterviews/tree/master/034-丑数)
 >
 >CSDN题解：[剑指Offer--034-丑数](http://blog.csdn.net/gatieme/article/details/51308037)
 
 
-| 牛客OJ | 九度OJ | CSDN题解 | GitHub代码 | 
-| ------------- |:-------------:| -----:| 
+| 牛客OJ | 九度OJ | CSDN题解 | GitHub代码 |
+| ------ |:------:| --------:|:----------:|
 |[034-丑数](http://www.nowcoder.com/practice/6aa9e04fc3794f68acf8778237ba065b?tpId=13&tqId=11186&rp=2&ru=%2Fta%2Fcoding-interviews&qru=%2Fta%2Fcoding-interviews%2Fquestion-ranking) | [1214-丑数](http://ac.jobdu.com/problem.php?pid=1214) | [剑指Offer--034-丑数](http://blog.csdn.net/gatieme/article/details/51308037) | [034-丑数](https://github.com/gatieme/CodingInterviews/tree/master/034-丑数) |
+
+
+
+<br>**您也可以选择[回到目录-剑指Offer--题集目录索引](http://blog.csdn.net/gatieme/article/details/51916802)**
+
 
 
 
@@ -22,7 +28,7 @@
 
 >把只包含因子2、3和5的数称作丑数（Ugly Number）。
 >
->例如6、8都是丑数，但14不是，因为它包含因子7。 
+>例如6、8都是丑数，但14不是，因为它包含因子7。
 习惯上我们把1当做是第一个丑数。求按从小到大的顺序的第N个丑数。
 
 
@@ -38,16 +44,16 @@ bool IsUglyNumber(int number)
     {
         number /= 5;
     }
-    
+
     while(number % 3 == 0)
     {
         number /= 3;
-    }        
+    }
 
     while(number % 2 == 0)
     {
         number /= 2;
-    }        
+    }
 
     return (number == 1);
 }
@@ -60,7 +66,7 @@ int GetUglyNumber_Solution(int index)
     {
         return -1;
     }
-    
+
     int count = 1;
     int num = 0;
 
@@ -110,45 +116,45 @@ class Solution
 {
 protected:
     int ugly[10000];
-    int min(int a, int b, int c)   
-    {   
-        int temp = (a < b ? a : b);   
-        
-        return (temp < c ? temp : c);   
+    int min(int a, int b, int c)
+    {
+        int temp = (a < b ? a : b);
+
+        return (temp < c ? temp : c);
     }
 
 public:
     int GetUglyNumber_Solution(int N)
     {
-        ugly[0] = 1;   
-        int index2 = 0;   
-        int index3 = 0;   
-        int index5 = 0;   
-        int index = 1;   
-        while (index < N)   
-        {   
-            //竞争产生下一个丑数 
-            int val = min(ugly[index2]*2, 
-                          ugly[index3]*3, 
-                          ugly[index5]*5);   
+        ugly[0] = 1;
+        int index2 = 0;
+        int index3 = 0;
+        int index5 = 0;
+        int index = 1;
+        while (index < N)
+        {
+            //竞争产生下一个丑数
+            int val = min(ugly[index2]*2,
+                          ugly[index3]*3,
+                          ugly[index5]*5);
 
-            if (val == ugly[index2] * 2) //将产生这个丑数的index*向后挪一位；  
+            if (val == ugly[index2] * 2) //将产生这个丑数的index*向后挪一位；
             {
-                ++index2;   
+                ++index2;
             }
             if (val == ugly[index3] * 3)   //这里不能用elseif，因为可能有两个最小值，这时都要挪动；
             {
-                ++index3;   
+                ++index3;
             }
-            if (val == ugly[index5] * 5)   
+            if (val == ugly[index5] * 5)
             {
-                ++index5;   
+                ++index5;
             }
-            
-            ugly[index++] = val;   
+
+            ugly[index++] = val;
         }
-        int result = ugly[N - 1];   
-        return result;  
+        int result = ugly[N - 1];
+        return result;
     }
 };
 
