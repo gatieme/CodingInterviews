@@ -1,7 +1,9 @@
 #include <iostream>
 #include <cstring>
 
+
 using namespace std;
+
 
 #define __tmain main
 
@@ -19,8 +21,10 @@ using namespace std;
 
 class Solution
 {
+
 protected:
     int count[256];
+
 public:
     int FirstNotRepeatingChar(string str)
     {
@@ -60,9 +64,9 @@ int __tmain( )
     int a = -1;
     unsigned int b = a;
     printf("%u\n", b);
-    
+
     Solution solu;
     cout <<solu.FirstNotRepeatingChar("abcdefg") <<endl;
-    
+
     return 0;
 }

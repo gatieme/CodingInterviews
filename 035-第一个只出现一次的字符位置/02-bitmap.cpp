@@ -1,7 +1,9 @@
 #include <iostream>
 #include <cstring>
 
+
 using namespace std;
+
 
 #define __tmain main
 
@@ -18,7 +20,9 @@ using namespace std;
 
 class Solution
 {
+
 public:
+
     int FirstNotRepeatingChar(string str)
     {
         int x[26] = {0}, y[26] = {0};
@@ -29,7 +33,7 @@ public:
             if('a' <= str[i] && str[i] <= 'z')
             {
                 if(x[str[i] - 'a'] == 0)
-                {   
+                {
                     //  首次出现保存出现位置
                     x[str[i] - 'a'] = i + 1;
                 }
@@ -47,7 +51,7 @@ public:
                      //  首次出现保存出现位置
                      y[str[i] - 'A']= i + 1;
                 }
-                else 
+                else
                 {
                     //  出现多次, 就置标识-1
                     y[str[i] - 'A'] = -1;

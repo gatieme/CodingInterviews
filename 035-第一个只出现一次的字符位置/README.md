@@ -1,17 +1,24 @@
 #链接
-------- 
+-------
 >牛客OJ：[第一个只出现一次的字符位置](http://www.nowcoder.com/practice/1c82e8cf713b4bbeb2a5b31cf5b0417c?tpId=13&tqId=11187&rp=2&ru=%2Fta%2Fcoding-interviews&qru=%2Fta%2Fcoding-interviews%2Fquestion-ranking)
-> 
+>
 >九度OJ：http://ac.jobdu.com/problem.php?pid=1283
-> 
+>
 >GitHub代码： [035-第一个只出现一次的字符位置](https://github.com/gatieme/CodingInterviews/tree/master/035-第一个只出现一次的字符位置)
 >
 >CSDN题解：[剑指Offer--035-第一个只出现一次的字符位置](http://blog.csdn.net/gatieme/article/details/51319158)
 
 
-| 牛客OJ | 九度OJ | CSDN题解 | GitHub代码 | 
-| ------------- |:-------------:| -----:| 
+| 牛客OJ | 九度OJ | CSDN题解 | GitHub代码 |
+| ------ |:------:| --------:|:----------:|
 |[035-第一个只出现一次的字符位置](http://www.nowcoder.com/practice/1c82e8cf713b4bbeb2a5b31cf5b0417c?tpId=13&tqId=11187&rp=2&ru=%2Fta%2Fcoding-interviews&qru=%2Fta%2Fcoding-interviews%2Fquestion-ranking) | [1283-第一个只出现一次的字符位置](http://ac.jobdu.com/problem.php?pid=1283) | [剑指Offer--035-第一个只出现一次的字符位置](http://blog.csdn.net/gatieme/article/details/51319158) | [035-第一个只出现一次的字符位置](https://github.com/gatieme/CodingInterviews/tree/master/035-第一个只出现一次的字符位置) |
+
+
+
+
+<br>**您也可以选择[回到目录-剑指Offer--题集目录索引](http://blog.csdn.net/gatieme/article/details/51916802)**
+
+
 
 
 
@@ -72,8 +79,8 @@ public:
             {
                 return i;
             }
-        }       
-        return -1; 
+        }
+        return -1;
     }
 };
 ```
@@ -128,9 +135,9 @@ public:
 #bitmap方法-同计数法，略微有变动
 -------
 
-我们计数数组不简单的存储计数 
-* 只出现一次的字符会存储出现的位置 
-* 出现多次的字符就存储标识-1 
+我们计数数组不简单的存储计数
+* 只出现一次的字符会存储出现的位置
+* 出现多次的字符就存储标识-1
 因此查找数组中非-1的最小值即可
 
 
@@ -149,7 +156,7 @@ public:
             if('a' <= str[i] && str[i] <= 'z')
             {
                 if(x[str[i] - 'a'] == 0)
-                {   
+                {
                     //  首次出现保存出现位置
                     x[str[i] - 'a'] = i + 1;
                 }
@@ -167,7 +174,7 @@ public:
                      //  首次出现保存出现位置
                      y[str[i] - 'A']= i + 1;
                 }
-                else 
+                else
                 {
                     //  出现多次, 就置标识-1
                     y[str[i] - 'A'] = -1;
