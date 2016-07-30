@@ -1,17 +1,24 @@
 #链接
-------- 
+-------
 >牛客OJ：[把数组排成最小的数](http://www.nowcoder.com/practice/8fecd3f8ba334add803bf2a06af1b993?tpId=13&tqId=11185&rp=2&ru=%2Fta%2Fcoding-interviews&qru=%2Fta%2Fcoding-interviews%2Fquestion-ranking)
-> 
+>
 >九度OJ：http://ac.jobdu.com/problem.php?pid=1504
-> 
+>
 >GitHub代码： [033-把数组排成最小的数](https://github.com/gatieme/CodingInterviews/tree/master/033-把数组排成最小的数)
 >
 >CSDN题解：[剑指Offer--033-把数组排成最小的数](http://blog.csdn.net/gatieme/article/details/51303662)
 
 
-| 牛客OJ | 九度OJ | CSDN题解 | GitHub代码 | 
-| ------------- |:-------------:| -----:| 
+| 牛客OJ | 九度OJ | CSDN题解 | GitHub代码 |
+| ------ |:------:| --------:|:----------:|
 |[033-把数组排成最小的数](http://www.nowcoder.com/practice/8fecd3f8ba334add803bf2a06af1b993?tpId=13&tqId=11185&rp=2&ru=%2Fta%2Fcoding-interviews&qru=%2Fta%2Fcoding-interviews%2Fquestion-ranking) | [1504-把数组排成最小的数](http://ac.jobdu.com/problem.php?pid=1504) | [剑指Offer--033-把数组排成最小的数](http://blog.csdn.net/gatieme/article/details/51303662) | [033-把数组排成最小的数](https://github.com/gatieme/CodingInterviews/tree/master/033-把数组排成最小的数) |
+
+
+
+<br>**您也可以选择[回到目录-剑指Offer--题集目录索引](http://blog.csdn.net/gatieme/article/details/51916802)**
+
+
+
 
 #题意
 -------

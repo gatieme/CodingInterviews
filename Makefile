@@ -30,12 +30,14 @@ COMMIT_29="剑指Offer--029-数组中出现次数超过一半的数字--http://b
 COMMIT_30="剑指Offer--030-最小的K个数--http://blog.csdn.net/gatieme/article/details/51277505"
 COMMIT_31="剑指Offer--031-连续子数组的最大和--http://blog.csdn.net/gatieme/article/details/51287801"
 COMMIT_32="剑指Offer--032-整数中1出现的次数（从1到n整数中1出现的次数）--http://blog.csdn.net/gatieme/article/details/51292339"
+COMMIT_33="剑指Offer--033-把数组排成最小的数--http://blog.csdn.net/gatieme/article/details/51303662"
+
 
 RETURN_TOP ="<br>**您也可以选择[回到目录-剑指Offer--题集目录索引](http://blog.csdn.net/gatieme/article/details/51916802)**"
 
 
 
-GITHUB_COMMIT=$(COMMIT_32)
+GITHUB_COMMIT=$(COMMIT_33)
 
 
 all:github
