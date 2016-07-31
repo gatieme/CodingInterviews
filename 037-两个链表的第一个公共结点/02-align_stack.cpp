@@ -1,6 +1,9 @@
 #include <iostream>
+#include <stack>
+
 
 using namespace std;
+
 
 //  调试开关
 #define __tmain main
@@ -25,7 +28,9 @@ public :
     struct ListNode *next;
 
 };
-#endif
+
+#endif  //  #endif  __tmain
+
 
 
 class Solution
@@ -33,23 +38,54 @@ class Solution
 public:
     ListNode* FindFirstCommonNode(ListNode *leftHead, ListNode *rightHead)
     {
-        ListNode *left= leftHead;
+        ListNode *left = leftHead;
         ListNode *right = rightHead;
 
-        debug <<(left == NULL ? -1 : left->val) <<", ";
-        debug <<(right == NULL ? -1 : right->val) <<endl;
+        stack<ListNode *> leftStack;
+        stack<ListNode *> rightStack;
 
-
-        while(left != right)
+        /// 结点依次入栈
+        while(left != NULL)
         {
-
-            left = (left == NULL ? rightHead : left->next);
-            right = (right == NULL ? leftHead : right->next);
-            debug <<(left == NULL ? -1 : left->val) <<", ";
-            debug <<(right == NULL ? -1 : right->val) <<endl;
-
+            //debug <<left->val <<endl;
+            leftStack.push(left);
+            left = left->next;
         }
-        return left;
+
+        while(right != NULL)
+        {
+            //debug <<right->val <<endl;
+            rightStack.push(right);
+            right = right->next;
+        }
+
+        ///  开始同步弹出元素
+        while(leftStack.empty( ) != true
+           && rightStack.empty( ) != true)
+        {
+            left = leftStack.top( );
+            right = rightStack.top( );
+
+            debug <<left->val <<", " <<right->val <<endl;
+
+            ///  不相同的元素就是合并的前一个结点
+            if(left != right)
+            {
+                break;
+            }
+            leftStack.pop( );
+            rightStack.pop( );
+        }
+
+        ///  不相同元素的下一个结点就是共同结点
+        if(left != right)
+        {
+            return left->next;
+        }
+        else
+        {
+            return NULL;
+        }
     }
 };
 

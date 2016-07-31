@@ -34,13 +34,13 @@ COMMIT_33="剑指Offer--033-把数组排成最小的数--http://blog.csdn.net/ga
 COMMIT_34="剑指Offer--034-丑数--http://blog.csdn.net/gatieme/article/details/51308037"
 COMMIT_35="剑指Offer--035-第一个只出现一次的字符位置--http://blog.csdn.net/gatieme/article/details/51319158"
 COMMIT_36="剑指Offer--036-数组中的逆序对--http://blog.csdn.net/gatieme/article/details/51326994"
-COMMIT_37=""
+COMMIT_37="剑指Offer–037-两个链表的第一个公共结点--http://blog.csdn.net/gatieme/article/details/51330871"
 
 RETURN_TOP ="<br>**您也可以选择[回到目录-剑指Offer--题集目录索引](http://blog.csdn.net/gatieme/article/details/51916802)**"
 
 
 
-GITHUB_COMMIT=$(COMMIT_36)
+GITHUB_COMMIT=$(COMMIT_37)
 
 
 all:github

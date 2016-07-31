@@ -1,6 +1,9 @@
 #include <iostream>
 
+
 using namespace std;
+
+
 
 //  调试开关
 #define __tmain main
@@ -16,6 +19,8 @@ using namespace std;
 #endif // __tmain
 
 
+
+
 #ifdef __tmain
 
 struct ListNode
@@ -25,7 +30,9 @@ public :
     struct ListNode *next;
 
 };
-#endif
+
+
+#endif          //  #endif  __tmain
 
 
 class Solution
@@ -33,33 +40,22 @@ class Solution
 public:
     ListNode* FindFirstCommonNode(ListNode *leftHead, ListNode *rightHead)
     {
-        ListNode *left = NULL;
-        ListNode *right = NULL;
+        ListNode *left= leftHead;
+        ListNode *right = rightHead;
 
-        //  循环第一个链表的每个结点
-        for(left = leftHead;
-            left != NULL;
-            left = left->next)
+        debug <<(left == NULL ? -1 : left->val) <<", ";
+        debug <<(right == NULL ? -1 : right->val) <<endl;
+
+
+        while(left != right)
         {
-            debug <<endl <<left->val <<" : ";
 
-            //  依次判断其在不在第二条链表中
-            for(right = rightHead;
-                right != NULL;
-                right = right->next)
-            {
-                debug <<right->val <<", ";
-                if(left == right)
-                {
-                    break;
-                }                
-            }
-            if(left == right)
-            {
-                break;
-            }
+            left = (left == NULL ? rightHead : left->next);
+            right = (right == NULL ? leftHead : right->next);
+            debug <<(left == NULL ? -1 : left->val) <<", ";
+            debug <<(right == NULL ? -1 : right->val) <<endl;
+
         }
-
         return left;
     }
 };

@@ -1,7 +1,9 @@
 #include <iostream>
-#include <stack>
+
 
 using namespace std;
+
+
 
 //  调试开关
 #define __tmain main
@@ -17,6 +19,8 @@ using namespace std;
 #endif // __tmain
 
 
+
+
 #ifdef __tmain
 
 struct ListNode
@@ -24,10 +28,9 @@ struct ListNode
 public :
     int val;
     struct ListNode *next;
-
 };
-#endif
 
+#endif      //      #endif  __tmain
 
 class Solution
 {
@@ -36,52 +39,62 @@ public:
     {
         ListNode *left = leftHead;
         ListNode *right = rightHead;
-        
-        stack<ListNode *> leftStack;
-        stack<ListNode *> rightStack;
+        int leftLength = 0;
+        int rightLength = 0;
 
-        /// 结点依次入栈
-        while(left != NULL)
-        {
-            //debug <<left->val <<endl;
-            leftStack.push(left);
-            left = left->next;
-        }
+        ///  首先计算两个链表的长度
+        leftLength = GetListLength(left);
+        rightLength = GetListLength(right);
 
-        while(right != NULL)
-        {
-            //debug <<right->val <<endl;
-            rightStack.push(right);
-            right = right->next;
-        }
+        ///  对齐两个链表
+        int length = 0;
 
-        ///  开始同步弹出元素
-        while(leftStack.empty( ) != true
-           && rightStack.empty( ) != true)
+        if(leftLength < rightLength)
         {
-            left = leftStack.top( );
-            right = rightStack.top( );
-            
-            debug <<left->val <<", " <<right->val <<endl;
-            
-            ///  不相同的元素就是合并的前一个结点
-            if(left != right)
+            // 右链表长
+            length = rightLength - leftLength;
+            while(right != NULL && length > 0)
             {
-                break;
+                right = right->next;
+                length--;
             }
-            leftStack.pop( );
-            rightStack.pop( );
-        }
-
-        ///  不相同元素的下一个结点就是共同结点
-        if(left != right)
-        {
-            return left->next;
         }
         else
         {
-            return NULL;
+            // 左链表长
+            length = leftLength - rightLength;
+            while(left != NULL && length > 0)
+            {
+                left = left->next;
+                length--;
+            }
         }
+
+        //  两个指针同步移动即可找到共同的结点
+        while(left != NULL && right != NULL)
+        {
+            if(left == right)
+            {
+                break;
+            }
+            left = left->next;
+            right = right->next;
+        }
+
+        return ((left == right) ? left : NULL);
+    }
+
+    int GetListLength(ListNode *head)
+    {
+        ListNode *node = head;
+        int length = 0;
+        while(node != NULL)
+        {
+            length++;
+            node = node->next;
+        }
+
+        return length;
     }
 };
 

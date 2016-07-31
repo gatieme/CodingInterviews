@@ -1,7 +1,8 @@
 #include <iostream>
-#include <map>
+
 
 using namespace std;
+
 
 //  调试开关
 #define __tmain main
@@ -34,27 +35,39 @@ class Solution
 public:
     ListNode* FindFirstCommonNode(ListNode *leftHead, ListNode *rightHead)
     {
-        unordered_map<ListNode*, bool> umap;
-        
-        ListNode* left = leftHead;
-        while (left != NULL)
+        ListNode *left = NULL;
+        ListNode *right = NULL;
+
+        //  循环第一个链表的每个结点
+        for(left = leftHead;
+            left != NULL;
+            left = left->next)
         {
-            umap.insert(make_pair(left, 1 ));
-            left = left->next;
-        }
-        
-        ListNode* right = rightHead;
-        while (right)
-        {
-            if (umap.count(right)>0)
+            debug <<endl <<left->val <<" : ";
+
+            //  依次判断其在不在第二条链表中
+            for(right = rightHead;
+                right != NULL;
+                right = right->next)
             {
-                return right;
+                debug <<right->val <<", ";
+                if(left == right)
+                {
+                    break;
+                }
             }
-            right = right->next;
+            if(left == right)
+            {
+                break;
+            }
         }
-        return NULL;
+
+        return left;
     }
 };
+
+
+
 
 int __tmain( )
 {
@@ -64,13 +77,13 @@ int __tmain( )
     common[1].val = 7;
     common[1].next = NULL;
 
-    ListNode leftHead[3];
-    leftHead[0].val = 1;
-    leftHead[0].next = &leftHead[1];
-    leftHead[1].val = 2;
-    leftHead[1].next = &leftHead[2];
-    leftHead[2].val = 3;
-    leftHead[2].next = &common[0];
+    ListNode left[3];
+    left[0].val = 1;
+    left[0].next = &left[1];
+    left[1].val = 2;
+    left[1].next = &left[2];
+    left[2].val = 3;
+    left[2].next = &common[0];
 
     ListNode right[2];
     right[0].val = 4;
@@ -79,7 +92,7 @@ int __tmain( )
     right[1].next = &common[0];
 
     Solution solu;
-    ListNode *node = solu.FindFirstCommonNode(leftHead, right);
+    ListNode *node = solu.FindFirstCommonNode(left, right);
     while(node != NULL)
     {
         debug <<node->val <<" ";
