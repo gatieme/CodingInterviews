@@ -33,13 +33,14 @@ COMMIT_32="剑指Offer--032-整数中1出现的次数（从1到n整数中1出现
 COMMIT_33="剑指Offer--033-把数组排成最小的数--http://blog.csdn.net/gatieme/article/details/51303662"
 COMMIT_34="剑指Offer--034-丑数--http://blog.csdn.net/gatieme/article/details/51308037"
 COMMIT_35="剑指Offer--035-第一个只出现一次的字符位置--http://blog.csdn.net/gatieme/article/details/51319158"
-COMMIT_36=""
+COMMIT_36="剑指Offer--036-数组中的逆序对--http://blog.csdn.net/gatieme/article/details/51326994"
+COMMIT_37=""
 
 RETURN_TOP ="<br>**您也可以选择[回到目录-剑指Offer--题集目录索引](http://blog.csdn.net/gatieme/article/details/51916802)**"
 
 
 
-GITHUB_COMMIT=$(COMMIT_35)
+GITHUB_COMMIT=$(COMMIT_36)
 
 
 all:github

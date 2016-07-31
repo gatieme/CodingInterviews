@@ -1,17 +1,28 @@
 #链接
-------- 
+-------
+
+
 >牛客OJ：[数组中的逆序对](http://www.nowcoder.com/practice/96bd6684e04a44eb80e6a68efc0ec6c5?tpId=13&tqId=11188&rp=2&ru=%2Fta%2Fcoding-interviews&qru=%2Fta%2Fcoding-interviews%2Fquestion-ranking)
-> 
+>
 >九度OJ：http://ac.jobdu.com/problem.php?pid=1348
-> 
+>
 >GitHub代码： [036-数组中的逆序对](https://github.com/gatieme/CodingInterviews/tree/master/036-数组中的逆序对)
 >
 >CSDN题解：[剑指Offer--036-数组中的逆序对](http://blog.csdn.net/gatieme/article/details/51326994)
 
 
-| 牛客OJ | 九度OJ | CSDN题解 | GitHub代码 | 
-| ------------- |:-------------:| -----:| 
+
+
+| 牛客OJ | 九度OJ | CSDN题解 | GitHub代码 |
+| ------ |:------:| --------:|:----------:|
 |[036-数组中的逆序对](http://www.nowcoder.com/practice/96bd6684e04a44eb80e6a68efc0ec6c5?tpId=13&tqId=11188&rp=2&ru=%2Fta%2Fcoding-interviews&qru=%2Fta%2Fcoding-interviews%2Fquestion-ranking) | [1348-数组中的逆序对](http://ac.jobdu.com/problem.php?pid=1348) | [剑指Offer--036-数组中的逆序对](http://blog.csdn.net/gatieme/article/details/51326994) | [036-数组中的逆序对](https://github.com/gatieme/CodingInterviews/tree/master/036-数组中的逆序对) |
+
+
+
+<br>**您也可以选择[回到目录-剑指Offer--题集目录索引](http://blog.csdn.net/gatieme/article/details/51916802)**
+
+
+
 
 
 #题意
@@ -184,7 +195,7 @@ public:
             {
                 temp[k++] = elem[i--];//从临时数组的最后一个位置开始排序
                 count += j - mid;//因为elem[mid+1...j...end]是有序的，如果elem[i]>elem[j]，那么也大于elem[j]之前的元素，从a[mid+1...j]一共有j-(mid+1)+1=j-mid
-                
+
             }
             else
             {
@@ -215,14 +226,14 @@ public:
 
     int InversePairsCore(vector<int> &elem,int start,int end, vector<int> &temp)
     {
-        int inversions = 0;  
+        int inversions = 0;
         if(start<end)
         {
             int mid = (start + end) / 2;
             inversions+=InversePairsCore(elem, start, mid, temp);//找左半段的逆序对数目
             inversions+=InversePairsCore(elem, mid + 1, end, temp);//找右半段的逆序对数目
             inversions+=MergeElem(elem,start, mid, end, temp);//在找完左右半段逆序对以后两段数组有序，然后找两段之间的逆序对。最小的逆序段只有一个元素。
-        }    
+        }
         return inversions;
     }
 };
