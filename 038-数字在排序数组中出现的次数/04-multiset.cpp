@@ -1,7 +1,11 @@
 #include <iostream>
 #include <vector>
 #include <set>
+
+
 using namespace std;
+
+
 
 //  µ÷ÊÔ¿ª¹Ø
 #define __tmain main
@@ -27,7 +31,7 @@ public:
         {
             mData.insert(data[i]);
         }
-        
+
         return mData.count(k);
     }
 };
@@ -39,6 +43,6 @@ int __tmain( )
     int arr[] = { 1, 2, 3, 3, 3, 3, 4, 5 };
     vector<int> vec(arr, arr + 8);
     cout <<solu.GetNumberOfK(vec, 3) <<endl;
-    
+
     return 0;
 }

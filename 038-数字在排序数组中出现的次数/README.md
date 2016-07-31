@@ -1,17 +1,23 @@
 #链接
-------- 
+-------
 >牛客OJ：[数字在排序数组中出现的次数](http://www.nowcoder.com/practice/70610bf967994b22bb1c26f9ae901fa2?tpId=13&tqId=11190&rp=2&ru=%2Fta%2Fcoding-interviews&qru=%2Fta%2Fcoding-interviews%2Fquestion-ranking)
-> 
+>
 >九度OJ：http://ac.jobdu.com/problem.php?pid=1349
-> 
+>
 >GitHub代码： [038-数字在排序数组中出现的次数](https://github.com/gatieme/CodingInterviews/tree/master/038-数字在排序数组中出现的次数)
 >
 >CSDN题解：[剑指Offer--038-数字在排序数组中出现的次数](http://blog.csdn.net/gatieme/article/details/51335323)
 
 
-| 牛客OJ | 九度OJ | CSDN题解 | GitHub代码 | 
+| 牛客OJ | 九度OJ | CSDN题解 | GitHub代码 |
 | ------------- |:-------------:| -----:|
 |[038-数字在排序数组中出现的次数](http://www.nowcoder.com/practice/70610bf967994b22bb1c26f9ae901fa2?tpId=13&tqId=11190&rp=2&ru=%2Fta%2Fcoding-interviews&qru=%2Fta%2Fcoding-interviews%2Fquestion-ranking) | [1505-数字在排序数组中出现的次数](http://ac.jobdu.com/problem.php?pid=1349) | [剑指Offer--038-数字在排序数组中出现的次数](http://blog.csdn.net/gatieme/article/details/51335323) | [038-数字在排序数组中出现的次数](https://github.com/gatieme/CodingInterviews/tree/master/038-数字在排序数组中出现的次数) |
+
+
+<br>**您也可以选择[回到目录-剑指Offer--题集目录索引](http://blog.csdn.net/gatieme/article/details/51916802)**
+
+
+
 
 #题意
 -------
@@ -77,7 +83,7 @@ int __tmain( )
     int arr[] = { 1, 2, 3, 3, 3, 3, 4, 5 };
     vector<int> vec(arr, arr + 8);
     cout <<solu.GetNumberOfK(vec, 3) <<endl;
-    
+
     return 0;
 }
 ```
@@ -95,7 +101,7 @@ public:
         {
             mData.insert(data[i]);
         }
-        
+
         return mData.count(k);
     }
 };
@@ -124,11 +130,11 @@ public:
         //  用二分查找查找到Key的位置
         int index = BinarySearch(data, 0, data.size( ) - 1, key);
         //int index = BinarySearch(data, key);
-        if(index == -1) 
+        if(index == -1)
         {
             return 0;
         }
-        
+
         int count = 1;
         // 查找前面部分Key的个数
         for(int j = index - 1;
@@ -149,14 +155,14 @@ public:
 
         return count;
     }
-    
+
     int BinarySearch(vector<int> &data, int begin, int end ,int key)
     {
         if(begin > end)
         {
             return -1;
         }
-        
+
         int mid = (begin + end) / 2;
         debug <<"mid = " <<mid <<", data = " <<data[mid] <<endl;
         if(data[mid] == key)
@@ -179,29 +185,29 @@ public:
     {
         int low = 0, high = array.size( ) - 1;
 
-        int mid;  
-        
-        while (low <= high)  
-        {  
-            mid = (low + high) / 2;  
-            
+        int mid;
+
+        while (low <= high)
+        {
+            mid = (low + high) / 2;
+
             if(key == array[mid])
-            {  
-                return mid;  
+            {
+                return mid;
             }
-            
+
             if(key < array[mid])
             {
-                high = mid - 1;  
+                high = mid - 1;
             }
 
             if(key > array[mid])
             {
-                low = mid + 1;  
+                low = mid + 1;
             }
         }
 
-        return -1;  
+        return -1;
     }
 };
 ```
@@ -222,11 +228,11 @@ public:
         {
             return 0;
         }
-        
+
         int number = 0;
         int first = GetFirstIndex(data, k, 0, data.size( ) - 1);
         int last  = GetLastIndex(data, k, 0, data.size( ) - 1);
-        
+
         if(first > -1 && last > -1)
         {
             number = last - first +1;
@@ -241,9 +247,9 @@ public:
         {
             return -1;
         }
-        
+
         int mid = (low + high) / 2;
-        
+
         if(data[mid] == k)
         {
             if((mid > 0 && data[mid-1] != k) || mid == 0)
@@ -273,7 +279,7 @@ public:
         {
             return -1;
         }
-        
+
         int mid = (low + high) / 2;
         if(data[mid]==k)
         {
@@ -315,10 +321,10 @@ public:
         {
             return 0;
         }
- 
+
         int low = 0, high = array.size( ) - 1,
         int first = 0, last = 0;
-         
+
         if (low == high)
         {
             if (array[0] != k)
@@ -329,12 +335,12 @@ public:
             {
                 return 1;
             }
-        } 
+        }
 
         int number = 0;
         int first = GetFirstIndex(data, k, 0, data.size( ) - 1);
         int last  = GetLastIndex(data, k, 0, data.size( ) - 1);
-        
+
         if(first > -1 && last > -1)
         {
             number = last - first +1;
@@ -361,19 +367,19 @@ public:
                 }
                 low = mid + 1;
             }
-            else 
+            else
             {
                 high = mid;
                 first = -1;
             }
         }
-         
+
         if (array[first + 1] != k)   // can't find it.
         {
             return 0;
         }
     }
-    
+
     int GetLastIndex(vector<int> &data, int low, int high, int k)
     {
         int last, mid;
@@ -394,7 +400,7 @@ public:
                     last++;
                     break;
                 }
-                low = mid + 1;  
+                low = mid + 1;
             }
             else
             {

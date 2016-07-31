@@ -4,6 +4,8 @@
 
 using namespace std;
 
+
+
 //  µ÷ÊÔ¿ª¹Ø
 #define __tmain main
 
@@ -20,7 +22,9 @@ using namespace std;
 
 class Solution
 {
+
 public:
+
     int GetNumberOfK(vector<int> data,int k)
     {
         if(data.size( ) == 0)
@@ -47,7 +51,7 @@ int __tmain( )
 {
     Solution solu;
 
-    int arr[] = { 1, 2, 3, 3, 3, 3, 4, 5 };
+    int arr[] = { 1, 2, 3, 3, 3, 3, 5, 6 };
     vector<int> vec(arr, arr + 8);
     cout <<solu.GetNumberOfK(vec, 3) <<endl;
 

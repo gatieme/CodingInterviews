@@ -18,19 +18,19 @@ using namespace std;
 
 class Solution
 {
-    /*二分查找 找到第一个K 和 最后一个K 二者位置相减*/
 public:
+    /*二分查找 找到第一个K 和 最后一个K 二者位置相减*/
     int GetNumberOfK(vector<int> data ,int k)
     {
         if(data.empty())
         {
             return 0;
         }
-        
+
         int number = 0;
         int first = GetFirstIndex(data, k, 0, data.size( ) - 1);
         int last  = GetLastIndex(data, k, 0, data.size( ) - 1);
-        
+
         if(first > -1 && last > -1)
         {
             number = last - first +1;
@@ -38,16 +38,16 @@ public:
         }
     }
 
-    // 查找第一个的位置
+    /*  查找第一个的位置  */
     int GetFirstIndex(vector<int> &data, int low, int high, int k)
     {
         if(low > high)
         {
             return -1;
         }
-        
+
         int mid = (low + high) / 2;
-        
+
         if(data[mid] == k)
         {
             if((mid > 0 && data[mid-1] != k) || mid == 0)
@@ -77,7 +77,7 @@ public:
         {
             return -1;
         }
-        
+
         int mid = (low + high) / 2;
         if(data[mid]==k)
         {
