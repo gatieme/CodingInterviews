@@ -1,6 +1,7 @@
 #include <iostream>
 #include <vector>
 
+
 using namespace std;
 
 //  µ÷ÊÔ¿ª¹Ø
@@ -49,6 +50,6 @@ int __tmain( )
     int arr[] = { 1, 2, 3, 3, 3, 3, 4, 5 };
     vector<int> vec(arr, arr + 8);
     cout <<solu.GetNumberOfK(vec, 3) <<endl;
-    
+
     return 0;
 }
