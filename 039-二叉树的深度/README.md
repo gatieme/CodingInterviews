@@ -1,15 +1,15 @@
 #链接
-------- 
+-------
 >牛客OJ：[二叉树的深度](http://www.nowcoder.com/practice/435fb86331474282a3499955f0a41e8b?tpId=13&tqId=11191&rp=2&ru=%2Fta%2Fcoding-interviews&qru=%2Fta%2Fcoding-interviews%2Fquestion-ranking)
-> 
+>
 >九度OJ：http://ac.jobdu.com/problem.php?pid=1350
-> 
+>
 >GitHub代码： [039-二叉树的深度](https://github.com/gatieme/CodingInterviews/tree/master/039-二叉树的深度)
 >
 >CSDN题解：[剑指Offer--039-二叉树的深度](http://blog.csdn.net/gatieme/article/details/51339884)
 
 
-| 牛客OJ | 九度OJ | CSDN题解 | GitHub代码 | 
+| 牛客OJ | 九度OJ | CSDN题解 | GitHub代码 |
 | ------------- |:-------------:| -----:|
 |[039-二叉树的深度](http://www.nowcoder.com/practice/435fb86331474282a3499955f0a41e8b?tpId=13&tqId=11191&rp=2&ru=%2Fta%2Fcoding-interviews&qru=%2Fta%2Fcoding-interviews%2Fquestion-ranking) | [1350-二叉树的深度](http://ac.jobdu.com/problem.php?pid=1350) | [剑指Offer--039-二叉树的深度](http://blog.csdn.net/gatieme/article/details/51339884) | [039-二叉树的深度](https://github.com/gatieme/CodingInterviews/tree/master/039-二叉树的深度) |
 
@@ -22,8 +22,16 @@
 >
 >从根结点到叶结点依次经过的结点（含根、叶结点）形成树的一条路径，最长路径的长度为树的深度。
 
+
+<br>**您也可以选择[回到目录-剑指Offer--题集目录索引](http://blog.csdn.net/gatieme/article/details/51916802)**
+
+
+
+
+
 #分析
 -------
+
 对二叉树进行层次遍历，维护一个层数计数器，每次进入一层就增加1，从而得到二叉树的层数。
 当然如果使用递归的话，思路就更简单了，返回左右子树中深度最大的那个
 
@@ -40,7 +48,7 @@ public:
     {
         return TreeDepth(root, 0);
     }
-	
+
 	/// 递归方法一
     int TreeDepthRecursion(TreeNode *root)
     {
@@ -115,7 +123,7 @@ public:
     int TreeDepth(TreeNode* root)
     {
         return TreeDepthRecursion(root);
-        //return TreeDepthRecursion(root, 0);        
+        //return TreeDepthRecursion(root, 0);
         //return LevelOrderDev(tree);
         //return LevelOrderUseEnd(tree);
         //return LevelOrderUseSize(tree);
@@ -199,7 +207,7 @@ public:
         int cur = 0;
         int end = 1;
         int count = 0;
-        
+
         while (cur < vec.size())
         {
             end = vec.size();       ///  新的一行访问开始，重新定位last于当前行最后一个节点的下一个位置
@@ -229,7 +237,7 @@ public:
     int LevelOrderUseSize(TreeNode *root)
     {
         int count = 0;
-        
+
         int parentSize = 1, childSize = 0;
         TreeNode *temp = NULL;
 
@@ -311,9 +319,9 @@ int __tmain( )
 {
 //     0
 //   1   2
-// 3   
+// 3
     TreeNode tree[4];
-    
+
     tree[0].val = 0;
     tree[0].left = &tree[1];
     tree[0].right = &tree[2];
@@ -330,18 +338,18 @@ int __tmain( )
     tree[3].val = 3;
     tree[3].left = NULL;
     tree[3].right = NULL;
-    
+
     Solution solu;
     cout <<solu.TreeDepth(tree) <<endl;
-    
+
     cout <<solu.LevelOrderDev(tree) <<endl;
 
     cout <<solu.LevelOrderUseEnd(tree) <<endl;
-    
+
     cout <<solu.LevelOrderUseSize(tree) <<endl;
 
     cout <<solu.LevelOrderUsePoint(tree) <<endl;
-    
+
     return 0;
 }
 ```

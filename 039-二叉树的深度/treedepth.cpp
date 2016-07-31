@@ -59,6 +59,7 @@ public:
             return max(leftDepth, rightDepth) + 1;
         }
     }
+
     int TreeDepthRecursion(TreeNode *root, int depth)
     {
         if(root == NULL)
@@ -120,7 +121,7 @@ public:
         int cur = 0;
         int end = 1;
         int count = 0;
-        
+
         while (cur < vec.size())
         {
             end = vec.size();       ///  新的一行访问开始，重新定位last于当前行最后一个节点的下一个位置
@@ -150,7 +151,7 @@ public:
     int LevelOrderUseSize(TreeNode *root)
     {
         int count = 0;
-        
+
         int parentSize = 1, childSize = 0;
         TreeNode *temp = NULL;
 
@@ -232,9 +233,9 @@ int __tmain( )
 {
 //     0
 //   1   2
-// 3   
+// 3
     TreeNode tree[4];
-    
+
     tree[0].val = 0;
     tree[0].left = &tree[1];
     tree[0].right = &tree[2];
@@ -251,17 +252,17 @@ int __tmain( )
     tree[3].val = 3;
     tree[3].left = NULL;
     tree[3].right = NULL;
-    
+
     Solution solu;
     cout <<solu.TreeDepth(tree) <<endl;
-    
+
     cout <<solu.LevelOrderDev(tree) <<endl;
 
     cout <<solu.LevelOrderUseEnd(tree) <<endl;
-    
+
     cout <<solu.LevelOrderUseSize(tree) <<endl;
 
     cout <<solu.LevelOrderUsePoint(tree) <<endl;
-    
+
     return 0;
 }
