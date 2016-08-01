@@ -39,13 +39,13 @@ COMMIT_38="剑指Offer--038-数字在排序数组中出现的次数--http://blog
 COMMIT_39_1="剑指Offer–039-二叉树的深度--http://blog.csdn.net/gatieme/article/details/51339884"
 COMMIT_39_2="剑指Offer–039-平衡二叉树--http://blog.csdn.net/gatieme/article/details/51346422"
 COMMIT_40="剑指Offer--040-数组中只出现一次的数字--http://blog.csdn.net/gatieme/article/details/51352156"
-
+COMMIT_41="剑指Offer–041-和为S的连续正数序列--http://blog.csdn.net/gatieme/article/details/51357308"
 
 RETURN_TOP ="<br>**您也可以选择[回到目录-剑指Offer--题集目录索引](http://blog.csdn.net/gatieme/article/details/51916802)**"
 
 
 
-GITHUB_COMMIT=$(COMMIT_40)
+GITHUB_COMMIT=$(COMMIT_41)
 
 
 all:github
