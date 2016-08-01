@@ -1,19 +1,24 @@
 #链接
-------- 
+-------
+
+
 >牛客OJ：[数组中只出现一次的数字](http://www.nowcoder.com/practice/e02fdb54d7524710a7d664d082bb7811?tpId=13&tqId=11193&rp=2&ru=%2Fta%2Fcoding-interviews&qru=%2Fta%2Fcoding-interviews%2Fquestion-ranking)
-> 
+>
 >九度OJ：http://ac.jobdu.com/problem.php?pid=1351
-> 
+>
 >GitHub代码： [040-数组中只出现一次的数字](https://github.com/gatieme/CodingInterviews/tree/master/040-数组中只出现一次的数字)
 >
 >CSDN题解：[剑指Offer--040-数组中只出现一次的数字](
 http://blog.csdn.net/gatieme/article/details/51352156)
-**样例输入**
 
 
-| 牛客OJ | 九度OJ | CSDN题解 | GitHub代码 | 
-| ------------- |:-------------:| -----:|
+
+| 牛客OJ | 九度OJ | CSDN题解 | GitHub代码 |
+| ------ |:------:| --------:|:----------:|
 |[040-数组中只出现一次的数字](http://www.nowcoder.com/practice/e02fdb54d7524710a7d664d082bb7811?tpId=13&tqId=11193&rp=2&ru=%2Fta%2Fcoding-interviews&qru=%2Fta%2Fcoding-interviews%2Fquestion-ranking) | [1351-数组中只出现一次的数字](http://ac.jobdu.com/problem.php?pid=1351) | [剑指Offer--040-数组中只出现一次的数字](http://blog.csdn.net/gatieme/article/details/51352156) | [040-数组中只出现一次的数字](https://github.com/gatieme/CodingInterviews/tree/master/040-数组中只出现一次的数字) |
+
+
+<br>**您也可以选择[回到目录-剑指Offer--题集目录索引](http://blog.csdn.net/gatieme/article/details/51916802)**
 
 
 #题意
@@ -24,6 +29,12 @@ http://blog.csdn.net/gatieme/article/details/51352156)
 
 
 >一个整型数组里除了两个数字之外，其他的数字都出现了两次。请写程序找出这两个只出现一次的数字
+
+
+
+**样例输入**
+
+
 >2 4 3 6 3 2 5 5
 
 
@@ -147,13 +158,13 @@ int __tmain( )
 ```
 
 
-找xor中最后一个1的位置的时候，可以用$(XOR & (-XOR))$ 
+找xor中最后一个1的位置的时候，可以用$(XOR & (-XOR))$
 
-由于计算机内部整数按照补码来存储，补码的表示方法是: 
+由于计算机内部整数按照补码来存储，补码的表示方法是:
 
-* 正数的补码就是其本身 
+* 正数的补码就是其本身
 
-* 负数的补码是在其原码（原码就是符号位加上真值的绝对值, 即用第一位表示符号, 其余位表示值.）的基础上, 符号位不变, 其余各位取反, 最后+1. (即在反码的基础上+1) 
+* 负数的补码是在其原码（原码就是符号位加上真值的绝对值, 即用第一位表示符号, 其余位表示值.）的基础上, 符号位不变, 其余各位取反, 最后+1. (即在反码的基础上+1)
 
 * 更简单的方法是，符号位不变，从最低位开始，指导遇见第一个1，这个1后面的都不变，前面的所有位依次取反。
 
