@@ -1,9 +1,11 @@
 #include <iostream>
 #include <cmath>
 
+
 using namespace std;
 
-//  µ÷ÊÔ¿ª¹Ø
+
+
 #define __tmain main
 
 #ifdef __tmain
@@ -27,6 +29,7 @@ struct TreeNode
 };
 
 #endif //   __tmain
+
 
 class Solution
 {
@@ -100,6 +103,8 @@ public:
 
     }
 };
+
+
 
 
 int __tmain( )

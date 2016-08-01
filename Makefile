@@ -36,13 +36,14 @@ COMMIT_35="剑指Offer--035-第一个只出现一次的字符位置--http://blog
 COMMIT_36="剑指Offer--036-数组中的逆序对--http://blog.csdn.net/gatieme/article/details/51326994"
 COMMIT_37="剑指Offer–037-两个链表的第一个公共结点--http://blog.csdn.net/gatieme/article/details/51330871"
 COMMIT_38="剑指Offer--038-数字在排序数组中出现的次数--http://blog.csdn.net/gatieme/article/details/51335323"
-
+COMMIT_39_1="剑指Offer–039-二叉树的深度--http://blog.csdn.net/gatieme/article/details/51339884"
+COMMIT_39_2="剑指Offer–039-平衡二叉树--http://blog.csdn.net/gatieme/article/details/51346422"
 
 RETURN_TOP ="<br>**您也可以选择[回到目录-剑指Offer--题集目录索引](http://blog.csdn.net/gatieme/article/details/51916802)**"
 
 
 
-GITHUB_COMMIT=$(COMMIT_38)
+GITHUB_COMMIT=$(COMMIT_39_2)
 
 
 all:github
