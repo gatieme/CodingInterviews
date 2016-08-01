@@ -21,15 +21,16 @@ using namespace std;
 class Solution
 {
 public:
-    int GetNumberOfK(std::vector<char> array , int k)
+    int GetNumberOfK(std::vector<int> array, int k)
     {
-        if (array == null || array.size( ) == 0)
+        if (array.size( ) == 0)
         {
             return 0;
         }
 
-        int low = 0, high = array.size( ) - 1,
+        int low = 0, high = array.size( ) - 1;
         int first = 0, last = 0;
+        int number = 0;
 
         if (low == high)
         {
@@ -43,13 +44,13 @@ public:
             }
         }
 
-        int number = 0;
-        int first = GetFirstIndex(data, k, 0, data.size( ) - 1);
-        int last  = GetLastIndex(data, k, 0, data.size( ) - 1);
+        first = GetFirstIndex(array, 0, array.size( ) - 1, k);
+        last  = GetLastIndex(array, 0, array.size( ) - 1, k);
 
         if(first > -1 && last > -1)
         {
-            number = last - first +1;
+            debug <<"first = " <<first <<", " <<"last = " <<last <<endl;
+            number = last - first + 1;
             return number;
         }
         else
@@ -58,13 +59,16 @@ public:
         }
     }
 
+
+
     /*  查找数组中第一个K的位置  */
-    int GetFirstIndex(vector<int> &data, int low, int high, int k)
+    int GetFirstIndex(vector<int> &array, int low, int high, int k)
     {
-        int mid
+        int first, mid;
+
         while (low < high)
         {
-            int mid = (low + high) / 2;
+            mid = (low + high) / 2;
             if (array[mid] < k)
             {
                 if (array[mid + 1] == k)
@@ -85,10 +89,14 @@ public:
         {
             return 0;
         }
+
+        return first + 1;
     }
 
-    /*  查找最有一个元素K的位置  */
-    int GetLastIndex(vector<int> &data, int low, int high, int k)
+
+
+    /*  查找最后一个元素K的位置  */
+    int GetLastIndex(vector<int> &array, int low, int high, int k)
     {
         int last, mid;
 
@@ -115,6 +123,8 @@ public:
                 high = mid;
             }
         }
+
+        return last;
     }
 };
 
@@ -125,7 +135,7 @@ int __tmain( )
 
     int arr[] = { 1, 2, 3, 3, 3, 3, 4, 5 };
     vector<int> vec(arr, arr + 8);
-    cout <<solu.GetNumberOfK(vec, 5) <<endl;
+    cout <<solu.GetNumberOfK(vec, 3) <<endl;
 
     return 0;
 }
