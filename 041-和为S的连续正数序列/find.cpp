@@ -1,7 +1,9 @@
 #include <iostream>
 #include <vector>
 
+
 using namespace std;
+
 
 #define __tmain main
 
@@ -31,6 +33,7 @@ public:
 
         int begin = 1, end = 2, mid = (sum + 1) / 2;
         int currSum = begin + end;
+
         while(begin < mid && end < sum)
         {
             ///  和正好是sum的话, 就存储下来

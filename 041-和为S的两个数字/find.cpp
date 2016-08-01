@@ -1,7 +1,9 @@
 #include <iostream>
 #include <vector>
 
+
 using namespace std;
+
 
 //  调试开关
 #define __tmain main
@@ -19,7 +21,9 @@ using namespace std;
 
 class Solution
 {
-public:
+
+public :
+
     vector<int> FindNumbersWithSum(vector<int> array,int sum)
     {
         vector<int> res;
@@ -40,7 +44,7 @@ public:
             {
                 ///  左右夹逼
                 ///  同时能保证乘积最小的
-                /// 和为sum的最大的两个数最接近sqrt(sum)  
+                /// 和为sum的最大的两个数最接近sqrt(sum)
                 res.push_back(array[start]);
                 res.push_back(array[end]);
 
