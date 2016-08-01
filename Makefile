@@ -43,12 +43,14 @@ COMMIT_41="剑指Offer–041-和为S的连续正数序列--http://blog.csdn.net/
 COMMIT_42_1="剑指Offer–042-翻转单词顺序列--http://blog.csdn.net/gatieme/article/details/51419097"
 COMMIT_42_2="剑指Offer–042-左旋转字符串--http://blog.csdn.net/gatieme/article/details/51407858"
 
+COMMIT_OTHER="完善了OJ的template代码..."
+
 
 RETURN_TOP ="<br>**您也可以选择[回到目录-剑指Offer--题集目录索引](http://blog.csdn.net/gatieme/article/details/51916802)**"
 
 
 
-GITHUB_COMMIT=$(COMMIT_42_1)
+GITHUB_COMMIT=$(COMMIT_OTHER)
 
 
 all:github
