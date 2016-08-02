@@ -1,6 +1,8 @@
 #include <iostream>
 
+
 using namespace std;
+
 
 //  调试开关
 #define __tmain main
@@ -14,6 +16,8 @@ using namespace std;
 #define debug 0 && cout
 
 #endif // __tmain
+
+
 
 class Solution
 {

@@ -50,7 +50,7 @@ RETURN_TOP ="<br>**您也可以选择[回到目录-剑指Offer--题集目录索�
 
 
 
-GITHUB_COMMIT=$(COMMIT_OTHER)
+GITHUB_COMMIT=$(COMMIT_42_1)
 
 
 all:github

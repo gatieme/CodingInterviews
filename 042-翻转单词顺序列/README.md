@@ -1,17 +1,21 @@
 #链接
-------- 
+-------
 >牛客OJ：[翻转单词顺序列](http://www.nowcoder.com/practice/3194a4f4cf814f63919d0790578d51f3?tpId=13&tqId=11197&rp=2&ru=%2Fta%2Fcoding-interviews&qru=%2Fta%2Fcoding-interviews%2Fquestion-ranking)
-> 
+>
 >九度OJ：http://ac.jobdu.com/problem.php?pid=1361
-> 
+>
 >GitHub代码： [042-翻转单词顺序列](https://github.com/gatieme/CodingInterviews/tree/master/042-翻转单词顺序列)
 >
 >CSDN题解：[剑指Offer--042-翻转单词顺序列](http://blog.csdn.net/gatieme/article/details/51419097)
 
 
-| 牛客OJ | 九度OJ | CSDN题解 | GitHub代码 | 
-| ------------- |:-------------:| -----:| -----:|
+| 牛客OJ | 九度OJ | CSDN题解 | GitHub代码 |
+| ------ |:------:| --------:| ----------:|
 |[042-翻转单词顺序列](http://www.nowcoder.com/practice/3194a4f4cf814f63919d0790578d51f3?tpId=13&tqId=11197&rp=2&ru=%2Fta%2Fcoding-interviews&qru=%2Fta%2Fcoding-interviews%2Fquestion-ranking) | [1361-翻转单词顺序列](http://ac.jobdu.com/problem.php?pid=1361) | [剑指Offer--042-翻转单词顺序列](http://blog.csdn.net/gatieme/article/details/51419097) | [042-翻转单词顺序列](https://github.com/gatieme/CodingInterviews/tree/master/042-翻转单词顺序列) |
+
+
+
+<br>**您也可以选择[回到目录-剑指Offer--题集目录索引](http://blog.csdn.net/gatieme/article/details/51916802)**
 
 
 

@@ -15,6 +15,10 @@
 
 
 
+<br>**您也可以选择[回到目录-剑指Offer--题集目录索引](http://blog.csdn.net/gatieme/article/details/51916802)**
+
+
+
 #题意
 -------
 
