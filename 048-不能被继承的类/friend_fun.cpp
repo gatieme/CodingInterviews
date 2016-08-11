@@ -19,27 +19,31 @@ using namespace std;
 
 class SealedClass
 {
-public  :
-    static SealedClass* GetInstance( )
-    {
-        return new SealedClass( );
-    }
 private :
     SealedClass( ){ }
-    ~SealedClass( ){ };
+    ~SealedClass( ){ }
+
+public  :
+    friend SealedClass* GetInstance( );
 
 };
 
+
+SealedClass* GetInstance( )
+{
+    return new SealedClass( );
+}
+
+
 class Base : public SealedClass
 {
-
-
 };
 
 int __tmain( )
 {
-    SealedClass *pb = Base::GetInstance( );
-    Base base;
+    SealedClass *p = GetInstance( );
+
+    //Base base;    // error
 
     return 0;
 }
