@@ -39,15 +39,7 @@
 >15
 
 
-#数组指针+求和公式
--------
 
-使用经典的求和公式。但是使用数组指针绕开了不能使用乘法的问题。
-
-```c
-printf("%d\n", ( (int)( &( (uint8_t (*) [n])0)[1+n][0])) >> 1
-);
-```
 
 
 #递归+短路判断终止
@@ -396,3 +388,36 @@ Sum<100>::N就是1+2++...+100的结果, 当编译器看到Sum<100>::N时, 就会
 
 
 
+#数组指针+求和公式
+-------
+
+
+>感谢[网友aheadlead](https://github.com/aheadlead)提供了方法,
+>
+> 参见https://github.com/gatieme/CodingInterviews/commit/82641aa505c99983339a7fb64fc57df6d30bbaef
+
+使用经典的求和公式。但是使用数组指针绕开了不能使用乘法的问题。
+
+```c
+printf("%d\n", ( (int)( &( (uint8_t (*) [n])0)[1+n][0])) >> 1
+);
+```
+
+完整代码如下
+
+```cpp
+#include <stdio.h>
+#include <stdint.h>
+
+int rich(int n)
+{
+    return ( (int)( &((uint8_t (*) [n])0)[1+n][0]) ) >> 1;
+}
+
+int main()
+{
+    printf("%d\n", rich(10));
+
+    return 0;
+}
+```
