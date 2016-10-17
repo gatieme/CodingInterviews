@@ -45,14 +45,14 @@ COMMIT_42_2="剑指Offer–042-左旋转字符串--http://blog.csdn.net/gatieme/
 COMMIT_46="剑指Offer--046-求1+2+3+...+n--http://blog.csdn.net/gatieme/article/details/51485713"
 
 
-COMMIT_OTHER="完善了OJ的template代码..."
+COMMIT_OTHER="修改了README.md的表示格式..."
 
 
 RETURN_TOP ="<br>**您也可以选择[回到目录-剑指Offer--题集目录索引](http://blog.csdn.net/gatieme/article/details/51916802)**"
 
 
 
-GITHUB_COMMIT=$(COMMIT_46)
+GITHUB_COMMIT=$(COMMIT_OTHER)
 
 
 all:github
