@@ -19,38 +19,28 @@ using namespace std;
 class Solution
 {
 public:
-    bool VerifySquenceOfBST(vector<int> sequence)
-    {
-        int left = 0, right = sequence.size( ) - 1;
-        while(left < right && right != 0)
-        {
-            //  前一半的元素都小于size
-            while(sequence[left] < sequence[right])
-            {
-                left++;
-            }
-            // 循环结束时, left是第一个大于根的元素的位置
-            //
-            while(sequence[left] > sequence[right])
-            {
-                left++;
-            }
+    //下面这种迭代的方法时间复杂度为O(n^2)
+    bool VerifySquenceOfBST_Iteratively(const vector<int>& sequence) {
+		int left = 0, right = sequence.size() - 1;
+		while (left < right && right != 0) {
+			//循环结束时，left是第一个大于根的元素的位置，即右子树首元素下标
+			while (sequence[left] < sequence[right])
+				left++;
+			//循环结束时，left越过右子树末节点，到达根节点
+			while (sequence[left] > sequence[right])
+				left++;
 
-            right--;
-        }
+			//如果没有到达根节点，说明不满足左子树所有节点小于根节点，右子树所有节点大于根节点的条件
+			if (left < right)
+				return false;
+			left = 0;
 
-        //  如果循环一直走到right == 0才终止, 说明满足后序遍历的定义
-        if(right == 0)
-        {
-            return true;
-        }
-        else            //  否则说明不满足递归的定义
-        {
-            return false;
-        }
+			right--;
+		}
 
-
-    }
+		//如果循环一直到right == 0才终止, 说明以所有节点为根节点，左侧序列均满足后序遍历序列的条件
+		return (right == 0) ? true : false;
+	}
 };
 
 
