@@ -5,10 +5,11 @@
 
 using namespace std;
 
-//  µ÷ÊÔ¿ª¹Ø
+//  ÂµÃ·ÃŠÃ”Â¿ÂªÂ¹Ã˜
 #define __tmain main
 
 #ifdef __tmain
+
 
 #define debug cout
 
@@ -55,7 +56,7 @@ public:
                 i++)
             {
                 //debug <<str[i] <<str[begin] <<endl;
-                if(i == begin || str[i] != str[begin])
+                if(!HasDuplicate(str, begin, i))
                 {
                     swap(str[i], str[begin]);
                     debug <<"swap " <<str[i] <<"(" <<i <<")" <<" and " <<str[begin] <<"(" <<begin <<")" <<endl;
@@ -66,7 +67,15 @@ public:
             }
         }
     }
+    
+private:
+    //find duplicate of str[i] in str[k,i)
+    bool HasDuplicate(string& str, int k, int i) const {
+		for (int p = k; p < i; p++)
+			if (str[p] == str[i]) return true;
 
+		return false;
+	}
 };
 
 int __tmain( )

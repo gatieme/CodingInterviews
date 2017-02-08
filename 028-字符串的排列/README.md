@@ -200,20 +200,26 @@ public:
                 i++)
             {
                 //debug <<str[i] <<str[begin] <<endl;
-                if(i == begin || str[i] != str[begin])
+                if(!HasDuplicate(str, begin, i))
                 {
-
                     swap(str[i], str[begin]);
-
+                    debug <<"swap " <<str[i] <<"(" <<i <<")" <<" and " <<str[begin] <<"(" <<begin <<")" <<endl;
                     PermutationRecursion(str, begin + 1);
-
+                    //copy(str.begin( ), str.degin( ) + i, ostream_iterator<char>(cout," "));
                     swap(str[i], str[begin]);
-
                 }
             }
         }
     }
+    
+private:
+    //find duplicate of str[i] in str[k,i)
+    bool HasDuplicate(string& str, int k, int i) const {
+		for (int p = k; p < i; p++)
+			if (str[p] == str[i]) return true;
 
+		return false;
+	}
 };
 
 int __tmain( )
