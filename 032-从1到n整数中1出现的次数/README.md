@@ -391,37 +391,29 @@ public:
      */
     int NumberOf1Between1AndN_Solution(int n)
     {
-        long count = 0;
-
-        long i = 1;
-
-        long current = 0,after = 0,before = 0;
-
-        while((n / i) != 0)
-        {
-            before = n / (i * 10);
-            current = (n / i) % 10;
-            after = n - (n / i) * i;
-            if (current > 1)
-            {
-                count = count + (before + 1) * i;
-            }
-            else if (current == 0)
-            {
-                 count = count + before * i;
-            }
-            else if(current == 1)
-            {
-                count = count + before * i + after + 1;
-            }
-            debug <<before <<" " <<current <<" " <<after <<", count = " <<count <<endl;
-
-
-            i = i * 10;
-
-        }
-
-        return count;
+        if(n <= 0)  
+           return 0;  
+        long long count = 0;    //统计1出现的次数  
+        long long current;    //当前位  
+        long long base = 1; //当前位的基  
+        long long remain = 0;   //当前位为1时，后面位剩余的数（即不完整的部分）中1出现的次数  
+        while(n)  
+        {  
+           current = n%10;  
+           n = n/10;  
+  
+           if(current > 1)  
+              count += (n+1)*base;  
+           else if(current == 1)  
+              count += n*base + (remain+1);  
+           else  
+              count += n*base;  
+      
+           //下一位要用到的基和剩余不完整部分值  
+           remain += current*base;   
+           base *= 10;  
+        }  
+        return count;  
 
     }
 };
