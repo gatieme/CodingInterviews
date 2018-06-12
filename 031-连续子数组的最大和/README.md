@@ -147,64 +147,22 @@ class Solution
 public:
 
     int FindGreatestSumOfSubArray(vector<int> array)
-    {
-
-        if(array.size( ) == 0)
+    { 
+        if(array.size()<=0)
+           return -1;
+        int nsum_value = array[0];   //初始化f(i-1)
+        int max_sum = -1;
+        for(int i = 1; i < array.size(); i++)
         {
-            return 0;
-        }
-
-
-
-#ifdef __tmain
-
-        int temp, start, end;
-
-#endif  // __tmain
-
-        int maxSum = INT_MIN;
-        dp[0] = array[0];
-
-        for(unsigned int i = 1; i < array.size( ); i++)
-        {
-
-            if(dp[i - 1] <= 0)
-            {
-                dp[i] = array[i];
-
-#ifdef __tmain
-
-                temp = i;
-
-#endif  // __tmain
-
-            }
+            if(nsum_value <= 0)     
+                nsum_value = array[i];
             else
-            {
-                dp[i] = array[i] + dp[i - 1];
-            }
-
-
-            if(dp[i] > maxSum)
-            {
-                maxSum = dp[i];
-
-#ifdef __tmain
-
-                start = temp;
-                end = i;
-
-#endif  // __tmain
-            }
-
+                nsum_value += array[i];
+            
+            if(nsum_value > max_sum)
+                max_sum = nsum_value;
         }
-
-        debug <<"[" <<start <<", " <<end <<"] = " <<maxSum <<endl;
-
-        return maxSum;
-
-
-
+        return max_sum;
     }
 
 };
