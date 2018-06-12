@@ -263,7 +263,7 @@ public:
     }
 };
 ```
-# 字符串的全排列
+# 字符串的全组合
 ```cpp
 #include<iostream>
 #include<vector>
