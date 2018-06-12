@@ -264,7 +264,7 @@ public:
 };
 ```
 # 字符串的全排列
-```
+```cpp
 #include<iostream>
 #include<vector>
 #include<cstring>
