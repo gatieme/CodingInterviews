@@ -263,7 +263,8 @@ public:
     }
 };
 ```
-字符串的全排列
+# 字符串的全排列
+```
 #include<iostream>
 #include<vector>
 #include<cstring>
@@ -309,4 +310,4 @@ int main(void)
     return 0;
 }
 
-
+```
