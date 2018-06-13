@@ -1,0 +1,95 @@
+**题目描述**
+
+题目描述
+
+>数字以01234567891011121314...的格式化系列化到一个字符串中，在这个序列中， 第5位（从0开始计数）是5，第13位是1， 第19位是4，等等。请写一个函数，
+求任意第n位对应的数字。
+
+比如：序列中的二弟1001位是什么？
+    首先，序列的前10位是0~9着10个只有一位的数字。显然，第100位在这10个数字之后，因此，可直接跳过这10个数字。然后在从后面紧跟的序列中找地991
+（1001-10）位的数字。
+    接下来180位数字中有90个10~99的两位数，由于991 > 180，所以991在所有的两位数之后。在跳过90个两位数，继续向后找881（811= 991 -180）位；
+    接下来的2700位是900个100~999的三位数，由于811 < 2700，所以881是某一三位数的一位。因为811/3 = 270，且811%3 = 1。这意味着811是从100开始
+的第270个数字即370的中间一位，也就是7.
+```
+#include <iostream>
+#include <math.h>
+using namespace std;
+
+//取得位数为index的数开头的第一个数
+int getFst(int index)
+{
+	if (index == 1)return 0;
+
+	return static_cast<int>(pow(10, index - 1));
+}
+
+//最后取得指定位上的数字
+int getTheNum(int num, int posi, int index)
+{
+	int n = index - posi - 1;
+
+	for (int i = 0; i < n; i++) {
+		num = num / 10;
+	}
+
+	return num % 10;
+}
+
+//位数为n的数一共有多少个
+int cntOfIntegers(int n)
+{
+	if (n == 1)return 10;
+
+	int resu = 1;
+	for (int i = 1; i != n; i++) {
+		resu *= 10;
+	}
+
+	return 9 * resu;
+}
+
+//位数为n的数一共有多少个
+int cntOfIntegers1(int n)
+{
+	if (n == 1)return 10;
+	return 9 * static_cast<int>(pow(10, n - 1));
+}
+
+int numOnPosiN(int n)
+{
+	//输入出错的情况
+	if (n < 0)return -1;
+
+	int index = 1;
+	while (true) {
+		//cnt为位数为index的数一共所占的位数
+		int cnt = cntOfIntegers(index)*index;
+		if (n - cnt  < 0) {
+			//
+			int fst = getFst(index);
+			int pre = n / index;//从fst开始的第pre个index位数                例：811/3=270==>即为从100开始的第270个数，即370（）
+			int remain = n % index;//从fst开始的第pre个index位数的第remain位  例：811%3==》即为370的从0开始计算的第remain+1为数
+
+			return getTheNum(fst + pre, remain, index);
+		}
+
+		n -= cnt;
+		index++;
+	}
+
+	//如果循环完毕还没有返回，说明出错返回-1
+	return -1;
+}
+
+int main()
+{
+	cout << "Please enter a interger:" << endl;
+	int n;
+	while (cin >> n) {
+		cout << numOnPosiN(n) << endl;
+	}
+	system("pause");
+	return 0;
+}
+```
