@@ -89,48 +89,35 @@ class Solution
 public:
     int LastRemaining_Solution(unsigned int n, unsigned int m)
     {
-        if(n < 1 || m < 1)
-        {
-            return -1;
-        }
+		if (n < 1 || m < 1)
+			return -1;
 
+		list<int> listInt;
+		unsigned i;
+		//初始化链表  
+		for (i = 0; i < n; i++)
+			listInt.push_back(i);
 
-        vector<int> numbers;
+		list<int>::iterator iterCurrent = listInt.begin();
+		while (listInt.size() > 1)
+		{
+			//前进m - 1步  
+			for (i = 0; i < m - 1; i++)
+			{
+				if (++iterCurrent == listInt.end())
+					iterCurrent = listInt.begin();
+			}
+			//临时保存删除的结点  
+			list<int>::iterator iterDel = iterCurrent;
+			if (++iterCurrent == listInt.end())
+				iterCurrent = listInt.begin();
+			cout << *iterDel << endl;
+			//删除结点  
+			listInt.erase(iterDel);
+		}
 
-        for(int i = 0; i < n; i++)
-        {
-            numbers.push_back(i);
-            debug <<i <<" ";
-        }
-        debug <<endl;
-
-        unsigned int cntN = 0;
-        unsigned int cntM = -1;
-        while(numbers.size( ) > 1)
-        {
-            debug <<"count = " <<1 <<", num[" <<cntN <<"] = " <<numbers[cntN] <<endl;
-            for(int cntM = 1; cntM < m; cntM++)
-            {
-                ++cntN;
-                cntN %= numbers.size( );
-                debug <<"count = " <<cntN + 1 <<", num[" <<cntN <<"] = " <<numbers[cntN] <<endl;
-            }
-
-            debug <<numbers[cntN] <<" leave the list" <<endl;
-            numbers.erase(numbers.begin( ) + cntN);
-
-#ifdef debug
-            copy(numbers.begin( ),
-                 numbers.end( ),
-                 ostream_iterator< int >(cout, " "));
-            debug <<endl;
-#endif // debug
-
-        }
-
-        //  循环结束的时候, cntN = 1
-        debug <<"count = " <<1 <<", num[" <<cntN <<"] = " <<numbers[cntN] <<endl;
-        return numbers[0];
+		return *iterCurrent;
+	 
     }
 };
 
