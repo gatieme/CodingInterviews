@@ -7,7 +7,7 @@ using namespace std;
 
 
 
-//  µ÷ÊÔ¿ª¹Ø
+//  è°ƒè¯•å¼€å…³
 #define __tmain main
 
 #ifdef __tmain

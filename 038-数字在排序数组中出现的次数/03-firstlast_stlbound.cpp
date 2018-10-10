@@ -25,7 +25,7 @@ class Solution
 public:
     int GetNumberOfK(vector<int> data ,int k)
     {
-        int upper = upper_bound(data.begin(),data.end(),k)£»
+        int upper = upper_bound(data.begin(),data.end(),k);
         int low = lower_bound(data.begin(),data.end(),k);
         return upper - low;
     }
