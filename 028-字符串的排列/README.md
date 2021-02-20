@@ -143,92 +143,30 @@ public:
 3.    接着，固定第一个字符，求后面所有字符的排列。这个时候我们仍把后面的所有字符分成两部分：后面字符的第一个字符，以及这个字符之后的所有字符。然后把第一个字符逐一和它后面的字符交换
 
 ```cpp
-#include <iostream>
-#include <algorithm>
-#include <vector>
-#include <string>
-
-using namespace std;
-
-//  调试开关
-#define __tmain main
-
-#ifdef __tmain
-
-#define debug cout
-
-#else
-
-#define debug 0 && cout
-
-#endif // __tmain
-
-
-class Solution
-{
-protected:
-    vector<string> m_res;
-
-public:
-
-    vector<string> Permutation(string str)
-    {
-        m_res.clear( );
-
-        if(str.empty( ) == true)
-        {
-            return m_res;
-        }
-        PermutationRecursion(str, 0);
-
-        sort(m_res.begin( ), m_res.end( ));
-        return m_res;
+vector<string> Permutation(string str) {
+        vector<string> v1;
+        if(str.size()<= 0 || str.size()>9 )//排除异常情况
+            return v1;
+        PermutationHelp(v1, 0, str);
+        return v1;
     }
-
-
-    void PermutationRecursion(string str, int begin)
-    {
-        if(str[begin] == '\0')
-        {
-            debug <<str <<endl;
-            m_res.push_back(str);
-        }
-        else
-        {
-            for(int i = begin;
-                str[i] != '\0';
-                i++)
-            {
-                //debug <<str[i] <<str[begin] <<endl;
-                if(!HasDuplicate(str, begin, i))
-                {
-                    swap(str[i], str[begin]);
-                    debug <<"swap " <<str[i] <<"(" <<i <<")" <<" and " <<str[begin] <<"(" <<begin <<")" <<endl;
-                    PermutationRecursion(str, begin + 1);
-                    //copy(str.begin( ), str.degin( ) + i, ostream_iterator<char>(cout," "));
-                    swap(str[i], str[begin]);
-                }
-            }
-        }
-    }
-    
-private:
-    //find duplicate of str[i] in str[k,i)
-    bool HasDuplicate(string& str, int k, int i) const {
-		for (int p = k; p < i; p++)
-			if (str[p] == str[i]) return true;
-
-		return false;
-	}
-};
-
-int __tmain( )
-{
-    Solution solu;
-    solu.Permutation("abc");
-
-    return 0;
-}
+    void PermutationHelp(vector<string> &ans, int k, string str) //遍历第k位的所有可能
+   {
+      if(k == (str.size() - 1))//单次递归终止条件
+          ans.push_back(str);
+      unordered_set<char> us;//保存字符串中字符的无序集合
+      sort(str.begin() + k, str.end());
+      for(int i = k; i < str.size(); i++)
+      {
+         if(us.find(str[i]) == us.end())
+         {
+            us.insert(str[i]);
+            swap(str[i], str[k]);
+            PermutationHelp(ans, k + 1, str);
+            swap(str[i], str[k]);
+         }
+      }
+   }
 ```
 
 #STL的next_permutation求全排列
@@ -263,4 +201,51 @@ public:
     }
 };
 ```
+# 字符串的全组合
+```cpp
+#include<iostream>
+#include<vector>
+#include<cstring>
+#include<assert.h>
+using namespace std;
 
+void Combination(char *string ,int number,vector<char> &result);
+
+void Combination(char *string)
+{
+    assert(string != NULL);
+    vector<char> result;
+    int i , length = strlen(string);
+    for(i = 1 ; i <= length ; ++i)
+        Combination(string , i ,result);
+}
+
+void Combination(char *string ,int number , vector<char> &result)
+{
+    assert(string != NULL);
+    if(number == 0)
+    {
+        static int num = 1;
+        printf("第%d个组合\t",num++);
+        vector<char>::iterator iter = result.begin();
+        for( ; iter != result.end() ; ++iter)
+            printf("%c",*iter);
+        printf("\n");
+        return ;
+    }
+    if(*string == '\0')
+        return ;
+    result.push_back(*string);
+    Combination(string + 1 , number - 1 , result);
+    result.pop_back();
+    Combination(string + 1 , number , result);
+}
+
+int main(void)
+{
+    char str[] = "abc";
+    Combination(str);
+    return 0;
+}
+
+```

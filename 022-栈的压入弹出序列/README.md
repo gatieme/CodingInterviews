@@ -90,50 +90,21 @@ using namespace std;
 class Solution
 {
 public:
-    bool IsPopOrder(vector<int> pushV,vector<int> popV)
-    {
-
-        if(pushV.size( ) == 0 || popV.size( ) == 0)
-        {
+   bool IsPopOrder(vector<int> pushV,vector<int> popV) {
+        if(pushV.empty() || popV.empty() || pushV.size()!=popV.size())
             return false;
-        }
         stack<int> s;
-        int push, pop;
-
-        s.push(pushV[0]);
-        debug <<"push" <<pushV[0] <<endl;
-
-        for(push = 0, pop = 0;
-            push < pushV.size() && pop < popV.size( );)
-        {
-            if(s.empty( ) != true && s.top( ) == popV[pop])        //  当前栈顶元素正好是出栈序列中的元素
-            {
-                debug <<"pop"<<popV[pop] <<endl;
-                // 模拟出栈的过程
-                s.pop( );
-                pop++;
-            }
-            else
-            {
-
-                //  模拟入栈的过程
-                s.push(pushV[++push]);
-                debug <<"push" <<pushV[push] <<endl;
-
+        int j=0;
+        for(int i=0;i<pushV.size();++i){
+            s.push(pushV[i]);
+            while(!s.empty()&&s.top()==popV[j]){
+                s.pop();
+                ++j;
             }
         }
-        if(s.empty( ) == true)
-        {
+        if(s.empty())
             return true;
-        }
-        else
-        {
-            return false;
-        }
-
-
-
-
+        return false;
     }
 };
 
